@@ -1,5 +1,5 @@
 import os
-
+import ServerAction
 from flask import Flask, request, jsonify
 
 import base64
@@ -40,11 +40,18 @@ def uploadText():
     if len(json['text']) == 0:
         return 'error invalid input'
 
-    # triplets = base64.b64decode(json['text'])
-    # with open('retrivedTriplets.txt', 'wb') as f:
-    #     f.write(triplets)
+    triplets = json['text']
 
-    return "Working"
+    print(triplets)
+    with open('retrievedTriplets.txt', 'w+') as f:
+        f.write(triplets)
+    ServerAction.tripletsToDot('retrievedTriplets.txt')
+    ServerAction.convertDotToPNG('cExample1.dot')
+
+    with open("cExample1.png", "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+
+    return encoded_string
 
 
 # # Flask
