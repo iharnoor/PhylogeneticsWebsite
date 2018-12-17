@@ -27,7 +27,6 @@ def hello_user(user):
     """
     return "Hello %s!" % user
 
-
 # POST
 @app.route('/upload/', methods=['POST'])
 def uploadText():

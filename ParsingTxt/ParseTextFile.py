@@ -10,4 +10,5 @@ def returnParentheticalFormat(fileName):
 
 if __name__ == '__main__':
     paren = returnParentheticalFormat("cExample.dot")
-    print(paren[:len(paren) - 1])
+    # print(paren[:len(paren)])
+    print(paren)
