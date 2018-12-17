@@ -45,11 +45,11 @@ def uploadText():
     with open('retrievedTriplets.txt', 'w+') as f:
         f.write(triplets)
     ServerAction.tripletsToDot('retrievedTriplets.txt')
-    ServerAction.convertDotToPNG('cExample1.dot')
+    # ServerAction.convertDotToPNG('cExample1.dot')
+    ServerAction.convertDotToPNGJulia('cExample1.dot')
 
-    with open("cExample1.png", "rb") as image_file:
+    with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
-
     return encoded_string
 
 
