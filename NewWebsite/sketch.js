@@ -49,9 +49,9 @@ function pushStringToServer(triplets) {
   request.send(data);
     function processRequest(e){
     // document.write("This is Working <p>");
-      if(request.readyState ==4 & request.status == 200){
+      if(request.readyState === 4 && request.status === 200){
         var response = request.responseText;
-        document.write(response);
+//        document.write(response);
         // Convert Base64 to Image
         var img = createImg();
         img.class('thumb');

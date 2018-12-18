@@ -1,0 +1,29 @@
+@charset "utf-8";
+	 body {
+			padding: 20px;
+		 
+		  }
+
+	.file {
+			margin-top: 24px;
+			font-weight: bold;
+		  }
+
+	.text {
+			border-style: solid;
+			border-width: 1px;
+			padding: 20px;
+		  }
+h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+	/* CSS Document */
+

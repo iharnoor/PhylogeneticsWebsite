@@ -56,10 +56,12 @@ def tripletsToDot(tripletsFName):
 
 
 if __name__ == '__main__':
-    # tripletsToDot('cExample1.trips')
+    print("Hello")
+    tripletsToDot('cExample1.trips')
     # convertDotToPNG('cExample1.dot')
-    # convertDotToPNGJulia('cExample1.dot')
-    removoeLeaves('1\n3\n4')
+    convertDotToPNGJulia('cExample1.dot')
+    # removoeLeaves('1\n3\n4')
+    print("Hello")
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file
