@@ -16,7 +16,7 @@ os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
 def returnParentheticalFormat(fileName):
     parentheticalFormat = ''
     for line in reversed(list(open(fileName))):
-        if (line.__contains__('eNewick')):
+        if line.__contains__('eNewick'):
             parentheticalFormat = line[28:]
             # print(parentheticalFormat)
             # print(line.rstrip())
@@ -38,15 +38,28 @@ def convertDotToPNGJulia(fileName):
     os.system(cmd)
 
 
+def removoeLeaves(leafNodes):
+    with open("leaves.txt", "w") as text_file:
+        text_file.write(leafNodes)
+    # write it to a file
+    # then use the julia command
+    cmd = 'julia .\\remove-leaves.jl .\\NetworkParen.net .\\leaves.txt'
+    os.system(cmd)
+    # convert Parenthetical format to png
+    cmd = 'julia plot-network.jl reduced-net.txt'
+    os.system(cmd)
+
+
 def tripletsToDot(tripletsFName):
     cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot'
     os.system(cmd)
 
 
 if __name__ == '__main__':
-    tripletsToDot('cExample1.trips')
-    convertDotToPNG('cExample1.dot')
-    convertDotToPNGJulia('cExample1.dot')
+    # tripletsToDot('cExample1.trips')
+    # convertDotToPNG('cExample1.dot')
+    # convertDotToPNGJulia('cExample1.dot')
+    removoeLeaves('1\n3\n4')
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file
