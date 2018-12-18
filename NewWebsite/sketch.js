@@ -60,7 +60,7 @@ function pushStringToServer(triplets) {
         'src', 'data:image/png;base64,'+response);
 
       }
-      else if (request.readyState ==4){
+      else if (request.readyState === 4){
         document.write("<p>Error : " + request.status + "," + request.statusText);
       }
     }
