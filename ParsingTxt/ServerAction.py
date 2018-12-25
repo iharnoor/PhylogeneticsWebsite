@@ -38,7 +38,7 @@ def convertDotToPNGJulia(fileName):
     os.system(cmd)
 
 
-def removoeLeaves(leafNodes):
+def removeLeaves(leafNodes):
     with open("leaves.txt", "w") as text_file:
         text_file.write(leafNodes)
     # write it to a file
@@ -58,10 +58,11 @@ def tripletsToDot(tripletsFName):
 if __name__ == '__main__':
     print("Hello")
     tripletsToDot('cExample1.trips')
-    # convertDotToPNG('cExample1.dot')
-    convertDotToPNGJulia('cExample1.dot')
-    # removoeLeaves('1\n3\n4')
+    convertDotToPNG('cExample1.dot')
+    removeLeaves('1')
+    # convertDotToPNGJulia('cExample1.dot')
     print("Hello")
+
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file
@@ -75,3 +76,8 @@ if __name__ == '__main__':
 # last line if you use please site the following
 # manuscript
 # Download button to
+
+# print parenthetical format instead of triplets
+# estimate of the time .
+# It won't finish in less than 20 minutes
+# Go get a coffee
