@@ -80,6 +80,45 @@ def uploadLeavesToBeRemoved():
     return encoded_string
 
 
+@app.route('/changeRoot/<root>', methods=['POST'])
+def uploadRootToBeChanged(root):
+    print('root= ', root)
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    flag = json['text']
+
+    print(flag)
+
+    ServerAction.changeRoot(flag, root)
+    with open("net.png", "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    print(encoded_string)
+    return encoded_string
+
+
+@app.route('/api/postData/<lang>', methods=['POST'])
+def get_text_prediction(lang):
+    """
+    predicts requested text whether it is ham or spam
+    :return: json
+    """
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    image_binary = base64.b64decode(json['text'])
+    with open('image.jpg', 'wb') as f:
+        f.write(image_binary)
+
+    dict = imageToText('image.jpg', lang)
+    return dict
+    # return json['text']
+
+
 # # Flask
 # from flask import request
 # import json
