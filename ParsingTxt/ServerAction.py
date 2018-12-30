@@ -38,7 +38,7 @@ def convertDotToPNGJulia(fileName):
     os.system(cmd)
 
 
-def removoeLeaves(leafNodes):
+def removeLeaves(leafNodes):
     with open("leaves.txt", "w") as text_file:
         text_file.write(leafNodes)
     # write it to a file
@@ -50,18 +50,32 @@ def removoeLeaves(leafNodes):
     os.system(cmd)
 
 
+# assumes that the triplets are in the parenthetical format in hte NetworkParen.net text file
+# converts
+def changeRoot(flag, newRoot):
+    cmd = 'julia change-root.jl NetworkParen.net ' + flag + ' ' + newRoot + ' '
+    os.system(cmd)
+    # convert Parenthetical format to png
+    cmd = 'julia plot-network.jl new-net.txt'
+    os.system(cmd)
+
+
+# julia change-root.jl test.net outgroup 3
+
 def tripletsToDot(tripletsFName):
     cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot'
     os.system(cmd)
 
 
 if __name__ == '__main__':
-    print("Hello")
-    tripletsToDot('cExample1.trips')
+    # print("Hello")
+    # tripletsToDot('cExample1.trips')
     # convertDotToPNG('cExample1.dot')
-    convertDotToPNGJulia('cExample1.dot')
-    # removoeLeaves('1\n3\n4')
-    print("Hello")
+    # removeLeaves('1\n4')
+    # # convertDotToPNGJulia('cExample1.dot')
+    # print("Hello")
+
+    changeRoot('outgroup', '3')
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file
@@ -75,3 +89,8 @@ if __name__ == '__main__':
 # last line if you use please site the following
 # manuscript
 # Download button to
+
+# print parenthetical format instead of triplets
+# estimate of the time .
+# It won't finish in less than 20 minutes
+# Go get a coffee
