@@ -55,9 +55,10 @@ function pushStringToServer(triplets) {
         // Convert Base64 to Image
         var img = createImg();
         img.class('thumb');
-        document.getElementsByClassName('thumb')[0]
+        img = document.getElementsByClassName('thumb')[0]
         .setAttribute(
         'src', 'data:image/png;base64,'+response);
+		
 
       }
       else if (request.readyState === 4){
