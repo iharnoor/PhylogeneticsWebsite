@@ -16,14 +16,45 @@ function setup() {
 
   button = createButton('Remove Nodes');
   button.position(input.x + input.width, 265);
-  button.mousePressed(greet);
+  button.mousePressed(removeNodesAction);
 
-  greeting = createElement('h2', 'what is your name?');
-  greeting.position(20, 5);
+  greeting = createElement('h2', 'Enter Leaves To be kept');
+  greeting.position(20, 210);
+
+  greeting = createElement('h2', 'Enter Flag and Root');
+  greeting.position(20, 410);
+
+  textAlign(CENTER);
+  textSize(50);
+
+  inputForFlag = createInput();
+  inputForFlag.position(20, 465);
+  
+  input2 = createInput();
+  input2.position(50, 465);
+
+  button = createButton('Change Root');
+  button.position(input.x + input.width, 465);
+  button.mousePressed(changeRootAction);
 
   textAlign(CENTER);
   textSize(50);
 }
+
+
+function changeRootAction(flag, root) {
+  var flag = inputForFlag.value();
+  var tripRoot = input2.value();
+  // greeting.html('Flag=  '+ flag +' Root='+ tripRoot);
+}
+
+function removeNodesAction() {
+  var name = input.value();
+  greeting.html('hello '+name+'!');
+  pushLeavesToServer(name)
+  // input.value('');
+}
+
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
@@ -79,23 +110,6 @@ function pushStringToServer(triplets) {
     }
 }
 
-
-function greet() {
-  var name = input.value();
-  greeting.html('hello '+name+'!');
-  pushLeavesToServer(name)
-  // input.value('');
-
-  // for (var i=0; i<200; i++) {
-  //   push();
-  //   fill(random(255), 255, 255);
-  //   translate(random(width), random(height));
-  //   rotate(random(2*PI));
-  //   text(name, 0, 0);
-  //   pop();
-  // }
-}
-
 function pushLeavesToServer(leaves) {
   var data = JSON.stringify({
         "text": leaves
@@ -124,3 +138,5 @@ function pushLeavesToServer(leaves) {
       }
     }
 }
+
+
