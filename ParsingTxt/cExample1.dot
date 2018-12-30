@@ -14,7 +14,7 @@
 // SUMMARY: (After post-processing)
 strict digraph G1 {
 edge [fontsize=8]
-labelbox [shape=box, width=0.4, label="File: cExample1.trips\nNumber of triplets: 12\nWeight of triplets: 12\nOverall %: 100.0%"];
+labelbox [shape=box, width=0.4, label="File: retrievedTriplets.txt\nNumber of triplets: 12\nWeight of triplets: 12\nOverall %: 100.0%"];
 1000 [shape=point];
 1001 [shape=point];
 1002 [shape=point];

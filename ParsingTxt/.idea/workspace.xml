@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/sketch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetworkParen.net" beforeDir="false" afterPath="$PROJECT_DIR$/NetworkParen.net" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerAction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leaves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/leaves.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/cExample1.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/net.png" beforeDir="false" afterPath="$PROJECT_DIR$/net.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-net.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new-net.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="Server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="493">
+              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -66,8 +65,8 @@
       <file leaf-file-name="ServerAction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerAction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="47" />
+            <state relative-caret-position="192">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -165,9 +164,9 @@
         <option value="$PROJECT_DIR$/retrivedTriplets.txt" />
         <option value="$PROJECT_DIR$/ParseTextFile.py" />
         <option value="$PROJECT_DIR$/leaves" />
-        <option value="$PROJECT_DIR$/NetworkParen.net" />
         <option value="$PROJECT_DIR$/ServerAction.py" />
         <option value="$PROJECT_DIR$/Server.py" />
+        <option value="$PROJECT_DIR$/NetworkParen.net" />
       </list>
     </option>
   </component>
@@ -199,7 +198,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="remove-lea&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/remove-leaves.jl&#10;reduced&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/reduced-net.txt&#10;serverac&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/ServerAction.py&#10;server.py&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Server.py&#10;tripcombo&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Lev1Than/Tripcombo.png&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize" />
+    <property name="SearchEverywhereHistoryKey" value="Network&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/NetworkParen.net&#10;remove-lea&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/remove-leaves.jl&#10;reduced&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/reduced-net.txt&#10;serverac&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/ServerAction.py&#10;server.py&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Server.py&#10;tripcombo&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Lev1Than/Tripcombo.png&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -344,7 +343,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -641,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NetworkParen.net">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="44" selection-start-column="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leaves">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -665,23 +656,30 @@
     <entry file="file://$PROJECT_DIR$/new-net.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/net.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServerAction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="47" />
+        <state relative-caret-position="192">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/NetworkParen.net">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="493">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
