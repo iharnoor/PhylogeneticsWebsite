@@ -2,16 +2,13 @@ import os
 import pydot
 import subprocess
 
+
 # out = subprocess.Popen(['wc', '-l', 'TripCombo.txt'],
 #                        stdout=subprocess.PIPE,
 #                        stderr=subprocess.STDOUT)
 #
 # stdout, stderr = out.communicate()
 # print(stdout)
-
-
-os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
-
 
 def returnParentheticalFormat(fileName):
     parentheticalFormat = ''
