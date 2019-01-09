@@ -59,19 +59,24 @@ def changeRoot(flag, newRoot):
 
 # julia change-root.jl test.net outgroup 3
 
+"""There is a problem in the following method. I tried the same commmand via the terminal and that generates a different
+dot file as compared the same command via Python.
+"""
 def tripletsToDot(tripletsFName):
-    cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot'
+    cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot --nopostprocess'
+    # cmd = 'java -jar Lev1athan.jar cExample1.trips > cExample1.dot --nopostprocess'
     os.system(cmd)
 
 
 if __name__ == '__main__':
     print("Hello")
     tripletsToDot('cExample1.trips')
+    convertDotToPNG('cExample1.dot')
     # removeLeaves('1\n4')
     convertDotToPNGJulia('cExample1.dot')
     print("Hello")
 
-    changeRoot('outgroup', '3')
+    # changeRoot('outgroup', '3')
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file
