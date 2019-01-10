@@ -87,7 +87,7 @@ function pushStringToServer(triplets) {
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:80/upload/");
+  request.open("POST", "http://127.0.0.1:5000/upload/");
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);
@@ -117,7 +117,7 @@ function pushLeavesToServer(leaves) {
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:80/uploadLeaves/");
+  request.open("POST", "http://127.0.0.1:5000/uploadLeaves/");
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);
@@ -147,7 +147,7 @@ function pushChangeRootToServer(flag, tripRoot) {
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:80/changeRoot/"+tripRoot);
+  request.open("POST", "http://127.0.0.1:5000/changeRoot/"+tripRoot);
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);

@@ -40,7 +40,7 @@ def removeLeaves(leafNodes):
         text_file.write(leafNodes)
     # write it to a file
     # then use the julia command
-    cmd = 'julia .\\remove-leaves.jl .\\NetworkParen.net .\\leaves.txt'
+    cmd = 'julia remove-leaves.jl  NetworkParen.net  leaves.txt'
     os.system(cmd)
     # convert Parenthetical format to png
     cmd = 'julia plot-network.jl reduced-net.txt'
@@ -62,6 +62,8 @@ def changeRoot(flag, newRoot):
 """There is a problem in the following method. I tried the same commmand via the terminal and that generates a different
 dot file as compared the same command via Python.
 """
+
+
 def tripletsToDot(tripletsFName):
     cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot --nopostprocess'
     # cmd = 'java -jar Lev1athan.jar cExample1.trips > cExample1.dot --nopostprocess'
@@ -72,8 +74,8 @@ if __name__ == '__main__':
     print("Hello")
     tripletsToDot('cExample1.trips')
     convertDotToPNG('cExample1.dot')
-    # removeLeaves('1\n4')
-    convertDotToPNGJulia('cExample1.dot')
+    removeLeaves('1\n5')
+    # convertDotToPNGJulia('cExample1.dot')
     print("Hello")
 
     # changeRoot('outgroup', '3')
