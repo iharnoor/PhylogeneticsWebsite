@@ -11,7 +11,8 @@ function setup() {
   // The 'multiple' flag allows more than one file to be selected
   var fileSelect = createFileInput(gotFile, 'multiple');
 
-  input = createInput();
+  input = createElement('textarea', 'your text here');
+
   input.position(20, 265);
 
   button = createButton('Remove Nodes');

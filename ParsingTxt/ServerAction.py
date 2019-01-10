@@ -73,9 +73,9 @@ def tripletsToDot(tripletsFName):
 if __name__ == '__main__':
     print("Hello")
     tripletsToDot('cExample1.trips')
-    convertDotToPNG('cExample1.dot')
-    removeLeaves('1\n5')
-    # convertDotToPNGJulia('cExample1.dot')
+    # convertDotToPNG('cExample1.dot')
+    # removeLeaves('1\n5')
+    convertDotToPNGJulia('cExample1.dot')
     print("Hello")
 
     # changeRoot('outgroup', '3')
