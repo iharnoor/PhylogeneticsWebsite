@@ -11,19 +11,26 @@ function setup() {
   // The 'multiple' flag allows more than one file to be selected
   var fileSelect = createFileInput(gotFile, 'multiple');
 
-  input = createElement('textarea', 'your text here');
+  input = createElement('textarea', 'Enter Leaves here');
 
-  input.position(20, 265);
+  input.position(20, 325);
 
-  button = createButton('Remove Nodes');
-  button.position(input.x + input.width, 265);
-  button.mousePressed(removeNodesAction);
+  inputForParenthetical = createElement('textarea', 'Enter Parenthetical Format here');
+  inputForParenthetical.position(20,255);
 
-  greeting = createElement('h2', 'Enter Leaves To be kept');
-  greeting.position(20, 210);
+  btnUseParen = createButton('Create Network');
+  btnUseParen.position(180, 255);
+  btnUseParen.mousePressed(onClickCreateNetwork);
 
-  greeting = createElement('h2', 'Enter Flag and Root');
-  greeting.position(20, 410);
+  btnRemoveNodes = createButton('Remove Nodes');
+  btnRemoveNodes.position(180, 325);
+  btnRemoveNodes.mousePressed(removeNodesAction);
+
+  greeting = createElement('h3', 'Enter Leaves To be kept');
+  greeting.position(20, 279);
+
+  greeting = createElement('h3', 'Enter Flag and Root');
+  greeting.position(20, 420);
 
   textAlign(CENTER);
   textSize(50);
@@ -44,6 +51,14 @@ function setup() {
 
   textAlign(CENTER);
   textSize(50);
+}
+
+function onClickCreateNetwork() {
+  var parentheticalText = inputForParenthetical.value();
+  // var tripRoot = input2.value();
+
+  // pushChangeRootToServer(flag, tripRoot)
+  greeting.html('Flag='+parentheticalText);
 }
 
 
