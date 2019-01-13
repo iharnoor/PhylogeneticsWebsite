@@ -11,6 +11,9 @@ function setup() {
   // The 'multiple' flag allows more than one file to be selected
   var fileSelect = createFileInput(gotFile, 'multiple');
 
+  inputForPlotFlag = createInput('');
+  inputForPlotFlag.position(270, 235);
+
   input = createElement('textarea', 'Enter Leaves here');
 
   input.position(20, 325);
@@ -58,8 +61,6 @@ function onClickCreateNetwork() {
   // var tripRoot = input2.value();
 
   pushParentheticalFormatToServer(parentheticalText)
-
-  // greeting.html('Flag='+parentheticalText);
 }
 
 
@@ -105,18 +106,18 @@ function gotFile(file) {
     // var paraText=  document.getElementsByClassName('text').innerHTML;
     paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-    pushStringToServer(paraText); 
+    pushTripletsToServer(paraText,inputForPlotFlag); 
     // push the file to the Server
   }
 }
-    
-function pushStringToServer(triplets) {
+
+function pushTripletsToServer(triplets,flag) {
   var data = JSON.stringify({
         "text": triplets
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/upload/");
+  request.open("POST", "http://127.0.0.1:5000/upload/"+flag);
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);

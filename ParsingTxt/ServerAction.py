@@ -25,13 +25,13 @@ def convertDotToPNG(fileName):
     graph.write_png('cExample1.png')
 
 
-def convertDotToPNGJulia(fileName):
+def convertDotToPNGJulia(fileName, flag=''):
     paren = returnParentheticalFormat(fileName)
     with open("NetworkParen.net", "w") as text_file:
         text_file.write(paren)
     # write it to a file
     # then use the julia command
-    cmd = 'julia plot-network.jl NetworkParen.net'
+    cmd = 'julia plot-network.jl NetworkParen.net ' + flag
     os.system(cmd)
 
 
@@ -47,12 +47,12 @@ def removeLeaves(leafNodes):
     os.system(cmd)
 
 
-def parentheticalFormatToPNG(parentheticalFormat):
+def parentheticalFormatToPNG(parentheticalFormat, flag=''):
     with open("NetworkParen.net", "w") as text_file:
         text_file.write(parentheticalFormat)
     # write it to a file
     # then use the julia command
-    cmd = 'julia plot-network.jl NetworkParen.net'
+    cmd = 'julia plot-network.jl NetworkParen.net ' + flag
     os.system(cmd)
 
 

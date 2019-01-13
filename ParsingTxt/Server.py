@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 
 # POST
-@app.route('/upload/', methods=['POST'])
-def uploadTriplets():
+@app.route('/upload/<flag>', methods=['POST'])
+def uploadTriplets(flag):
     """
     predicts requested text whether it is ham or spam
     :return: json
@@ -23,9 +23,13 @@ def uploadTriplets():
     print(triplets)
     with open('retrievedTriplets.txt', 'w+') as f:
         f.write(triplets)
+
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     # ServerAction.convertDotToPNG('cExample1.dot')
-    ServerAction.convertDotToPNGJulia('cExample1.dot')
+    if len(flag)>1:
+        ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
+    else:
+        ServerAction.convertDotToPNGJulia('cExample1.dot')
 
     with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
