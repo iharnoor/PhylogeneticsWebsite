@@ -51,6 +51,10 @@ function setup() {
   button = createButton('Download as PNG');
   button.position(500, 465);
   button.mousePressed(downloadImage);
+	
+  button = createButton('Download Parenthetical Format');
+  button.position(700, 465);
+  button.mousePressed(dwnPFormat);
 
   textAlign(CENTER);
   textSize(50);
@@ -86,6 +90,17 @@ function downloadImage(){
   window.open(url, 'image.png');
 //  window.location= "buf/image.png";
 }
+
+function getParentheticalFmt(){
+	var pFmt= "Whae Guru ji da khalsa, Wahe Guru di fateh";
+	return pFmt;
+}
+
+function dwnPFormat(){
+	var text= getParentheticalFmt() 
+//	var text= "stariakal";
+	download(text, "ParentheticalFormat.txt", "text/html")
+	}
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
