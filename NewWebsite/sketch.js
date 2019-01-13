@@ -48,6 +48,8 @@ function setup() {
   button = createButton('Download as PNG');
   button.position(500, 465);
   button.mousePressed(downloadImage);
+	
+  
 
   textAlign(CENTER);
   textSize(50);
@@ -84,6 +86,7 @@ function downloadImage(){
   window.open(url, 'image.png');
 //  window.location= "buf/image.png";
 }
+
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
