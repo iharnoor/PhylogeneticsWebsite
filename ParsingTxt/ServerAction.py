@@ -47,6 +47,15 @@ def removeLeaves(leafNodes):
     os.system(cmd)
 
 
+def parentheticalFormatToPNG(parentheticalFormat):
+    with open("NetworkParen.net", "w") as text_file:
+        text_file.write(parentheticalFormat)
+    # write it to a file
+    # then use the julia command
+    cmd = 'julia plot-network.jl NetworkParen.net'
+    os.system(cmd)
+
+
 # assumes that the triplets are in the parenthetical format in hte NetworkParen.net text file
 # converts
 def changeRoot(flag, newRoot):

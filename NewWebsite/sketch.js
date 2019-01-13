@@ -57,8 +57,9 @@ function onClickCreateNetwork() {
   var parentheticalText = inputForParenthetical.value();
   // var tripRoot = input2.value();
 
-  // pushChangeRootToServer(flag, tripRoot)
-  greeting.html('Flag='+parentheticalText);
+  pushParentheticalFormatToServer(parentheticalText)
+
+  // greeting.html('Flag='+parentheticalText);
 }
 
 
@@ -197,3 +198,32 @@ function pushChangeRootToServer(flag, tripRoot) {
       }
     }
 }
+
+function pushParentheticalFormatToServer(parenthetical) {
+  var data = JSON.stringify({
+        "text": parenthetical
+  });;
+
+  var request = new XMLHttpRequest();
+  request.open("POST", "http://127.0.0.1:5000/uploadParenthetical/");
+  request.setRequestHeader("Content-Type", "application/json");
+  request.addEventListener("readystatechange", processRequest, false);
+  request.send(data);
+    function processRequest(e){
+    // document.write("This is Working <p>");
+      if(request.readyState === 4 && request.status === 200){
+        var response = request.responseText;
+//        document.write(response);
+        // Convert Base64 to Image
+        var img = createImg();
+        img.class('thumb');
+        document.getElementsByClassName('thumb')[0]
+        .setAttribute(
+        'src', 'data:image/png;base64,'+response);
+      }
+      else if (request.readyState ==4){
+        document.write("<p>Error : " + request.status + "," + request.statusText);
+      }
+    }
+}
+

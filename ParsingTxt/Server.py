@@ -77,5 +77,25 @@ def uploadRootToBeChanged(root):
     return encoded_string
 
 
+# POST
+@app.route('/uploadParenthetical/', methods=['POST'])
+def uploadParentheticalFormat():
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    parentheticalFormat = json['text']
+
+    print(parentheticalFormat)
+
+    ServerAction.parentheticalFormatToPNG(parentheticalFormat)
+
+    with open("net.png", "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read())
+    print(encoded_string)
+    return encoded_string
+
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=5000)
