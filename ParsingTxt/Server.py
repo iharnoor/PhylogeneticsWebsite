@@ -26,7 +26,7 @@ def uploadTriplets(flag):
 
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     # ServerAction.convertDotToPNG('cExample1.dot')
-    if len(flag)>1:
+    if len(flag) > 1:
         ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
     else:
         ServerAction.convertDotToPNGJulia('cExample1.dot')
@@ -99,6 +99,18 @@ def uploadParentheticalFormat():
         encoded_string = base64.b64encode(image_file.read())
     print(encoded_string)
     return encoded_string
+
+
+@app.route('/getParenthetical/')
+def getParenthetical():
+    """
+    this serves as a demo purpose
+    :param user:
+    :return: str
+    """
+    parenthetical = ServerAction.returnParentheticalFormat('cExample.dot')
+    print(parenthetical)
+    return "Hello parenthetical is here" + parenthetical
 
 
 if __name__ == '__main__':
