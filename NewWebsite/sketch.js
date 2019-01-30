@@ -12,7 +12,7 @@ function setup() {
   var fileSelect = createFileInput(gotFile, 'multiple');
 
   inputForPlotFlag = createInput('');
-  inputForPlotFlag.position(270, 235);
+  inputForPlotFlag.position(270, 195);
 
   input = createElement('textarea', 'Enter Leaves here');
 
@@ -121,7 +121,9 @@ function gotFile(file) {
     // var paraText=  document.getElementsByClassName('text').innerHTML;
     paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-    pushTripletsToServer(paraText,inputForPlotFlag); 
+    // document.write("flag = ",inputForPlotFlag)
+    var flag = inputForPlotFlag.value()
+    pushTripletsToServer(paraText,flag); 
     // push the file to the Server
   }
 }

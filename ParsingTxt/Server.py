@@ -13,6 +13,7 @@ def uploadTriplets(flag):
     predicts requested text whether it is ham or spam
     :return: json
     """
+    print("Flaga ggafadslfladksf")
     json = request.get_json()
     print(json)
     if len(json['text']) == 0:
@@ -26,7 +27,8 @@ def uploadTriplets(flag):
 
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     # ServerAction.convertDotToPNG('cExample1.dot')
-    if len(flag) > 1:
+    print('flag=', flag)
+    if len(flag) > 0:
         ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
     else:
         ServerAction.convertDotToPNGJulia('cExample1.dot')
