@@ -13,7 +13,6 @@ def uploadTriplets(flag):
     predicts requested text whether it is ham or spam
     :return: json
     """
-    print("Flaga ggafadslfladksf")
     json = request.get_json()
     print(json)
     if len(json['text']) == 0:
@@ -84,8 +83,8 @@ def uploadRootToBeChanged(root):
 
 
 # POST
-@app.route('/uploadParenthetical/', methods=['POST'])
-def uploadParentheticalFormat():
+@app.route('/uploadParenthetical/<flag>', methods=['POST'])
+def uploadParentheticalFormat(flag):
     json = request.get_json()
     print(json)
     if len(json['text']) == 0:
@@ -95,7 +94,7 @@ def uploadParentheticalFormat():
 
     print(parentheticalFormat)
 
-    ServerAction.parentheticalFormatToPNG(parentheticalFormat)
+    ServerAction.parentheticalFormatToPNG(parentheticalFormat, flag)
 
     with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())

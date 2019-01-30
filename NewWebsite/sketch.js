@@ -63,8 +63,9 @@ function setup() {
 function onClickCreateNetwork() {
   var parentheticalText = inputForParenthetical.value();
   // var tripRoot = input2.value();
+  var flag = inputForPlotFlag.value()
 
-  pushParentheticalFormatToServer(parentheticalText)
+  pushParentheticalFormatToServer(parentheticalText,flag)
 }
 
 
@@ -217,13 +218,13 @@ function pushChangeRootToServer(flag, tripRoot) {
     }
 }
 
-function pushParentheticalFormatToServer(parenthetical) {
+function pushParentheticalFormatToServer(parenthetical,flag) {
   var data = JSON.stringify({
         "text": parenthetical
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/uploadParenthetical/");
+  request.open("POST", "http://127.0.0.1:5000/uploadParenthetical/"+flag);
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);
