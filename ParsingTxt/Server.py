@@ -5,6 +5,12 @@ import base64
 
 app = Flask(__name__)
 
+def returnReducedDotFile(fileName):
+    parentheticalFormat = ''
+    for line in list(open(fileName)) :
+        if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
+            parentheticalFormat += line
+    return parentheticalFormat.rstrip()
 
 # POST
 @app.route('/upload/<flag>', methods=['POST'])
@@ -112,6 +118,39 @@ def getParenthetical():
     parenthetical = ServerAction.returnParentheticalFormat('cExample.dot')
     print(parenthetical)
     return "Hello parenthetical is here" + parenthetical
+
+
+# POST
+@app.route('/upload/<flag>', methods=['POST'])
+def uploadTripletsAndReturnDot(flag):
+    """
+    predicts requested text whether it is ham or spam
+    :return: json
+    """
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    triplets = json['text']
+
+    print(triplets)
+    with open('retrievedTriplets.txt', 'w+') as f:
+        f.write(triplets)
+
+    ServerAction.tripletsToDot('retrievedTriplets.txt')
+    dotFile = returnReducedDotFile('cExample1.dot')
+
+
+    # ServerAction.convertDotToPNG('cExample1.dot')
+    # print('flag=', flag)
+    # if len(flag) > 0:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
+    # else:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
+
+
+    return dotFile
 
 
 if __name__ == '__main__':
