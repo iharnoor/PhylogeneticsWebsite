@@ -4,7 +4,9 @@
 // http://shiffman.net/a2z
 
 function setup() {
-  noCanvas();
+//  noCanvas();
+	createCanvas(300, 300);
+	
   // createFileInput creates a button in the window
   // that can be used to select files
   // The first argument is the callback function
@@ -12,37 +14,37 @@ function setup() {
   var fileSelect = createFileInput(gotFile, 'multiple');
 
   inputForPlotFlag = createInput('');
-  inputForPlotFlag.position(270, 235);
+  inputForPlotFlag.position(370, 235);
 
   input = createElement('textarea', 'Enter Leaves here');
 
-  input.position(20, 325);
+  input.position(300, 325);
 
   inputForParenthetical = createElement('textarea', 'Enter Parenthetical Format here');
-  inputForParenthetical.position(20,255);
+  inputForParenthetical.position(300,255);
 
   btnUseParen = createButton('Create Network');
-  btnUseParen.position(180, 255);
+  btnUseParen.position(380, 255);
   btnUseParen.mousePressed(onClickCreateNetwork);
 
   btnRemoveNodes = createButton('Remove Nodes');
-  btnRemoveNodes.position(180, 325);
+  btnRemoveNodes.position(380, 325);
   btnRemoveNodes.mousePressed(removeNodesAction);
 
   greeting = createElement('h3', 'Enter Leaves To be kept');
-  greeting.position(20, 279);
+  greeting.position(300, 279);
 
   greeting = createElement('h3', 'Enter Flag and Root');
-  greeting.position(20, 420);
+  greeting.position(300, 420);
 
   textAlign(CENTER);
   textSize(50);
 
   inputForFlag = createInput();
-  inputForFlag.position(20, 465);
+  inputForFlag.position(300, 465);
   
   input2 = createInput();
-  input2.position(200, 465);
+  input2.position(300, 465);
 
   button = createButton('Change Root');
   button.position(input2.x + input.width, 465);
@@ -51,6 +53,7 @@ function setup() {
   button = createButton('Download as PNG');
   button.position(500, 465);
   button.mousePressed(downloadImage);
+  button = select('#btn') 
 	
   button = createButton('Download Parenthetical Format');
   button.position(700, 465);

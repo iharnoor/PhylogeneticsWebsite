@@ -1,33 +1,65 @@
 @charset "utf-8";
-body {
-			padding: 20px;
-		 
-		  }
-.file {
-			margin-top: 24px;
-			font-weight: bold;
-		  }
+body{
+		/*padding: 20px;*/
+		margin: 0px;
+	}
+.file{
+		margin-top: 24px;
+		font-weight: bold;
+	 }
 
-.text {
-			border-style: solid;
-			border-width: 1px;
-			padding: 20px;
-		  }
+.text{
+		border-style: solid;
+		border-width: 1px;
+		padding: 20px;
+	  }
 .center{
 	text-align: center;
+	}
+
+.top{ 
+  /*overflow: hidden;*/
+  background-color: #757575;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif}
+.vbox{
+	width: 30%;
+	/*margin-top: 86px;*/
+	height: 100%;
+	margin-left: 0px;
+	background-color: #74b9ff;
+	float: left;
+	/*text-align: center;*/
+	padding-left: 30px;
+}
 
-.btn {
+h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.button {
   background-color: DodgerBlue;
   border: none;
   color: white;
+  margin-top: 20px;
   padding: 12px 20px;
   cursor: pointer;
   font-size: 20px;
+  border-radius: 25px;
 }
 
+#hidden{
+	/*display: none;*/
+	visibility: hidden;
+}
+#visible{
+	visibility: visible;
+}
 
 	/* CSS Document */
 

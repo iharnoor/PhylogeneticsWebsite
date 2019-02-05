@@ -1,23 +1,41 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>TRIP 2 NET</title>
+    <title>DNA 2 NET</title>
 
-	<link href="styles.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
     <script src="libraries/p5.js" type="text/javascript"></script>
-	<script src="libraries/download.js" type="text/javascript"></script>
+    <script src="libraries/download.js" type="text/javascript"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
     <script src="libraries/p5.sound.js" type="text/javascript"></script>
-
+    <script src="layout.js" type="text/javascript"></script>
     <script src="sketch.js" type="text/javascript"></script>
 	
   </head>
-  <body>
+  <body >
+    
+      <div class="top"><h1 class = "center" style="color: #a4a4a4">DNA 2 NET</h1>
+      </div>
+      
 
-    <h1 class = "center" >TRIP 2 NET</h1>
+      <div class="vbox">
+        <!-- <button class="button">Choose File</button> -->
+        <select class= button id="fileType">
+          <option value="type">Select file type</option>
+          <option value="pf">Patenthetical format</option>
+          <option value="trip" onclick="unhide()">Triplets</option>
+          <option value="dna">DNA format</option>
+          </select><br>
 
-    <p><h3>This example loads a file (or multiple files) that are selected by a user from their local drive.  If the file is an image, an image element is displayed.  For a text file, a paragraph element is created to display the text.</h3></p>
+        <button class="button" id="chooser" style="visibility: hidden;">Choose file</button><br>
+        <button class="button" onclick="removeNodesAction()">Remove nodes</button><br>
+        <button class="button" onclick="changeRootAction()">Change root</button><br>
+        <button class="button" onclick="dwnPFormat()">Download Parentheical format</button><br>
+        <button class="button" onclick="downloadImage()">Download PNG</button><br>
+      </div>
+
+    <!-- <h3>This example loads a file (or multiple files) that are selected by a user from their local drive.  If the file is an image, an image element is displayed.  For a text file, a paragraph element is created to display the text.</h3> -->
 	
 
 	
