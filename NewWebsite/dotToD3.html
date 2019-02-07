@@ -4,18 +4,25 @@
 
     .links path {
         fill: none;
-        stroke: #666;
+        stroke: #afb900;
         stroke-width: 1.5px;
     }
 
-    .nodes circle {
-        fill: #ccc;
+    .nodes1 circle {
+        fill: #0dcc00;
         stroke: #fff;
         stroke-width: 1.5px;
     }
 
+    .nodes2 circle {
+        fill: #0023cc;
+        stroke: #fff;
+        stroke-width: 1.5px;
+    }
+
+
     .nodes text {
-        fill: #000;
+        fill: #00d020;
         font: 10px sans-serif;
         pointer-events: none;
     }
@@ -28,6 +35,7 @@
 </style>
 <svg class="hi" width="960" height="600"></svg>
 <h1>Hi</h1>
+<p id="demo"></p>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="d3-dot-graph.js"></script>
 <script>
@@ -67,12 +75,54 @@
             .attr("d", "M0,-5L10,0L0,5");
         ;
 
-// add the links and the arrows
+        // add the links and the arrows
         var path = svg.append("svg:g").attr("class", "links").selectAll("path")
             .data(graph.links)
             .enter().append("svg:path")
             //    .attr("class", function(d) { return "link " + d.type; })
             .attr("marker-end", "url(#end)");
+
+        // tempArr = graph.nodes;
+        //
+        // final1 = [];
+        // final2 = [];
+        //
+        // for (let i = 0; i < tempArr.length; i++) {
+        //     var tempNode = tempArr[i].id;
+        //     if (parseInt(tempNode) < 1000) {
+        //         document.getElementById("demo").innerHTML += "," + tempNode;
+        //         // node.setAttribute("id","leafNode");
+        //         // node.style.color = "#00d020";
+        //         final1.push(tempArr[i]);
+        //     }
+        //     else {
+        //         final2.push(tempArr[i])
+        //     }
+        // }
+
+        // document.write(tempArr);
+        // // var final1= Array();
+        // // var final2= Array();
+        //
+        // for (var i in tempArr){
+        //     if(parseInt(i.id.toString())< 1000){
+        //         // final1.append(i)
+        //         print(i.id.toString());
+        //     }
+        // }
+
+        // for (let i = 0; i < final1.length; i++) {
+        //     final2.push(final1[i])
+        // }
+
+
+        //
+        // var khus = svg.append("svg")
+        //     .attr("class", "nodes2")
+        //     .selectAll("circle")
+        //     .data(final2).attr("id","naman")
+        //     .enter().append("svg");
+
 
         var node = svg.append("g")
             .attr("class", "nodes")
@@ -89,6 +139,7 @@
                 .on("drag", dragged)
                 .on("end", dragended));
 
+
         // add the text
         node.append("text")
             .attr("x", 12)
@@ -96,6 +147,7 @@
             .text(function (d) {
                 return d.id;
             });
+
 
         simulation
             .nodes(graph.nodes)
@@ -137,7 +189,8 @@
                     return "translate(" + d.x + "," + d.y + ")";
                 });
         }
-    });
+    })
+    ;
 
     function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();

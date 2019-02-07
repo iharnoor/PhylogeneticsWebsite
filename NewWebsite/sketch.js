@@ -40,7 +40,7 @@ function setup() {
 
   inputForFlag = createInput();
   inputForFlag.position(20, 465);
-  
+
   input2 = createInput();
   input2.position(200, 465);
 
@@ -51,7 +51,7 @@ function setup() {
   button = createButton('Download as PNG');
   button.position(500, 465);
   button.mousePressed(downloadImage);
-	
+
   button = createButton('Download Parenthetical Format');
   button.position(700, 465);
   button.mousePressed(dwnPFormat);
@@ -129,27 +129,28 @@ function gotFile(file) {
   }
 }
 
-function pushTripletsToServer(triplets,flag) {
+function pushTripletsToServer(triplets) {
   var data = JSON.stringify({
         "text": triplets
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/upload/"+flag);
+  request.open("POST", "http://127.0.0.1:5000/upload/");
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);
     function processRequest(e){
-    // document.write("This is Working <p>");
+    document.write("This is Working <p>");
       if(request.readyState === 4 && request.status === 200){
         var response = request.responseText;
-//        document.write(response);
+       document.write(response);
         // Convert Base64 to Image
-        var img = createImg();
-        img.class('thumb');
-        img = document.getElementsByClassName('thumb')[0]
-        .setAttribute(
-        'src', 'data:image/png;base64,'+response);
+        // var img = createImg();
+        // img.class('thumb');
+        // img = document.getElementsByClassName('thumb')[0]
+        // .setAttribute(
+        // 'src', 'data:image/png;base64,'+response);
+          createGraph()
 		
 
       }
@@ -158,91 +159,3 @@ function pushTripletsToServer(triplets,flag) {
       }
     }
 }
-
-function pushLeavesToServer(leaves) {
-  var data = JSON.stringify({
-        "text": leaves
-  });;
-
-  var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/uploadLeaves/");
-  request.setRequestHeader("Content-Type", "application/json");
-  request.addEventListener("readystatechange", processRequest, false);
-  request.send(data);
-    function processRequest(e){
-    // document.write("This is Working <p>");
-      if(request.readyState === 4 && request.status === 200){
-        var response = request.responseText;
-//        document.write(response);
-        // Convert Base64 to Image
-        var img = createImg();
-        img.class('thumb');
-        document.getElementsByClassName('thumb')[0]
-        .setAttribute(
-        'src', 'data:image/png;base64,'+response);
-
-      }
-      else if (request.readyState ==4){
-        document.write("<p>Error : " + request.status + "," + request.statusText);
-      }
-    }
-}
-
-
-function pushChangeRootToServer(flag, tripRoot) {
-  var data = JSON.stringify({
-        "text": flag
-  });;
-
-  var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/changeRoot/"+tripRoot);
-  request.setRequestHeader("Content-Type", "application/json");
-  request.addEventListener("readystatechange", processRequest, false);
-  request.send(data);
-    function processRequest(e){
-    // document.write("This is Working <p>");
-      if(request.readyState === 4 && request.status === 200){
-        var response = request.responseText;
-//        document.write(response);
-        // Convert Base64 to Image
-        var img = createImg();
-        img.class('thumb');
-        document.getElementsByClassName('thumb')[0]
-        .setAttribute(
-        'src', 'data:image/png;base64,'+response);
-
-      }
-      else if (request.readyState === 4){
-        document.write("<p>Error : " + request.status + "," + request.statusText);
-      }
-    }
-}
-
-function pushParentheticalFormatToServer(parenthetical,flag) {
-  var data = JSON.stringify({
-        "text": parenthetical
-  });;
-
-  var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/uploadParenthetical/"+flag);
-  request.setRequestHeader("Content-Type", "application/json");
-  request.addEventListener("readystatechange", processRequest, false);
-  request.send(data);
-    function processRequest(e){
-    // document.write("This is Working <p>");
-      if(request.readyState === 4 && request.status === 200){
-        var response = request.responseText;
-//        document.write(response);
-        // Convert Base64 to Image
-        var img = createImg();
-        img.class('thumb');
-        document.getElementsByClassName('thumb')[0]
-        .setAttribute(
-        'src', 'data:image/png;base64,'+response);
-      }
-      else if (request.readyState ==4){
-        document.write("<p>Error : " + request.status + "," + request.statusText);
-      }
-    }
-}
-
