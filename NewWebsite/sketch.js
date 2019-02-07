@@ -4,47 +4,42 @@
 // http://shiffman.net/a2z
 
 function setup() {
-//  noCanvas();
-	createCanvas(300, 300);
-	
+  noCanvas();
   // createFileInput creates a button in the window
   // that can be used to select files
   // The first argument is the callback function
   // The 'multiple' flag allows more than one file to be selected
   var fileSelect = createFileInput(gotFile, 'multiple');
 
-  inputForPlotFlag = createInput('');
-  inputForPlotFlag.position(370, 235);
-
   input = createElement('textarea', 'Enter Leaves here');
 
-  input.position(300, 325);
+  input.position(20, 325);
 
   inputForParenthetical = createElement('textarea', 'Enter Parenthetical Format here');
-  inputForParenthetical.position(300,255);
+  inputForParenthetical.position(20,255);
 
   btnUseParen = createButton('Create Network');
-  btnUseParen.position(380, 255);
+  btnUseParen.position(180, 255);
   btnUseParen.mousePressed(onClickCreateNetwork);
 
   btnRemoveNodes = createButton('Remove Nodes');
-  btnRemoveNodes.position(380, 325);
+  btnRemoveNodes.position(180, 325);
   btnRemoveNodes.mousePressed(removeNodesAction);
 
   greeting = createElement('h3', 'Enter Leaves To be kept');
-  greeting.position(300, 279);
+  greeting.position(20, 279);
 
   greeting = createElement('h3', 'Enter Flag and Root');
-  greeting.position(300, 420);
+  greeting.position(20, 420);
 
   textAlign(CENTER);
   textSize(50);
 
   inputForFlag = createInput();
-  inputForFlag.position(300, 465);
+  inputForFlag.position(20, 465);
   
   input2 = createInput();
-  input2.position(300, 465);
+  input2.position(200, 465);
 
   button = createButton('Change Root');
   button.position(input2.x + input.width, 465);
@@ -53,11 +48,8 @@ function setup() {
   button = createButton('Download as PNG');
   button.position(500, 465);
   button.mousePressed(downloadImage);
-  button = select('#btn') 
-	
-  button = createButton('Download Parenthetical Format');
-  button.position(700, 465);
-  button.mousePressed(dwnPFormat);
+  
+  
 
   textAlign(CENTER);
   textSize(50);
@@ -67,7 +59,8 @@ function onClickCreateNetwork() {
   var parentheticalText = inputForParenthetical.value();
   // var tripRoot = input2.value();
 
-  pushParentheticalFormatToServer(parentheticalText)
+  // pushChangeRootToServer(flag, tripRoot)
+  greeting.html('Flag='+parentheticalText);
 }
 
 
@@ -94,16 +87,6 @@ function downloadImage(){
 //  window.location= "buf/image.png";
 }
 
-function getParentheticalFmt(){
-	var pFmt= "Whae Guru ji da khalsa, Wahe Guru di fateh";
-	return pFmt;
-}
-
-function dwnPFormat(){
-	var text= getParentheticalFmt() 
-//	var text= "stariakal";
-	download(text, "ParentheticalFormat.txt", "text/html")
-	}
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
@@ -124,18 +107,18 @@ function gotFile(file) {
     // var paraText=  document.getElementsByClassName('text').innerHTML;
     paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-    pushTripletsToServer(paraText,inputForPlotFlag); 
+    pushStringToServer(paraText); 
     // push the file to the Server
   }
 }
-
-function pushTripletsToServer(triplets,flag) {
+    
+function pushStringToServer(triplets) {
   var data = JSON.stringify({
         "text": triplets
   });;
 
   var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/upload/"+flag);
+  request.open("POST", "http://127.0.0.1:5000/upload/");
   request.setRequestHeader("Content-Type", "application/json");
   request.addEventListener("readystatechange", processRequest, false);
   request.send(data);
@@ -150,7 +133,7 @@ function pushTripletsToServer(triplets,flag) {
         img = document.getElementsByClassName('thumb')[0]
         .setAttribute(
         'src', 'data:image/png;base64,'+response);
-		
+    
 
       }
       else if (request.readyState === 4){
@@ -217,32 +200,3 @@ function pushChangeRootToServer(flag, tripRoot) {
       }
     }
 }
-
-function pushParentheticalFormatToServer(parenthetical) {
-  var data = JSON.stringify({
-        "text": parenthetical
-  });;
-
-  var request = new XMLHttpRequest();
-  request.open("POST", "http://127.0.0.1:5000/uploadParenthetical/");
-  request.setRequestHeader("Content-Type", "application/json");
-  request.addEventListener("readystatechange", processRequest, false);
-  request.send(data);
-    function processRequest(e){
-    // document.write("This is Working <p>");
-      if(request.readyState === 4 && request.status === 200){
-        var response = request.responseText;
-//        document.write(response);
-        // Convert Base64 to Image
-        var img = createImg();
-        img.class('thumb');
-        document.getElementsByClassName('thumb')[0]
-        .setAttribute(
-        'src', 'data:image/png;base64,'+response);
-      }
-      else if (request.readyState ==4){
-        document.write("<p>Error : " + request.status + "," + request.statusText);
-      }
-    }
-}
-

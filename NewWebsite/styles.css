@@ -19,7 +19,7 @@ body{
 
 .top{ 
   /*overflow: hidden;*/
-  background-color: #757575;
+  /*background-color: #757575;*/
   position: relative;
   top: 0;
   left: 0;
@@ -53,13 +53,49 @@ h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
   border-radius: 25px;
 }
 
-#hidden{
+/*/*#hidden{
 	/*display: none;*/
-	visibility: hidden;
+	/*visibility: hidden;
 }
 #visible{
 	visibility: visible;
 }
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
 
-	/* CSS Document */
+[type="file"] + label {
+  background: #f15d22;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+	font-family: 'Poppins', sans-serif;
+	font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+  
+  &:hover {
+    background-color: darken(#f15d22, 10%);
+  }
+  
+  &.btn-1 {
+    background-color: #f79159;
+    box-shadow: 0 6px darken(#f79159, 10%);
+    transition: none;
 
+    &:hover {
+      box-shadow: 0 4px darken(#f79159, 10%);
+      top: 2px;
+    }*/
+  /*}*/
+  
+  
