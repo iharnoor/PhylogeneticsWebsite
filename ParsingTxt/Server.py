@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 
 # POST
-@app.route('/upload/<flag>', methods=['POST'])
-def uploadTriplets(flag):
+@app.route('/upload/', methods=['POST'])
+def uploadTriplets():
     """
     predicts requested text whether it is ham or spam
     :return: json
@@ -23,13 +23,9 @@ def uploadTriplets(flag):
     print(triplets)
     with open('retrievedTriplets.txt', 'w+') as f:
         f.write(triplets)
-
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     # ServerAction.convertDotToPNG('cExample1.dot')
-    if len(flag)>1:
-        ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-    else:
-        ServerAction.convertDotToPNGJulia('cExample1.dot')
+    ServerAction.convertDotToPNGJulia('cExample1.dot')
 
     with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
@@ -75,26 +71,6 @@ def uploadRootToBeChanged(root):
     print(flag)
 
     ServerAction.changeRoot(flag, root)
-    with open("net.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    print(encoded_string)
-    return encoded_string
-
-
-# POST
-@app.route('/uploadParenthetical/', methods=['POST'])
-def uploadParentheticalFormat():
-    json = request.get_json()
-    print(json)
-    if len(json['text']) == 0:
-        return 'error invalid input'
-
-    parentheticalFormat = json['text']
-
-    print(parentheticalFormat)
-
-    ServerAction.parentheticalFormatToPNG(parentheticalFormat)
-
     with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     print(encoded_string)
