@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-
     .links path {
         fill: none;
         stroke: #afb900;
@@ -82,52 +81,36 @@
             //    .attr("class", function(d) { return "link " + d.type; })
             .attr("marker-end", "url(#end)");
 
-        // tempArr = graph.nodes;
-        //
-        // final1 = [];
-        // final2 = [];
-        //
-        // for (let i = 0; i < tempArr.length; i++) {
-        //     var tempNode = tempArr[i].id;
-        //     if (parseInt(tempNode) < 1000) {
-        //         document.getElementById("demo").innerHTML += "," + tempNode;
-        //         // node.setAttribute("id","leafNode");
-        //         // node.style.color = "#00d020";
-        //         final1.push(tempArr[i]);
-        //     }
-        //     else {
-        //         final2.push(tempArr[i])
-        //     }
-        // }
+        tempArr = graph.nodes;
 
-        // document.write(tempArr);
-        // // var final1= Array();
-        // // var final2= Array();
-        //
-        // for (var i in tempArr){
-        //     if(parseInt(i.id.toString())< 1000){
-        //         // final1.append(i)
-        //         print(i.id.toString());
-        //     }
-        // }
+        final1 = [];
+        final2 = [];
 
-        // for (let i = 0; i < final1.length; i++) {
-        //     final2.push(final1[i])
-        // }
-
-
-        //
-        // var khus = svg.append("svg")
-        //     .attr("class", "nodes2")
-        //     .selectAll("circle")
-        //     .data(final2).attr("id","naman")
-        //     .enter().append("svg");
+        for (let i = 0; i < tempArr.length; i++) {
+            var tempNode = tempArr[i].id;
+            if (parseInt(tempNode) < 1000) {
+                document.getElementById("demo").innerHTML += "," + tempNode;
+                // node.setAttribute("id","leafNode");
+                // node.style.color = "#00d020";
+                final1.push(tempArr[i]);
+            }
+            else {
+                final2.push(tempArr[i])
+            }
+        }
 
 
         var node = svg.append("g")
-            .attr("class", "nodes")
+            .attr("class", "nodes2")
             .selectAll("circle")
-            .data(graph.nodes)
+            .data(final2)
+            .enter().append("g");
+
+
+        var node = svg.append("g")
+            .attr("class", "nodes1")
+            .selectAll("circle")
+            .data(final1)
             .enter().append("g")
 
         node
