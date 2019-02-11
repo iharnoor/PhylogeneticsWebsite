@@ -4,6 +4,8 @@
     <list default="true" id="51f6065d-727d-4f89-8034-b031fcebc771" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dotToD3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dotToD3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/sketch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ParsingTxt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ParsingTxt/Server.py" afterDir="false" />
     </list>
@@ -18,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dotToD3.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="-19">
+              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -30,17 +32,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="784">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            <state relative-caret-position="694">
+              <caret line="287" column="28" lean-forward="true" selection-start-line="287" selection-end-line="288" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -65,6 +67,9 @@
       <find>graph.node</find>
       <find>graph.nodes</find>
       <find>cExample.dot</find>
+      <find>color</find>
+      <find>line</find>
+      <find>this is work</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,9 +79,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/D3/indexD3.html" />
-        <option value="$PROJECT_DIR$/sketch.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/dotToD3.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/sketch.js" />
       </list>
     </option>
   </component>
@@ -128,15 +133,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.dotToD3.html">
+  <component name="RunManager" selected="Node.js.sketch.js">
     <configuration name="dotToD3.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/NewWebsite/dotToD3.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/NewWebsite/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="sketch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/sketch.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.sketch.js" />
         <item itemvalue="JavaScript Debug.dotToD3.html" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
@@ -156,22 +165,23 @@
       <workItem from="1549337225913" duration="6808000" />
       <workItem from="1549505596879" duration="4735000" />
       <workItem from="1549513283838" duration="3641000" />
-      <workItem from="1549841500303" duration="4390000" />
+      <workItem from="1549841500303" duration="6003000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21794000" />
+    <option name="totallyTimeSpent" value="23407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="960" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25665602" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25665602" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32953367" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32953367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.36994818" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -219,27 +229,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sketch.js">
+    <entry file="file://$PROJECT_DIR$/dotToD3.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="-19">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="784">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dotToD3.html">
+    <entry file="file://$PROJECT_DIR$/libraries/p5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="390">
+          <caret line="5964" column="26" lean-forward="true" selection-start-line="5964" selection-start-column="26" selection-end-line="5964" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sketch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="287" column="28" lean-forward="true" selection-start-line="287" selection-end-line="288" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

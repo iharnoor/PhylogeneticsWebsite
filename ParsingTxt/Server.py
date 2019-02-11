@@ -152,12 +152,13 @@ def uploadTripletsAndReturnDot():
     # else:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot')
     print(dotFile)
-    return "dotFile"
+    return "work in progress"
 
 
 # POST
 @app.route('/readDot')
 def receiveDot():
+    print('Sending Dot')
     with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
 
