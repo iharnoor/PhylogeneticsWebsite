@@ -1,5 +1,5 @@
 import ServerAction
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 
 import base64
 
@@ -152,7 +152,14 @@ def uploadTripletsAndReturnDot():
     # else:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot')
     print(dotFile)
-    return dotFile
+    return "dotFile"
+
+
+# POST
+@app.route('/readDot')
+def receiveDot():
+    with open("upload.dot", "r") as f:
+        return Response(f.read(), mimetype='text/plain')
 
 
 if __name__ == '__main__':
