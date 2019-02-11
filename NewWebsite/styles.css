@@ -2,6 +2,7 @@
 body{
 		/*padding: 20px;*/
 		margin: 0px;
+	/*background-color: #74b9ff;*/
 	}
 .file{
 		margin-top: 24px;
@@ -19,7 +20,7 @@ body{
 
 .top{ 
   /*overflow: hidden;*/
-  /*background-color: #757575;*/
+  background-color: #757575;
   position: relative;
   top: 0;
   left: 0;
@@ -31,7 +32,8 @@ body{
 .vbox{
 	width: 30%;
 	/*margin-top: 86px;*/
-	height: 100%;
+	position: relative;
+  	height: 100%;
 	margin-left: 0px;
 	background-color: #74b9ff;
 	float: left;
@@ -51,8 +53,49 @@ h1,h2,h3,h4,h5,h6{font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
   cursor: pointer;
   font-size: 20px;
   border-radius: 25px;
+
 }
 
+.chooseButton{
+	display: inline-block;
+	margin-top: 90px;
+	margin-left: -370px;
+	/*border: 2px solid #dce4ec;*/
+	color: #34495e;
+	cursor: pointer;
+	/*line-height: 40px;*/
+	text-align: left;
+	/*background: #ffffff;*/
+	overflow: hidden;
+	position: absolute;
+	background: #dce4ec;
+	/*padding: 0 10px;*/
+	/*display: inline-block;*/
+	/*height: 40px;*/
+	/*line-height: 40px;*/
+	border-radius: 25px;
+	width: 15%;
+
+}
+
+.chooseButton:hover{
+	border-color: #34495e;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	color: white;
+	/*background: #dce4ec;*/
+
+	background-color: DodgerBlue;
+	border-radius: 25px;
+	padding: 0 10px;
+	display: inline-block;
+	/*height: 40px;*/
+	/*line-height: 40px;*/
+
+
+}
 /*/*#hidden{
 	/*display: none;*/
 	/*visibility: hidden;
