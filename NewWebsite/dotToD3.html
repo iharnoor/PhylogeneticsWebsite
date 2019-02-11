@@ -19,7 +19,6 @@
         stroke-width: 1.5px;
     }
 
-
     .nodes text {
         fill: #00d020;
         font: 10px sans-serif;
@@ -82,7 +81,7 @@
             .attr("marker-end", "url(#end)");
 
         var node = svg.append("g")
-            // .attr("class", "nodes1")
+        // .attr("class", "nodes1")
             .selectAll("circle")
             .data(graph.nodes)
             .enter().append("g");
@@ -102,7 +101,6 @@
                 .on("drag", dragged)
                 .on("end", dragended));
 
-
         // add the text
         node.append("text")
             .attr("x", 12)
@@ -110,7 +108,6 @@
             .text(function (d) {
                 return d.id;
             });
-
 
         simulation
             .nodes(graph.nodes)
@@ -152,8 +149,7 @@
                     return "translate(" + d.x + "," + d.y + ")";
                 });
         }
-    })
-    ;
+    });
 
     function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();

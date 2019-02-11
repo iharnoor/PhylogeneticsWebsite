@@ -6,11 +6,11 @@ import base64
 app = Flask(__name__)
 
 def returnReducedDotFile(fileName):
-    parentheticalFormat = ''
+    dotFormat = ''
     for line in list(open(fileName)):
         if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
-            parentheticalFormat += line
-    return parentheticalFormat.rstrip()
+            dotFormat += line
+    return dotFormat.rstrip()
 
 
 # # POST
@@ -142,14 +142,17 @@ def uploadTripletsAndReturnDot():
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     dotFile = returnReducedDotFile('cExample1.dot')
 
+    with open('upload.dot', 'w+') as f:
+        f.write(dotFile)
+
     # ServerAction.convertDotToPNG('cExample1.dot')
     # print('flag=', flag)
     # if len(flag) > 0:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
     # else:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot')
-
-    return "Good Job"
+    print(dotFile)
+    return dotFile
 
 
 if __name__ == '__main__':
