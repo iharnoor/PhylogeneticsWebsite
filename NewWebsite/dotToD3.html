@@ -81,41 +81,21 @@
             //    .attr("class", function(d) { return "link " + d.type; })
             .attr("marker-end", "url(#end)");
 
-        tempArr = graph.nodes;
-
-        final1 = [];
-        final2 = [];
-
-        for (let i = 0; i < tempArr.length; i++) {
-            var tempNode = tempArr[i].id;
-            if (parseInt(tempNode) < 1000) {
-                document.getElementById("demo").innerHTML += "," + tempNode;
-                // node.setAttribute("id","leafNode");
-                // node.style.color = "#00d020";
-                final1.push(tempArr[i]);
-            }
-            else {
-                final2.push(tempArr[i])
-            }
-        }
-
-
         var node = svg.append("g")
-            .attr("class", "nodes2")
+            // .attr("class", "nodes1")
             .selectAll("circle")
-            .data(final2)
+            .data(graph.nodes)
             .enter().append("g");
-
-
-        var node = svg.append("g")
-            .attr("class", "nodes1")
-            .selectAll("circle")
-            .data(final1)
-            .enter().append("g")
 
         node
             .append("circle")
-            .attr("r", 5)
+            // .attr("r", 5)
+            .attr("r", function (d) {
+                return (parseInt(d.id.toString()) < 1000) ? 10 : 5;
+            })
+            .style("fill", function (d) {
+                return (parseInt(d.id.toString()) < 1000) ? "red" : "green";
+            })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
                 .on("start", dragstarted)
