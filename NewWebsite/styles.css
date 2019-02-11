@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     /*background: #ffffff;*/
     overflow: hidden;
-    position: absolute;
+    position: relative;
     background: #dce4ec;
     /*padding: 0 10px;*/
     /*display: inline-block;*/
