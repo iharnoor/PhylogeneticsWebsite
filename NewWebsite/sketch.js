@@ -1,7 +1,3 @@
-// A2Z F16
-// Daniel Shiffman
-// https://github.com/shiffman/A2Z-F16
-// http://shiffman.net/a2z
 var lineD3 = d3.line()
     .curve(d3.curveCatmullRom.alpha(0.5));
 
@@ -22,7 +18,7 @@ var simulation = d3.forceSimulation()
 
 function createD3Graph() {
     // d3.dot("cExample.dot", function (graph) {
-    d3.dot("http://localhost:5000/readDot", function (graph) {
+    d3.dot("upload.dot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
         //if (error) throw error;
 
@@ -118,6 +114,8 @@ function createD3Graph() {
         }
     });
 }
+
+createD3Graph();
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
