@@ -1,46 +1,47 @@
 import ServerAction
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 
 import base64
 
 app = Flask(__name__)
 
 def returnReducedDotFile(fileName):
-    parentheticalFormat = ''
-    for line in list(open(fileName)) :
+    dotFormat = ''
+    for line in list(open(fileName)):
         if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
-            parentheticalFormat += line
-    return parentheticalFormat.rstrip()
+            dotFormat += line
+    return dotFormat.rstrip()
 
-# POST
-@app.route('/upload/<flag>', methods=['POST'])
-def uploadTriplets(flag):
-    """
-    predicts requested text whether it is ham or spam
-    :return: json
-    """
-    json = request.get_json()
-    print(json)
-    if len(json['text']) == 0:
-        return 'error invalid input'
 
-    triplets = json['text']
-
-    print(triplets)
-    with open('retrievedTriplets.txt', 'w+') as f:
-        f.write(triplets)
-
-    ServerAction.tripletsToDot('retrievedTriplets.txt')
-    # ServerAction.convertDotToPNG('cExample1.dot')
-    print('flag=', flag)
-    if len(flag) > 0:
-        ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-    else:
-        ServerAction.convertDotToPNGJulia('cExample1.dot')
-
-    with open("net.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    return encoded_string
+# # POST
+# @app.route('/upload/<flag>', methods=['POST'])
+# def uploadTriplets(flag):
+#     """
+#     predicts requested text whether it is ham or spam
+#     :return: json
+#     """
+#     json = request.get_json()
+#     print(json)
+#     if len(json['text']) == 0:
+#         return 'error invalid input'
+#
+#     triplets = json['text']
+#
+#     print(triplets)
+#     with open('retrievedTriplets.txt', 'w+') as f:
+#         f.write(triplets)
+#
+#     ServerAction.tripletsToDot('retrievedTriplets.txt')
+#     # ServerAction.convertDotToPNG('cExample1.dot')
+#     print('flag=', flag)
+#     if len(flag) > 0:
+#         ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
+#     else:
+#         ServerAction.convertDotToPNGJulia('cExample1.dot')
+#
+#     with open("net.png", "rb") as image_file:
+#         encoded_string = base64.b64encode(image_file.read())
+#     return encoded_string
 
 
 # POST
@@ -121,8 +122,8 @@ def getParenthetical():
 
 
 # POST
-@app.route('/upload/<flag>', methods=['POST'])
-def uploadTripletsAndReturnDot(flag):
+@app.route('/upload/', methods=['POST'])
+def uploadTripletsAndReturnDot():
     """
     predicts requested text whether it is ham or spam
     :return: json
@@ -141,6 +142,8 @@ def uploadTripletsAndReturnDot(flag):
     ServerAction.tripletsToDot('retrievedTriplets.txt')
     dotFile = returnReducedDotFile('cExample1.dot')
 
+    with open('upload.dot', 'w+') as f:
+        f.write(dotFile)
 
     # ServerAction.convertDotToPNG('cExample1.dot')
     # print('flag=', flag)
@@ -148,9 +151,16 @@ def uploadTripletsAndReturnDot(flag):
     #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
     # else:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot')
+    print(dotFile)
+    return "work in progress"
 
 
-    return dotFile
+# POST
+@app.route('/readDot')
+def receiveDot():
+    print('Sending Dot')
+    with open("upload.dot", "r") as f:
+        return Response(f.read(), mimetype='text/plain')
 
 
 if __name__ == '__main__':
