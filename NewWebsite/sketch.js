@@ -18,7 +18,7 @@ var simulation = d3.forceSimulation()
 
 function createD3Graph() {
     // d3.dot("cExample.dot", function (graph) {
-    d3.dot("http://localhost:5000/readDot", function (graph) {
+    d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
         //if (error) throw error;
 
@@ -175,7 +175,7 @@ function ajaxTest() {
     jQuery.support.cors = true;
     $.ajax({
         type: "GET",
-        url: "http://localhost:5000/readDot",
+        url: "http://localhost:5001/readDot",
         // success: function (data) {
         //     $("#test").html(data);
         //     alert(data);
@@ -269,10 +269,10 @@ function pushStringToServer(triplets) {
     var data = JSON.stringify({
         "text": triplets
     });
-    ;
+
 
     var request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1:5000/upload/");
+    request.open("POST", "http://127.0.0.1:5001/upload/");
     request.setRequestHeader("Content-Type", "application/json");
     request.addEventListener("readystatechange", processRequest, false);
     request.send(data);
