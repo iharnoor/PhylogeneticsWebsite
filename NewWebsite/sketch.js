@@ -18,7 +18,7 @@ var simulation = d3.forceSimulation()
 
 function createD3Graph() {
     // d3.dot("cExample.dot", function (graph) {
-    d3.dot("upload.dot", function (graph) {
+    d3.dot("http://localhost:5000/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
         //if (error) throw error;
 
@@ -44,7 +44,6 @@ function createD3Graph() {
             .attr("marker-end", "url(#end)");
 
         var node = svg.append("g")
-        // .attr("class", "nodes1")
             .selectAll("circle")
             .data(graph.nodes)
             .enter().append("g");
@@ -53,7 +52,7 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
-                return (parseInt(d.id.toString()) < 1000) ? 10 : 5;
+                return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
                 return (parseInt(d.id.toString()) < 1000) ? "red" : "green";
@@ -213,6 +212,31 @@ function removeNodesAction() {
     // input.value('');
 }
 
+function ajaxTest() {
+    jQuery.support.cors = true;
+    $.ajax
+    ({
+        // url: "get_data.php",
+        type: "GET",
+        url: "http://localhost:5000/readDot",
+        // success: function (data) {
+        //     $("#test").html(data);
+        //     alert(data);
+        // }
+        // data:{q:idiom},
+        async: true,
+        dataType: "text",
+        crossDomain: true,
+        success: function (data) {
+            alert(data);
+            // alert(xhr.getResponseHeader('Location'));
+        },
+        error: function (jqXHR, textStatus, ex) {
+            alert(textStatus + "," + ex + "," + jqXHR.responseText);
+        }
+    });
+}
+
 function downloadImage() {
     var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
     url = document.getElementsByClassName('thumb')[0].src;//url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
@@ -220,7 +244,6 @@ function downloadImage() {
     window.open(url, 'image.png');
 //  window.location= "buf/image.png";
 }
-
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
