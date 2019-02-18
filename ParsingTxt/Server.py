@@ -128,7 +128,6 @@ def getParenthetical():
 @app.route('/uploadHyde/', methods=['POST'])
 @cross_origin()
 def uploadHyde():
-
     json = request.get_json()
     print(json)
     if len(json['text']) == 0:
@@ -140,20 +139,18 @@ def uploadHyde():
     with open('HydeInput.txt', 'w+') as f:
         f.write(hyde)
 
-    ServerAction.tripletsToDot('HydeInput.txt')
+    ServerAction.parseHydeToTriplets("HydeInput.txt", 0.0005)
+    # TODO: uncomment the following
+    # ServerAction.tripletsToDot('HydeToTriplets.txt')
+    ServerAction.tripletsToDot('hydetotriplets.out')
     dotFile = returnReducedDotFile('cExample1.dot')
 
     with open('upload.dot', 'w+') as f:
         f.write(dotFile)
 
-    # ServerAction.convertDotToPNG('cExample1.dot')
-    # print('flag=', flag)
-    # if len(flag) > 0:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-    # else:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
     print(dotFile)
     return "work in progress"
+
 
 # POST
 @app.route('/upload/', methods=['POST'])
@@ -195,7 +192,14 @@ def uploadTripletsAndReturnDot():
 @cross_origin()
 def receiveDot():
     print('Sending Dot')
-    with open("upload.dot", "r") as f:
+    # TODO change
+    dotFile = returnReducedDotFile('hydetotriplets.out')
+
+    with open('upload1.dot', 'w+') as f:
+        f.write(dotFile)
+
+    with open("upload1.dot", "r") as f:
+    # with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
 
     # return "working"
