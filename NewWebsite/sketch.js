@@ -1,7 +1,3 @@
-// A2Z F16
-// Daniel Shiffman
-// https://github.com/shiffman/A2Z-F16
-// http://shiffman.net/a2z
 var lineD3 = d3.line()
     .curve(d3.curveCatmullRom.alpha(0.5));
 
@@ -48,7 +44,6 @@ function createD3Graph() {
             .attr("marker-end", "url(#end)");
 
         var node = svg.append("g")
-        // .attr("class", "nodes1")
             .selectAll("circle")
             .data(graph.nodes)
             .enter().append("g");
@@ -57,7 +52,7 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
-                return (parseInt(d.id.toString()) < 1000) ? 10 : 5;
+                return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
                 return (parseInt(d.id.toString()) < 1000) ? "red" : "green";
@@ -146,46 +141,7 @@ function setup() {
     inp.addClass("chooseButton");
 
 
-    // input = createElement('textarea', 'Enter Leaves here');
-    //
-    // input.position(20, 325);
-
-    // inputForParenthetical = createElement('textarea', 'Enter Parenthetical Format here');
-    // // inputForParenthetical.addClass("button");
-    // inputForParenthetical.position(800,255);
-
-    // btnUseParen = createButton('Create Network');
-    // btnUseParen.addClass("button");
-    // btnUseParen.position(30, 255);
-    // btnUseParen.mousePressed(onClickCreateNetwork);
-    //
-    // btnRemoveNodes = createButton('Remove Nodes');
-    // btnRemoveNodes.addClass("button");
-    // btnRemoveNodes.position(30, 325);
-    // btnRemoveNodes.mousePressed(removeNodesAction);
-    //
-    // button = createButton('Change Root');
-    // button.position(30, 465);
-    // button.addClass("button");
-    // button.mousePressed(changeRootAction);
-    //
-    // button = createButton('Download as PNG');
-    // button.addClass("button");
-    // button.position(30, 465);
-    // button.mousePressed(downloadImage);
-
-    // inputForFlag = createInput();
-    // inputForFlag.position(200, 465);
-    //
-    // input2 = createInput();
-    // input2.position(200, 465);
-    //
-    // greeting = createElement('h3', 'Enter Leaves To be kept');
-    // greeting.position(20, 279);
-    //
-    // greeting = createElement('h3', 'Enter Flag and Root');
-    // greeting.position(200, 420);
-
+    // inpputForHyde = createFileInput(gotHydeFile, 'multiple');
 
     textAlign(CENTER);
     textSize(50);
@@ -215,6 +171,29 @@ function removeNodesAction() {
     // input.value('');
 }
 
+function ajaxTest() {
+    jQuery.support.cors = true;
+    $.ajax({
+        type: "GET",
+        url: "http://localhost:5000/readDot",
+        // success: function (data) {
+        //     $("#test").html(data);
+        //     alert(data);
+        // }
+        // data:{q:idiom},
+        async: true,
+        dataType: "text",
+        crossDomain: true,
+        success: function (data) {
+            alert(data);
+            // alert(xhr.getResponseHeader('Location'));
+        },
+        error: function (jqXHR, textStatus, ex) {
+            alert(textStatus + "," + ex + "," + jqXHR.responseText);
+        }
+    });
+}
+
 function downloadImage() {
     var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
     url = document.getElementsByClassName('thumb')[0].src;//url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
@@ -222,7 +201,6 @@ function downloadImage() {
     window.open(url, 'image.png');
 //  window.location= "buf/image.png";
 }
-
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
@@ -244,9 +222,48 @@ function gotFile(file) {
         paraText = document.getElementsByClassName('text')[0].innerHTML;
 
         pushStringToServer(paraText);
+        // pushTripletsToServer(paraText);
         // push the file to the Server
     }
 }
+
+
+// function pushTripletsToServer(triplets) {
+//     var data = JSON.stringify({
+//         "text": triplets
+//     });
+//
+//     jQuery.support.cors = true;
+//     $.ajax({
+//         type: "POST",
+//         url: "http://localhost:5000/upload/",
+//         data: {json: JSON.stringify({text: triplets})},
+//         // async: true,
+//         contentType: "application/json; charset=utf-8",
+//         dataType: "json",
+//         crossDomain: true,
+//         success: function (data) {
+//             alert(data);
+//         },
+//         failure: function (errMsg) {
+//             alert(errMsg);
+//         }
+//     });
+
+    // var request = new XMLHttpRequest();
+    // request.open("POST", "http://127.0.0.1:5000/upload/");
+    // request.setRequestHeader("Content-Type", "application/json");
+    // request.addEventListener("readystatechange", processRequest, false);
+    // request.send(data);
+    //
+    // function processRequest(e) {
+    //     // document.write("This is Working <p>");
+    //     if (request.readyState === 4 && request.status === 200) {
+    //         createD3Graph();
+    //
+    // }
+
+
 
 function pushStringToServer(triplets) {
     var data = JSON.stringify({

@@ -1,6 +1,8 @@
 import os
+import pandas as pd
 import pydot
 import subprocess
+import numpy as np
 
 
 # out = subprocess.Popen(['wc', '-l', 'TripCombo.txt'],
@@ -9,6 +11,37 @@ import subprocess
 #
 # stdout, stderr = out.communicate()
 # print(stdout)
+
+def parseHydeToTriplets(fileName, threshold):
+    dataset = pd.read_table(fileName, delim_whitespace=True, header=None,
+                            names=['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'])
+
+    datasetLess = dataset.loc[dataset['a7'] < threshold]
+    datasetMore = dataset.loc[dataset['a7'] > threshold]
+
+    # make 2 types of triplets from the dataset less than the threshold
+    tripletsFromLess1 = datasetLess.values[:, [1, 3, 5]]
+    tripletsFromLess2 = datasetLess.values[:, [1, 5, 3]]
+
+    print(tripletsFromLess1)
+    print(tripletsFromLess2)
+
+    # Writing Triplets from Less in 2 parts
+    np.savetxt('Triplets1.txt', tripletsFromLess1, fmt='%d', delimiter=" ")
+    np.savetxt('Triplets2.txt', tripletsFromLess2, fmt='%d', delimiter=" ")
+
+    # Working with dataset more than the threshold
+    tripletsFromMore1 = datasetMore.values[:, [1, 3, 5]]
+    np.savetxt('Triplets3.txt', tripletsFromMore1, fmt='%d', delimiter=" ")
+
+    read_files = ['Triplets1.txt', 'Triplets2.txt', 'Triplets3.txt']
+
+    with open("HydeToTriplets.txt", "wb") as outfile:
+        for f in read_files:
+            f.replace("	", " ")
+            with open(f, "rb") as infile:
+                outfile.write(infile.read())
+
 
 def returnParentheticalFormat(fileName):
     parentheticalFormat = ''
@@ -80,12 +113,15 @@ def tripletsToDot(tripletsFName):
 
 
 if __name__ == '__main__':
-    print("Hello")
-    tripletsToDot('cExample1.trips')
-    # convertDotToPNG('cExample1.dot')
-    # removeLeaves('1\n5')
-    convertDotToPNGJulia('cExample1.dot')
-    print("Hello")
+    # print("Hello")
+    # tripletsToDot('cExample1.trips')
+    # # convertDotToPNG('cExample1.dot')
+    # # removeLeaves('1\n5')
+    # convertDotToPNGJulia('cExample1.dot')
+    # print("Hello")
+    #
+
+    parseHydeToTriplets("sig.results.txt", 0.0005)
 
     # changeRoot('outgroup', '3')
 

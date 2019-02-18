@@ -1,9 +1,13 @@
 import ServerAction
 from flask import Flask, request, jsonify, Response
+from flask_cors import CORS, cross_origin
 
 import base64
 
 app = Flask(__name__)
+# app = Flask(__name__)
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+
 
 def returnReducedDotFile(fileName):
     dotFormat = ''
@@ -42,7 +46,6 @@ def returnReducedDotFile(fileName):
 #     with open("net.png", "rb") as image_file:
 #         encoded_string = base64.b64encode(image_file.read())
 #     return encoded_string
-
 
 # POST
 @app.route('/uploadLeaves/', methods=['POST'])
@@ -122,7 +125,36 @@ def getParenthetical():
 
 
 # POST
+@app.route('/uploadHyde/', methods=['POST'])
+@cross_origin()
+def uploadHyde():
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    hyde = json['text']
+
+    print(hyde)
+    with open('HydeInput.txt', 'w+') as f:
+        f.write(hyde)
+
+    ServerAction.parseHydeToTriplets("HydeInput.txt", 0.0005)
+    # TODO: uncomment the following
+    # ServerAction.tripletsToDot('HydeToTriplets.txt')
+    ServerAction.tripletsToDot('hydetotriplets.out')
+    dotFile = returnReducedDotFile('cExample1.dot')
+
+    with open('upload.dot', 'w+') as f:
+        f.write(dotFile)
+
+    print(dotFile)
+    return "work in progress"
+
+
+# POST
 @app.route('/upload/', methods=['POST'])
+@cross_origin()
 def uploadTripletsAndReturnDot():
     """
     predicts requested text whether it is ham or spam
@@ -155,12 +187,22 @@ def uploadTripletsAndReturnDot():
     return "work in progress"
 
 
-# POST
+# GET
 @app.route('/readDot')
+@cross_origin()
 def receiveDot():
     print('Sending Dot')
-    with open("upload.dot", "r") as f:
+    # TODO change
+    dotFile = returnReducedDotFile('hydetotriplets.out')
+
+    with open('upload1.dot', 'w+') as f:
+        f.write(dotFile)
+
+    with open("upload1.dot", "r") as f:
+    # with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
+
+    # return "working"
 
 
 if __name__ == '__main__':
