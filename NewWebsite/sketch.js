@@ -141,46 +141,7 @@ function setup() {
     inp.addClass("chooseButton");
 
 
-    // input = createElement('textarea', 'Enter Leaves here');
-    //
-    // input.position(20, 325);
-
-    // inputForParenthetical = createElement('textarea', 'Enter Parenthetical Format here');
-    // // inputForParenthetical.addClass("button");
-    // inputForParenthetical.position(800,255);
-
-    // btnUseParen = createButton('Create Network');
-    // btnUseParen.addClass("button");
-    // btnUseParen.position(30, 255);
-    // btnUseParen.mousePressed(onClickCreateNetwork);
-    //
-    // btnRemoveNodes = createButton('Remove Nodes');
-    // btnRemoveNodes.addClass("button");
-    // btnRemoveNodes.position(30, 325);
-    // btnRemoveNodes.mousePressed(removeNodesAction);
-    //
-    // button = createButton('Change Root');
-    // button.position(30, 465);
-    // button.addClass("button");
-    // button.mousePressed(changeRootAction);
-    //
-    // button = createButton('Download as PNG');
-    // button.addClass("button");
-    // button.position(30, 465);
-    // button.mousePressed(downloadImage);
-
-    // inputForFlag = createInput();
-    // inputForFlag.position(200, 465);
-    //
-    // input2 = createInput();
-    // input2.position(200, 465);
-    //
-    // greeting = createElement('h3', 'Enter Leaves To be kept');
-    // greeting.position(20, 279);
-    //
-    // greeting = createElement('h3', 'Enter Flag and Root');
-    // greeting.position(200, 420);
-
+    // inpputForHyde = createFileInput(gotHydeFile, 'multiple');
 
     textAlign(CENTER);
     textSize(50);

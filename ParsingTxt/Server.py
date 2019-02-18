@@ -125,6 +125,37 @@ def getParenthetical():
 
 
 # POST
+@app.route('/uploadHyde/', methods=['POST'])
+@cross_origin()
+def uploadHyde():
+
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    hyde = json['text']
+
+    print(hyde)
+    with open('HydeInput.txt', 'w+') as f:
+        f.write(hyde)
+
+    ServerAction.tripletsToDot('HydeInput.txt')
+    dotFile = returnReducedDotFile('cExample1.dot')
+
+    with open('upload.dot', 'w+') as f:
+        f.write(dotFile)
+
+    # ServerAction.convertDotToPNG('cExample1.dot')
+    # print('flag=', flag)
+    # if len(flag) > 0:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
+    # else:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
+    print(dotFile)
+    return "work in progress"
+
+# POST
 @app.route('/upload/', methods=['POST'])
 @cross_origin()
 def uploadTripletsAndReturnDot():
