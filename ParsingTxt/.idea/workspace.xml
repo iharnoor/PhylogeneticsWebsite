@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../NewWebsite/get_data.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NewWebsite/get_data.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/sketch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+            <state relative-caret-position="35">
+              <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -94,9 +92,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-840" />
+    <option name="x" value="-751" />
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="751" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -285,9 +283,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-840" y="23" width="840" height="1027" extended-state="0" />
+    <frame x="-751" y="23" width="751" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2942613" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33013698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -476,8 +475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="161" column="22" lean-forward="true" selection-start-line="161" selection-start-column="22" selection-end-line="161" selection-end-column="22" />
+        <state relative-caret-position="35">
+          <caret line="144" lean-forward="true" selection-start-line="144" selection-end-line="144" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

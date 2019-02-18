@@ -114,8 +114,6 @@ function createD3Graph() {
     });
 }
 
-createD3Graph();
-
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
@@ -214,9 +212,7 @@ function removeNodesAction() {
 
 function ajaxTest() {
     jQuery.support.cors = true;
-    $.ajax
-    ({
-        // url: "get_data.php",
+    $.ajax({
         type: "GET",
         url: "http://localhost:5000/readDot",
         // success: function (data) {
@@ -265,9 +261,48 @@ function gotFile(file) {
         paraText = document.getElementsByClassName('text')[0].innerHTML;
 
         pushStringToServer(paraText);
+        // pushTripletsToServer(paraText);
         // push the file to the Server
     }
 }
+
+
+// function pushTripletsToServer(triplets) {
+//     var data = JSON.stringify({
+//         "text": triplets
+//     });
+//
+//     jQuery.support.cors = true;
+//     $.ajax({
+//         type: "POST",
+//         url: "http://localhost:5000/upload/",
+//         data: {json: JSON.stringify({text: triplets})},
+//         // async: true,
+//         contentType: "application/json; charset=utf-8",
+//         dataType: "json",
+//         crossDomain: true,
+//         success: function (data) {
+//             alert(data);
+//         },
+//         failure: function (errMsg) {
+//             alert(errMsg);
+//         }
+//     });
+
+    // var request = new XMLHttpRequest();
+    // request.open("POST", "http://127.0.0.1:5000/upload/");
+    // request.setRequestHeader("Content-Type", "application/json");
+    // request.addEventListener("readystatechange", processRequest, false);
+    // request.send(data);
+    //
+    // function processRequest(e) {
+    //     // document.write("This is Working <p>");
+    //     if (request.readyState === 4 && request.status === 200) {
+    //         createD3Graph();
+    //
+    // }
+
+
 
 function pushStringToServer(triplets) {
     var data = JSON.stringify({
