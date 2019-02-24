@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            <state relative-caret-position="580">
+              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -35,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
+            <state relative-caret-position="94">
+              <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -44,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+            <state relative-caret-position="1580">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -80,15 +78,16 @@
         <option value="$PROJECT_DIR$/NewWebsite/filereader.html" />
         <option value="$PROJECT_DIR$/NewWebsite/get_data.php" />
         <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
-        <option value="$PROJECT_DIR$/NewWebsite/index.html" />
         <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
+        <option value="$PROJECT_DIR$/NewWebsite/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="178" />
+    <option name="y" value="-11" />
+    <option name="width" value="840" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -168,13 +167,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15872000" />
+    <option name="totallyTimeSpent" value="19277000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="840" height="1027" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2543641" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,6 +191,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10748156" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34010696" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -233,22 +251,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="149" column="16" selection-start-line="149" selection-start-column="16" selection-end-line="149" selection-end-column="16" />
+        <state relative-caret-position="94">
+          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+        <state relative-caret-position="1580">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="580">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
