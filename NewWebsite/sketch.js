@@ -131,6 +131,11 @@ function dragended(d) {
     d.fy = null;
 }
 
+//End of D3 code
+
+
+
+var bool= 0;
 function setup() {
     noCanvas();
     // createFileInput creates a button in the window
@@ -138,6 +143,7 @@ function setup() {
     // The first argument is the callback function
     // The 'multiple' flag allows more than one file to be selected
     inp = createFileInput(gotFile, 'multiple');
+    inp.position(400, 100);
     inp.addClass("chooseButton");
 
 
@@ -145,6 +151,13 @@ function setup() {
 
     textAlign(CENTER);
     textSize(50);
+}
+
+function selectInputType(val){
+    if (val==='HYDE format'){
+        bool= 1;
+        alert(bool);
+    }
 }
 
 function onClickCreateNetwork() {

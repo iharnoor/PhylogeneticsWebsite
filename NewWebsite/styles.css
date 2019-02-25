@@ -32,7 +32,7 @@ body {
 }
 
 .vbox {
-    width: 30%;
+
     /*margin-top: 86px;*/
     position: relative;
     height: 100%;
@@ -70,14 +70,14 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     /*background: #ffffff;*/
     overflow: hidden;
-    position: relative;
+    position: absolute;
     background: #dce4ec;
     /*padding: 0 10px;*/
     /*display: inline-block;*/
     /*height: 40px;*/
     /*line-height: 40px;*/
     border-radius: 25px;
-    width: 15%;
+    width: 10%;
 
 }
 
@@ -122,6 +122,14 @@ h1, h2, h3, h4, h5, h6 {
     border: 3px;
 }
 
+svg{
+    position:relative;
+    margin-left: 500px;
+    margin-top: -1000px;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
 /*/*#hidden{
 	/*display: none;*/
 /*visibility: hidden;
