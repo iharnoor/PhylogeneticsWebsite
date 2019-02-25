@@ -119,9 +119,9 @@ if __name__ == '__main__':
     # # removeLeaves('1\n5')
     # convertDotToPNGJulia('cExample1.dot')
     # print("Hello")
-    #
 
-    parseHydeToTriplets("sig.results.txt", 0.0005)
+    # parseHydeToTriplets("results.txt", 0.05)
+    tripletsToDot('HydeToTriplets.txt')
 
     # changeRoot('outgroup', '3')
 

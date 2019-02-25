@@ -1,0 +1,5 @@
+// LEV1ATHAN Version 1.0, 21 september 2009
+// COMMENT: Pre-processing the input file to count the leaves
+// COMMENT: Pre-processing showed that there are 51 leaves in the input.
+// Terminating because in normal usage duplicate triplets in input not allowed.
+w
