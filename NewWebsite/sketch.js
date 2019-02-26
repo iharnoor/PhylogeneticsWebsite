@@ -1,3 +1,4 @@
+var nodeNum= 0;
 var lineD3 = d3.line()
     .curve(d3.curveCatmullRom.alpha(0.5));
 
@@ -42,7 +43,7 @@ function createD3Graph() {
             .enter().append("svg:path")
             //    .attr("class", function(d) { return "link " + d.type; })
             .attr("marker-end", "url(#end)");
-
+        nodeNum= graph.nodes.length;
         var node = svg.append("g")
             .selectAll("circle")
             .data(graph.nodes)
@@ -156,9 +157,24 @@ function setup() {
 function selectInputType(val){
     if (val==='HYDE format'){
         bool= 1;
-        alert(bool);
     }
 }
+
+function createboxes() {
+    // alert("Hello");
+    // print(nodeNum);
+    // let loc = 400;
+    for (let i = 0; i < nodeNum; i++) {
+        // alert("Here in the loop");
+        var x = document.createElement("INPUT");
+        x.setAttribute("type", "checkbox");
+        // x.position(loc, 400);
+        // loc+= 10;
+        document.body.appendChild(x);
+    }
+}
+
+
 
 function onClickCreateNetwork() {
     var parentheticalText = inputForParenthetical.value();
