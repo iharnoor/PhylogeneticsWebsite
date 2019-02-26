@@ -192,14 +192,14 @@ def uploadTripletsAndReturnDot():
 @cross_origin()
 def receiveDot():
     print('Sending Dot')
-    # TODO change
-    dotFile = returnReducedDotFile('hydetotriplets.out')
+    # TODO change done
+    # dotFile = returnReducedDotFile('cExample1.dot')
 
-    with open('upload1.dot', 'w+') as f:
-        f.write(dotFile)
+    # with open('upload.dot', 'w+') as f:
+    #     f.write(dotFile)
 
-    with open("upload1.dot", "r") as f:
-    # with open("upload.dot", "r") as f:
+    # with open("upload1.dot", "r") as f:
+    with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
 
     # return "working"
