@@ -140,9 +140,9 @@ def uploadHyde():
         f.write(hyde)
 
     ServerAction.parseHydeToTriplets("HydeInput.txt", 0.0005)
-    # TODO: uncomment the following
-    # ServerAction.tripletsToDot('HydeToTriplets.txt')
-    ServerAction.tripletsToDot('hydetotriplets.out')
+    # TODO: uncomment the following done
+    ServerAction.tripletsToDot('HydeToTriplets.txt')
+    # ServerAction.tripletsToDot('hydetotriplets.out')
     dotFile = returnReducedDotFile('cExample1.dot')
 
     with open('upload.dot', 'w+') as f:

@@ -182,23 +182,9 @@ function removeNodesAction() {
     // input.value('');
 }
 
-// function ajaxTest() {
-//     jQuery.support.cors = true;
-//     $.ajax({
-//         type: "GET",
-//         url: "http://localhost:5001/readDot",
-//
-//         async: true,
-//         dataType: "text",
-//         crossDomain: true,
-//         success: function (data) {
-//             alert(data);
-//             // alert(xhr.getResponseHeader('Location'));
-//         },
-//         error: function (jqXHR, textStatus, ex) {
-//             alert(textStatus + "," + ex + "," + jqXHR.responseText);
-//         }
-//     });
+function ajaxTest() {
+    createD3Graph();
+}
 
 function downloadImage() {
     var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');

@@ -105,22 +105,22 @@ def tripletsToDot(tripletsFName):
 
 
 if __name__ == '__main__':
-    # print("Hello")
+    print("Hello")
     # tripletsToDot('cExample1.trips')
     # # convertDotToPNG('cExample1.dot')
     # # removeLeaves('1\n5')
     # convertDotToPNGJulia('cExample1.dot')
     # print("Hello")
 
-    parseHydeToTriplets("sig.results.txt", 0.0005)
     # lines_seen = set()  # holds lines already seen
-    # outfile = open('HydeToTriplets2.txt', "w")
+    # outfile = open('HydeToTriplets.txt', "w")
     # for line in open('HydeToTriplets.txt', "r"):
     #     if line not in lines_seen:  # not a duplicate
     #         outfile.write(line)
     #         lines_seen.add(line)
     # outfile.close()
 
+    parseHydeToTriplets("results.txt", 0.05)
     tripletsToDot('HydeToTriplets.txt')
 
 

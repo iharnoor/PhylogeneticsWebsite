@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/ServerAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/ServerAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="585">
+              <caret line="39" column="76" lean-forward="true" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -33,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
+            <state relative-caret-position="-286">
+              <caret line="249" selection-start-line="249" selection-end-line="249" />
             </state>
           </provider>
         </entry>
@@ -77,9 +80,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="960" />
+    <option name="width" value="1920" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
@@ -164,17 +167,18 @@
       <workItem from="1550521515587" duration="647000" />
       <workItem from="1550581483807" duration="309000" />
       <workItem from="1550684872528" duration="640000" />
-      <workItem from="1551146091386" duration="1748000" />
+      <workItem from="1551146091386" duration="2855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19424000" />
+    <option name="totallyTimeSpent" value="20531000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="960" height="1057" extended-state="0" />
+    <frame x="-1680" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25559106" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14466546" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -245,16 +249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="37" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParsingTxt/results.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -262,10 +256,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="76" lean-forward="true" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="239" lean-forward="true" selection-start-line="239" selection-end-line="239" />
+        <state relative-caret-position="-286">
+          <caret line="249" selection-start-line="249" selection-end-line="249" />
         </state>
       </provider>
     </entry>
