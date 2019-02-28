@@ -49,6 +49,7 @@ def returnReducedDotFile(fileName):
 
 # POST
 @app.route('/uploadLeaves/', methods=['POST'])
+@cross_origin()
 def uploadLeavesToBeRemoved():
     """
     predicts requested text whether it is ham or spam
@@ -65,12 +66,12 @@ def uploadLeavesToBeRemoved():
 
     # ServerAction.removeLeaves(leaves + '')
     # convertDotToPNG('cExample1.dot')
-    ServerAction.removeLeaves(leaves)
+    ServerAction.removeNodes(leaves)
 
-    with open("net.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    print(encoded_string)
-    return encoded_string
+    # with open("net.png", "rb") as image_file:
+    #     encoded_string = base64.b64encode(image_file.read())
+    # print(encoded_string)
+    return "working"
 
 
 @app.route('/changeRoot/<root>', methods=['POST'])
