@@ -1,4 +1,11 @@
 var nodeNum= 0;
+function formdata()
+{
+    var firstname1= document.getElementById("rNodes").value;
+
+    document.writeln(firstname1 + "<br>");
+    alert(firstname1);
+}
 var lineD3 = d3.line()
     .curve(d3.curveCatmullRom.alpha(0.5));
 
