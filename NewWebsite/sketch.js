@@ -55,7 +55,7 @@ function createD3Graph() {
                 return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
-                return (parseInt(d.id.toString()) < 1000) ? "red" : "green";
+                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray" ;
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
