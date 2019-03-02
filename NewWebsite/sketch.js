@@ -1,4 +1,6 @@
 var nodeNum= 0;
+var nodeVal=[];
+var boolArray= [];
 function formdata()
 {
     var firstname1= document.getElementById("rNodes").value;
@@ -50,7 +52,11 @@ function createD3Graph() {
             .enter().append("svg:path")
             //    .attr("class", function(d) { return "link " + d.type; })
             .attr("marker-end", "url(#end)");
+        // alert(Object.values(graph.nodes.name));
+        // alert(graph.nodes);
         nodeNum= graph.nodes.length;
+
+
         var node = svg.append("g")
             .selectAll("circle")
             .data(graph.nodes)
@@ -60,6 +66,9 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
+                var valueOfNode= (parseInt(d.id.toString()));
+                if(valueOfNode < 1000)
+                    nodeVal.push(valueOfNode);
                 return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
@@ -70,7 +79,7 @@ function createD3Graph() {
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end", dragended));
-
+        // alert(nodeVal);
         // add the text
         node.append("text")
             .attr("x", 12)
@@ -101,6 +110,7 @@ function createD3Graph() {
             .radius(function (d) {
                 return d.y;
             });
+
 
         function ticked() {
             path.attr("d", function (d) {
@@ -170,17 +180,39 @@ function createboxes() {
     // alert("Hello");
     // print(nodeNum);
     // let loc = 400;
-    for (let i = 0; i < nodeNum; i++) {
-        // alert("Here in the loop");
+    nodeVal.forEach(function(element){
         var x = document.createElement("INPUT");
         x.setAttribute("type", "checkbox");
-        // x.position(loc, 400);
-        // loc+= 10;
+        x.setAttribute("id", element);
+        x.onclick= checking;
         document.body.appendChild(x);
-    }
+        console.log(x.id);
+    });
+    // for (let i = 0; i < nodeNum; i++) {
+    //     // alert("Here in the loop");
+    //     var x = document.createElement("INPUT");
+    //     x.setAttribute("type", "checkbox");
+    //     // x.position(loc, 400);
+    //     // loc+= 10;
+    //     document.body.appendChild(x);
+    // }
+}
+//new Array(nodeVal.length).fill(0);
+
+function checking(){
+    boolArray+= this.id.toString();
+    alert(boolArray);
 }
 
-
+// function check() {
+//     nodeVal.forEach(function(element){
+//         var check= document.getElementById("element");
+//         alert(check.checked);
+//         // if(check.checked === true){
+//         //     console.log(element);
+//         // }
+//     });
+// }
 
 function onClickCreateNetwork() {
     var parentheticalText = inputForParenthetical.value();
