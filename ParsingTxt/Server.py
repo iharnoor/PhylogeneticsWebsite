@@ -49,6 +49,7 @@ def returnReducedDotFile(fileName):
 
 # POST
 @app.route('/uploadLeaves/', methods=['POST'])
+@cross_origin()
 def uploadLeavesToBeRemoved():
     """
     predicts requested text whether it is ham or spam
@@ -65,12 +66,12 @@ def uploadLeavesToBeRemoved():
 
     # ServerAction.removeLeaves(leaves + '')
     # convertDotToPNG('cExample1.dot')
-    ServerAction.removeLeaves(leaves)
+    ServerAction.removeNodes(leaves)
 
-    with open("net.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    print(encoded_string)
-    return encoded_string
+    # with open("net.png", "rb") as image_file:
+    #     encoded_string = base64.b64encode(image_file.read())
+    # print(encoded_string)
+    return "working"
 
 
 @app.route('/changeRoot/<root>', methods=['POST'])
@@ -140,9 +141,9 @@ def uploadHyde():
         f.write(hyde)
 
     ServerAction.parseHydeToTriplets("HydeInput.txt", 0.0005)
-    # TODO: uncomment the following
-    # ServerAction.tripletsToDot('HydeToTriplets.txt')
-    ServerAction.tripletsToDot('hydetotriplets.out')
+    # TODO: uncomment the following done
+    ServerAction.tripletsToDot('HydeToTriplets.txt')
+    # ServerAction.tripletsToDot('hydetotriplets.out')
     dotFile = returnReducedDotFile('cExample1.dot')
 
     with open('upload.dot', 'w+') as f:
@@ -150,7 +151,6 @@ def uploadHyde():
 
     print(dotFile)
     return "work in progress"
-
 
 # POST
 @app.route('/upload/', methods=['POST'])
@@ -192,14 +192,14 @@ def uploadTripletsAndReturnDot():
 @cross_origin()
 def receiveDot():
     print('Sending Dot')
-    # TODO change
-    dotFile = returnReducedDotFile('hydetotriplets.out')
+    # TODO change done
+    # dotFile = returnReducedDotFile('cExample1.dot')
 
-    with open('upload1.dot', 'w+') as f:
-        f.write(dotFile)
+    # with open('upload.dot', 'w+') as f:
+    #     f.write(dotFile)
 
-    with open("upload1.dot", "r") as f:
-    # with open("upload.dot", "r") as f:
+    # with open("upload1.dot", "r") as f:
+    with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
 
     # return "working"

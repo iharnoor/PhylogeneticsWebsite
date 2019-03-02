@@ -7,7 +7,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="styles.css" rel="stylesheet">
 
-
 </head>
 <body>
 
@@ -16,16 +15,19 @@
 
 <div class="vbox">
     <!-- <button class="button">Choose File</button> -->
-    <select class=button id="transfer_reason"name="transfer_reason"
+    <select class=button id="transfer_reason" name="transfer_reason"
             onchange="selectInputType(this.value)">
         <option value="type">Select file type</option>
         <option value="pf">Patenthetical format</option>
         <option value="trip" onclick="unhide()">Triplets</option>
         <option value="dna">DNA format</option>
         <option value="HYDE format">HYDE format</option>
-
     </select><br><br><br>
 
+    <br>
+    <br>
+
+    <textarea id="textareabox" name="textarea1" placeholder="Enter Nodes To Be Removed"></textarea>
     <!--<button class="button" id="chooser" onclick="gotFile(file)">Choose file</button><br>-->
 
     <!-- <label for="file"><strong>Choose a file</strong></label> -->
@@ -34,8 +36,8 @@
             <label for="file" class="btn-2">upl</label> -->
 
     <!-- <input type="file" id="file" onclick="gotFile" />
-<label for="file" class="btn-2">upload</label> -->
-
+    <label for="file" class="btn-2">upload</label> -->
+    <br>
     <button class="button" onclick="changeRootAction()">Change root</button>
     <br>
     <button class="button" onclick="dwnPFormat()">Download Parentheical format</button>
@@ -43,13 +45,15 @@
     <button class="button" onclick="downloadImage()">Download PNG</button>
 
     <br>
-    <button class="button" onclick="createboxes()">Remove nodes</button>
+    <button class="button" onclick="ajaxTest()">Refresh Graph</button>
+
+    <button class="button" onclick="removeNodesAction()">Remove nodes</button>
 
 
     <!--<div>-->
-        <!--<script type="text/javascript">-->
-            <!--createboxes();-->
-        <!--</script>-->
+    <!--<script type="text/javascript">-->
+    <!--createboxes();-->
+    <!--</script>-->
 
     <!--</div>-->
 

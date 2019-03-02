@@ -5,13 +5,6 @@ import subprocess
 import numpy as np
 
 
-# out = subprocess.Popen(['wc', '-l', 'TripCombo.txt'],
-#                        stdout=subprocess.PIPE,
-#                        stderr=subprocess.STDOUT)
-#
-# stdout, stderr = out.communicate()
-# print(stdout)
-
 def parseHydeToTriplets(fileName, threshold):
     dataset = pd.read_table(fileName, delim_whitespace=True, header=None,
                             names=['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'])
@@ -38,7 +31,6 @@ def parseHydeToTriplets(fileName, threshold):
 
     with open("HydeToTriplets.txt", "wb") as outfile:
         for f in read_files:
-            f.replace("	", " ")
             with open(f, "rb") as infile:
                 outfile.write(infile.read())
 
@@ -68,7 +60,7 @@ def convertDotToPNGJulia(fileName, flag=''):
     os.system(cmd)
 
 
-def removeLeaves(leafNodes):
+def removeLeavesJulia(leafNodes):
     with open("leaves.txt", "w") as text_file:
         text_file.write(leafNodes)
     # write it to a file
@@ -88,8 +80,9 @@ def parentheticalFormatToPNG(parentheticalFormat, flag=''):
     cmd = 'julia plot-network.jl NetworkParen.net ' + flag
     os.system(cmd)
 
+    # assumes that the triplets are in the parenthetical format in hte NetworkParen.net text file
 
-# assumes that the triplets are in the parenthetical format in hte NetworkParen.net text file
+
 # converts
 def changeRoot(flag, newRoot):
     cmd = 'julia change-root.jl NetworkParen.net ' + flag + ' ' + newRoot + ' '
@@ -112,18 +105,45 @@ def tripletsToDot(tripletsFName):
     os.system(cmd)
 
 
+def removeNodes(nodes):
+    output = ''
+    nodes = nodes.split(',')
+
+    with open("upload.dot", "r") as text_file:
+        for line in text_file:
+            try:
+                for n in nodes:
+                    if line.__contains__(" " + n + "\n"):
+                        raise Exception()
+            except Exception:
+                continue
+            output += line
+
+    print(output)
+    with open("upload.dot", "w+") as text_file:
+        text_file.write(output)
+
+
 if __name__ == '__main__':
-    # print("Hello")
+    print("Hello")
     # tripletsToDot('cExample1.trips')
     # # convertDotToPNG('cExample1.dot')
     # # removeLeaves('1\n5')
     # convertDotToPNGJulia('cExample1.dot')
     # print("Hello")
-    #
 
-    parseHydeToTriplets("sig.results.txt", 0.0005)
+    # lines_seen = set()  # holds lines already seen
+    # outfile = open('HydeToTriplets.txt', "w")
+    # for line in open('HydeToTriplets.txt', "r"):
+    #     if line not in lines_seen:  # not a duplicate
+    #         outfile.write(line)
+    #         lines_seen.add(line)
+    # outfile.close()
 
-    # changeRoot('outgroup', '3')
+    # parseHydeToTriplets("results.txt", 0.05)
+    # tripletsToDot('HydeToTriplets.txt')
+
+    removeNodes('5,4,3')
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file

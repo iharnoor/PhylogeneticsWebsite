@@ -63,7 +63,7 @@ function createD3Graph() {
                 return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
-                return (parseInt(d.id.toString()) < 1000) ? "red" : "green";
+                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray" ;
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
@@ -141,9 +141,8 @@ function dragended(d) {
 
 //End of D3 code
 
+var bool = 0;
 
-
-var bool= 0;
 function setup() {
     noCanvas();
     // createFileInput creates a button in the window
@@ -161,9 +160,9 @@ function setup() {
     textSize(50);
 }
 
-function selectInputType(val){
-    if (val==='HYDE format'){
-        bool= 1;
+function selectInputType(val) {
+    if (val === 'HYDE format') {
+        bool = 1;
     }
 }
 
@@ -201,33 +200,14 @@ function changeRootAction() {
 }
 
 function removeNodesAction() {
-    var name = input.value();
-    greeting.html('hello ' + name + '!');
-    pushLeavesToServer(name)
-    // input.value('');
+    var leaves = document.getElementById("textareabox").value;
+
+    pushLeavesToServer(leaves)
+
 }
 
 function ajaxTest() {
-    jQuery.support.cors = true;
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:5001/readDot",
-        // success: function (data) {
-        //     $("#test").html(data);
-        //     alert(data);
-        // }
-        // data:{q:idiom},
-        async: true,
-        dataType: "text",
-        crossDomain: true,
-        success: function (data) {
-            alert(data);
-            // alert(xhr.getResponseHeader('Location'));
-        },
-        error: function (jqXHR, textStatus, ex) {
-            alert(textStatus + "," + ex + "," + jqXHR.responseText);
-        }
-    });
+    createD3Graph();
 }
 
 function downloadImage() {
@@ -247,65 +227,57 @@ function gotFile(file) {
 
     // Hanlde image and text differently
     if (file.type === 'image') {
-        var img = createImg(file.data);
-        img.class('thumb');
+        // var img = createImg(file.data);
+        // img.class('thumb');
+        alert('image not accepted')
     } else if (file.type === 'text') {
-        // Make a paragraph of text
-        var par = createP(file.data);
-        par.class('text');
-        var texts = selectAll('.text');
-        // var paraText=  document.getElementsByClassName('text').innerHTML;
-        paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-        pushStringToServer(paraText);
-        // pushTripletsToServer(paraText);
-        // push the file to the Server
+        if (bool === 1) {//HYDE Selected
+            var par = createP(file.data);
+            par.class('text');
+            var texts = selectAll('.text');
+            // var paraText=  document.getElementsByClassName('text').innerHTML;
+            paraText = document.getElementsByClassName('text')[0].innerHTML;
+
+            pushHydeToServer(paraText);
+        } else {
+            // Make a paragraph of text
+            var par = createP(file.data);
+            par.class('text');
+            var texts = selectAll('.text');
+            // var paraText=  document.getElementsByClassName('text').innerHTML;
+            paraText = document.getElementsByClassName('text')[0].innerHTML;
+
+            pushStringToServer(paraText);
+        }
     }
 }
 
+function pushHydeToServer(hydeInput) {
+    var data = JSON.stringify({
+        "text": hydeInput
+    });
 
-// function pushTripletsToServer(triplets) {
-//     var data = JSON.stringify({
-//         "text": triplets
-//     });
-//
-//     jQuery.support.cors = true;
-//     $.ajax({
-//         type: "POST",
-//         url: "http://localhost:5000/upload/",
-//         data: {json: JSON.stringify({text: triplets})},
-//         // async: true,
-//         contentType: "application/json; charset=utf-8",
-//         dataType: "json",
-//         crossDomain: true,
-//         success: function (data) {
-//             alert(data);
-//         },
-//         failure: function (errMsg) {
-//             alert(errMsg);
-//         }
-//     });
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://127.0.0.1:5001/uploadHyde/");
+    request.setRequestHeader("Content-Type", "application/json");
+    request.addEventListener("readystatechange", processRequest, false);
+    request.send(data);
 
-    // var request = new XMLHttpRequest();
-    // request.open("POST", "http://127.0.0.1:5000/upload/");
-    // request.setRequestHeader("Content-Type", "application/json");
-    // request.addEventListener("readystatechange", processRequest, false);
-    // request.send(data);
-    //
-    // function processRequest(e) {
-    //     // document.write("This is Working <p>");
-    //     if (request.readyState === 4 && request.status === 200) {
-    //         createD3Graph();
-    //
-    // }
-
-
+    function processRequest(e) {
+        // document.write("This is Working <p>");
+        if (request.readyState === 4 && request.status === 200) {
+            createD3Graph();
+        } else if (request.readyState === 4) {
+            document.write("<p>Error : " + request.status + "," + request.statusText);
+        }
+    }
+}
 
 function pushStringToServer(triplets) {
     var data = JSON.stringify({
         "text": triplets
     });
-
 
     var request = new XMLHttpRequest();
     request.open("POST", "http://127.0.0.1:5001/upload/");
@@ -325,7 +297,6 @@ function pushStringToServer(triplets) {
 //         .setAttribute(
 //         'src', 'data:image/png;base64,'+response);
             createD3Graph();
-
         } else if (request.readyState === 4) {
             document.write("<p>Error : " + request.status + "," + request.statusText);
         }
@@ -336,10 +307,9 @@ function pushLeavesToServer(leaves) {
     var data = JSON.stringify({
         "text": leaves
     });
-    ;
 
     var request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1:5000/uploadLeaves/");
+    request.open("POST", "http://127.0.0.1:5001/uploadLeaves/");
     request.setRequestHeader("Content-Type", "application/json");
     request.addEventListener("readystatechange", processRequest, false);
     request.send(data);
@@ -347,14 +317,15 @@ function pushLeavesToServer(leaves) {
     function processRequest(e) {
         // document.write("This is Working <p>");
         if (request.readyState === 4 && request.status === 200) {
-            var response = request.responseText;
-//        document.write(response);
-            // Convert Base64 to Image
-            var img = createImg();
-            img.class('thumb');
-            document.getElementsByClassName('thumb')[0]
-                .setAttribute(
-                    'src', 'data:image/png;base64,' + response);
+//             var response = request.responseText;
+// //        document.write(response);
+//             // Convert Base64 to Image
+//             var img = createImg();
+//             img.class('thumb');
+//             document.getElementsByClassName('thumb')[0]
+//                 .setAttribute(
+//                     'src', 'data:image/png;base64,' + response);
+            createD3Graph();
 
         } else if (request.readyState == 4) {
             document.write("<p>Error : " + request.status + "," + request.statusText);
