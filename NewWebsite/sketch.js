@@ -283,7 +283,11 @@ function gotFile(file) {
 
             var threshold = document.getElementById("textThreshold").value;
 
-            pushHydeToServer(paraText);
+            if (threshold == "") {
+                alert("Enter THreshold First")
+            } else {
+                pushHydeToServer(paraText, threshold);
+            }
         } else {
             // Make a paragraph of text
             var par = createP(file.data);
@@ -297,13 +301,13 @@ function gotFile(file) {
     }
 }
 
-function pushHydeToServer(hydeInput) {
+function pushHydeToServer(hydeInput, thresh) {
     var data = JSON.stringify({
         "text": hydeInput
     });
 
     var request = new XMLHttpRequest();
-    request.open("POST", "http://127.0.0.1:5001/uploadHyde/");
+    request.open("POST", "http://127.0.0.1:5001/uploadHyde/" + thresh);
     request.setRequestHeader("Content-Type", "application/json");
     request.addEventListener("readystatechange", processRequest, false);
     request.send(data);

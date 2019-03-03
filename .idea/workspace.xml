@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/file1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/file2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/HydeInput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/HydeToTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/ServerAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/ServerAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.png" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="81" column="15" lean-forward="true" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+              <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -37,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="381" column="31" lean-forward="true" selection-start-line="381" selection-start-column="31" selection-end-line="381" selection-end-column="31" />
+            <state relative-caret-position="164">
+              <caret line="272" column="30" lean-forward="true" selection-start-line="272" selection-start-column="30" selection-end-line="272" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -81,6 +95,8 @@
       <find>textare</find>
       <find>push</find>
       <find>textthreshold</find>
+      <find>thresh</find>
+      <find>threshol</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551624076124" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551629053371" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -193,7 +209,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35462000" />
+    <option name="totallyTimeSpent" value="36296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1680" y="23" width="1680" height="1027" extended-state="6" />
@@ -315,7 +331,7 @@
     <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="81" column="15" lean-forward="true" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -328,8 +344,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="381" column="31" lean-forward="true" selection-start-line="381" selection-start-column="31" selection-end-line="381" selection-end-column="31" />
+        <state relative-caret-position="164">
+          <caret line="272" column="30" lean-forward="true" selection-start-line="272" selection-start-column="30" selection-end-line="272" selection-end-column="30" />
         </state>
       </provider>
     </entry>

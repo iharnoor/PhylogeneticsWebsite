@@ -27,6 +27,8 @@ def parseHydeToTriplets(fileName, threshold):
     tripletsFromMore1 = datasetMore.values[:, [1, 3, 5]]
     np.savetxt('Triplets3.txt', tripletsFromMore1, fmt='%d', delimiter=" ")
 
+    print(tripletsFromMore1)
+
     read_files = ['Triplets1.txt', 'Triplets2.txt', 'Triplets3.txt']
 
     with open("HydeToTriplets.txt", "wb") as outfile:
@@ -140,10 +142,11 @@ if __name__ == '__main__':
     #         lines_seen.add(line)
     # outfile.close()
 
-    # parseHydeToTriplets("results.txt", 0.05)
-    # tripletsToDot('HydeToTriplets.txt')
+    parseHydeToTriplets("results.txt", 0.05)
+    tripletsToDot('HydeToTriplets.txt')
+    # convertDotToPNG('cExample1.dot')
 
-    removeNodes('5,4,3')
+    # removeNodes('5,4,3')
 
 #  1) Return Parenthetical fiel and return the image
 # Download image or text file

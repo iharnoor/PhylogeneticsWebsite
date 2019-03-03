@@ -126,9 +126,9 @@ def getParenthetical():
 
 
 # POST
-@app.route('/uploadHyde/', methods=['POST'])
+@app.route('/uploadHyde/<thresh>', methods=['POST'])
 @cross_origin()
-def uploadHyde():
+def uploadHyde(thresh):
     json = request.get_json()
     print(json)
     if len(json['text']) == 0:
@@ -136,11 +136,13 @@ def uploadHyde():
 
     hyde = json['text']
 
+    print('Threshold =', thresh)
+
     print(hyde)
     with open('HydeInput.txt', 'w+') as f:
         f.write(hyde)
 
-    ServerAction.parseHydeToTriplets("HydeInput.txt", 0.0005)
+    ServerAction.parseHydeToTriplets("HydeInput.txt", float(thresh))
     # TODO: uncomment the following done
     ServerAction.tripletsToDot('HydeToTriplets.txt')
     # ServerAction.tripletsToDot('hydetotriplets.out')
@@ -151,6 +153,7 @@ def uploadHyde():
 
     print(dotFile)
     return "work in progress"
+
 
 # POST
 @app.route('/upload/', methods=['POST'])
