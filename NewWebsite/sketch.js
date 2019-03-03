@@ -281,6 +281,8 @@ function gotFile(file) {
             // var paraText=  document.getElementsByClassName('text').innerHTML;
             paraText = document.getElementsByClassName('text')[0].innerHTML;
 
+            var threshold = document.getElementById("textThreshold").value;
+
             pushHydeToServer(paraText);
         } else {
             // Make a paragraph of text
