@@ -1,6 +1,6 @@
 var nodeNum = 0;
 var nodeVal = [];
-var boolArray = [];
+var nodesCheckedStr = "";
 
 function formdata() {
     var firstname1 = document.getElementById("rNodes").value;
@@ -205,8 +205,8 @@ function createboxes() {
 //new Array(nodeVal.length).fill(0);
 
 function checking() {
-    boolArray += this.id.toString();
-    alert(boolArray);
+    nodesCheckedStr += this.id.toString() + ",";
+    alert(nodesCheckedStr);
 }
 
 // function check() {
@@ -237,10 +237,10 @@ function changeRootAction() {
 }
 
 function removeNodesAction() {
-    var leaves = document.getElementById("textareabox").value;
+    // var leaves = document.getElementById("textareabox").value;
+    nodesCheckedStr = nodesCheckedStr.substr(0, nodesCheckedStr.length - 1);
 
-    pushLeavesToServer(leaves)
-
+    pushLeavesToServer(nodesCheckedStr)
 }
 
 function removeGraph() {
