@@ -1,13 +1,14 @@
-var nodeNum= 0;
-var nodeVal=[];
-var boolArray= [];
-function formdata()
-{
-    var firstname1= document.getElementById("rNodes").value;
+var nodeNum = 0;
+var nodeVal = [];
+var boolArray = [];
+
+function formdata() {
+    var firstname1 = document.getElementById("rNodes").value;
 
     document.writeln(firstname1 + "<br>");
     alert(firstname1);
 }
+
 var lineD3 = d3.line()
     .curve(d3.curveCatmullRom.alpha(0.5));
 
@@ -27,11 +28,14 @@ var simulation = d3.forceSimulation()
 
 
 function createD3Graph() {
+    removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
-        //if (error) throw error;
 
+        // d3.select("svg").remove();
+
+        //if (error) throw error;
         // build the arrow.
         svg.append("svg:defs").selectAll("marker")
             .data(["end"])      // Different link/path types can be defined here
@@ -54,7 +58,7 @@ function createD3Graph() {
             .attr("marker-end", "url(#end)");
         // alert(Object.values(graph.nodes.name));
         // alert(graph.nodes);
-        nodeNum= graph.nodes.length;
+        nodeNum = graph.nodes.length;
 
 
         var node = svg.append("g")
@@ -66,13 +70,13 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
-                var valueOfNode= (parseInt(d.id.toString()));
-                if(valueOfNode < 1000)
+                var valueOfNode = (parseInt(d.id.toString()));
+                if (valueOfNode < 1000)
                     nodeVal.push(valueOfNode);
                 return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
             .style("fill", function (d) {
-                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray" ;
+                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
@@ -180,11 +184,11 @@ function createboxes() {
     // alert("Hello");
     // print(nodeNum);
     // let loc = 400;
-    nodeVal.forEach(function(element){
+    nodeVal.forEach(function (element) {
         var x = document.createElement("INPUT");
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
-        x.onclick= checking;
+        x.onclick = checking;
         document.body.appendChild(x);
         console.log(x.id);
     });
@@ -197,10 +201,11 @@ function createboxes() {
     //     document.body.appendChild(x);
     // }
 }
+
 //new Array(nodeVal.length).fill(0);
 
-function checking(){
-    boolArray+= this.id.toString();
+function checking() {
+    boolArray += this.id.toString();
     alert(boolArray);
 }
 
@@ -238,7 +243,12 @@ function removeNodesAction() {
 
 }
 
-function ajaxTest() {
+function removeGraph() {
+    $(".hi").empty();
+}
+
+function refreshGraph() {
+    // svg.selectAll("svg").remove();
     createD3Graph();
 }
 
