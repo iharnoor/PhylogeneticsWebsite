@@ -206,7 +206,7 @@ function createboxes() {
 
 function checking() {
     nodesCheckedStr += this.id.toString() + ",";
-    alert(nodesCheckedStr);
+    // alert(nodesCheckedStr);
 }
 
 // function check() {

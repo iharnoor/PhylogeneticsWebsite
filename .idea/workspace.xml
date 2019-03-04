@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
-    </list>
+    <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,20 +22,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
+            <state relative-caret-position="735">
               <caret line="124" column="21" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="216" column="39" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
+            <state relative-caret-position="574">
+              <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -68,7 +60,6 @@
       <find>nodeNum</find>
       <find>d.</find>
       <find>d</find>
-      <find>alert</find>
       <find>nodenum</find>
       <find>remove</find>
       <find>selectall</find>
@@ -89,6 +80,7 @@
       <find>boolArray</find>
       <find>leaves</find>
       <find>nodeval</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,9 +93,9 @@
         <option value="$PROJECT_DIR$/upload.dot" />
         <option value="$PROJECT_DIR$/NewWebsite/filereader.html" />
         <option value="$PROJECT_DIR$/NewWebsite/get_data.php" />
-        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
         <option value="$PROJECT_DIR$/NewWebsite/index.html" />
         <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
+        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
       </list>
     </option>
   </component>
@@ -201,7 +193,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38512000" />
+    <option name="totallyTimeSpent" value="38626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -327,17 +319,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="216" column="39" selection-start-line="216" selection-start-column="39" selection-end-line="216" selection-end-column="39" />
+        <state relative-caret-position="735">
+          <caret line="124" column="21" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="124" column="21" selection-start-line="124" selection-start-column="21" selection-end-line="124" selection-end-column="21" />
+        <state relative-caret-position="574">
+          <caret line="209" column="1" lean-forward="true" selection-start-line="209" selection-start-column="1" selection-end-line="209" selection-end-column="1" />
         </state>
       </provider>
     </entry>
