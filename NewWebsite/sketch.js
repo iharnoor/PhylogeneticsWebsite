@@ -30,6 +30,7 @@ var simulation = d3.forceSimulation()
 function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
+    document.getElementById("loader").style.visibility= "hidden";
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
 
@@ -168,6 +169,7 @@ function setup() {
     inp.addClass("chooseButton");
 
 
+
     // inpputForHyde = createFileInput(gotHydeFile, 'multiple');
 
     textAlign(CENTER);
@@ -184,6 +186,9 @@ function createboxes() {
     // alert("Hello");
     // print(nodeNum);
     // let loc = 400;
+
+    // var loader = document.getElementsByI ("container");
+    // loader.style.visibility= "visible";
     nodeVal.forEach(function (element) {
         var x = document.createElement("INPUT");
         x.setAttribute("type", "checkbox");
@@ -262,6 +267,7 @@ function downloadImage() {
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
+    document.getElementById("loader").style.visibility= "visible";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     // Assign a CSS class for styling (see index.html)

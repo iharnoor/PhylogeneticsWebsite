@@ -1,0 +1,82 @@
+// Colors variables
+$primary: #4285F4; // blue
+$success: #34A853; // green
+$danger: #EA4335; // red
+$warning: #FBBC05; // yellow
+
+// Container and shapes dimentions
+$containerDimentions: 30px;
+$shapeDimentions: 10px;
+//shape translate amount
+$amount: 20px;
+
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03002E;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+//colors
+
+.container {
+  position: relative;
+  width: $containerDimentions;
+  height: $containerDimentions;
+  border-radius: $containerDimentions/2;
+  animation: rotation 1s infinite;
+  .shape {
+    position: absolute;
+    width: $shapeDimentions;
+    height: $shapeDimentions;
+    border-radius: $shapeDimentions/2;
+    &.shape-1 {
+      left: 0;
+      background-color: $primary;
+    }
+    &.shape-2 {
+      right: 0;
+      background-color: $success;
+    }
+    &.shape-3 {
+      bottom: 0;
+      background-color: $warning;
+    }
+    &.shape-4 {
+      bottom: 0;
+      right: 0;
+      background-color: $danger;
+    }
+  }
+  @for $i from 1 through 4 {
+    .shape-#{$i} {
+      animation: shape#{$i} 0.5s infinite alternate;
+    }
+  }
+}
+
+@keyframes rotation {
+  from { transform:  rotate(0deg) }
+  to { transform:  rotate(360deg) }
+}
+
+@mixin shapeTranslate($index, $tx, $ty) {
+  @keyframes shape#{$index} {
+    from { transform: translate(0,0) }
+    to { transform: translate($tx, $ty) }
+  }
+}
+
+@include shapeTranslate(1, $amount, $amount);
+@include shapeTranslate(2, -$amount,$amount);
+@include shapeTranslate(3, $amount,-$amount);
+@include shapeTranslate(4, -$amount,-$amount);
