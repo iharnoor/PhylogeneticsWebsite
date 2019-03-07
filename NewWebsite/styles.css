@@ -6,7 +6,9 @@ body {
 
     /*background-color: #74b9ff;*/
 }
-
+p {
+    display: inline-block;
+}
 .file {
     margin-top: 24px;
     font-weight: bold;
@@ -59,6 +61,8 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     font-size: 20px;
     border-radius: 25px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -66,21 +70,15 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     margin-top: 90px;
     margin-left: -370px;
-    /*border: 2px solid #dce4ec;*/
     color: #34495e;
     cursor: pointer;
-    /*line-height: 40px;*/
     text-align: left;
-    /*background: #ffffff;*/
     overflow: hidden;
     position: absolute;
     background: #dce4ec;
-    /*padding: 0 10px;*/
-    /*display: inline-block;*/
-    /*height: 40px;*/
-    /*line-height: 40px;*/
     border-radius: 25px;
     width: 10%;
+    visibility: hidden;
 
 }
 

@@ -19,7 +19,7 @@
             onchange="selectInputType(this.value)">
         <option value="type">Select file type</option>
         <option value="pf">Patenthetical format</option>
-        <option value="trip" onclick="unhide()">Triplets</option>
+        <option value="Triplets">Triplets</option>
         <option value="dna">DNA format</option>
         <option value="HYDE format">HYDE format</option>
     </select><br><br><br>
@@ -45,7 +45,7 @@
 
     <br>
 
-    <button class="button" onclick="createboxes()">Remove nodes</button>
+    <button class="button" onclick="createboxes()" id="boxes">Remove nodes</button>
     <!--<button class="button" onclick="changeRootAction()">Change root</button>-->
     <!--<br>-->
     <!--<button class="button" onclick="dwnPFormat()">Download Parentheical format</button>-->
@@ -53,9 +53,9 @@
     <!--<button class="button" onclick="downloadImage()">Download PNG</button>-->
 
     <br>
-    <button class="button" onclick="refreshGraph()">Refresh Graph</button>
+    <button class="button" onclick="refreshGraph()" id="remove">Refresh Graph</button>
     <br>
-    <button class="button" onclick="removeNodesAction()">Submit Nodes</button>
+    <button class="button" onclick="removeNodesAction()" id="submit">Submit Nodes</button>
     <!--<br>-->
     <!--<button class="button" onclick="check()">Submit</button>-->
 

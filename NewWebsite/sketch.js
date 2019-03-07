@@ -1,11 +1,21 @@
 var nodeNum = 0;
 var nodeVal = [];
 var nodesCheckedStr = "";
+var threshold;
+
+var b= document.getElementById("boxes");
+b.style.visibility="hidden";
+
+var c= document.getElementById("remove");
+c.style.visibility="hidden";
+
+var d= document.getElementById("submit");
+d.style.visibility="hidden";
 
 function formdata() {
     var firstname1 = document.getElementById("rNodes").value;
 
-    document.writeln(firstname1 + "<br>");
+    // document.writeln(firstname1 + "<br>");
     alert(firstname1);
 }
 
@@ -31,6 +41,7 @@ function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility= "hidden";
+    b.style.visibility= "visible";
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
 
@@ -135,6 +146,7 @@ function createD3Graph() {
                 });
         }
     });
+    // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
 function dragstarted(d) {
@@ -167,6 +179,7 @@ function setup() {
     inp = createFileInput(gotFile, 'multiple');
     inp.position(400, 100);
     inp.addClass("chooseButton");
+    inp.attribute("id", "file");
 
 
 
@@ -179,6 +192,21 @@ function setup() {
 function selectInputType(val) {
     if (val === 'HYDE format') {
         bool = 1;
+        let x = document.getElementById("file");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.visibility="visible";
+        }
+    }
+    else if (val === 'Triplets') {
+        let x = document.getElementById("file");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.visibility="visible";
+        }
+
     }
 }
 
@@ -189,12 +217,18 @@ function createboxes() {
 
     // var loader = document.getElementsByI ("container");
     // loader.style.visibility= "visible";
+    c.style.visibility= "visible";
+    d.style.visibility= "visible";
     nodeVal.forEach(function (element) {
         var x = document.createElement("INPUT");
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
+        var y= document.createElement("p");
+        var text = document.createTextNode(""+ element);
+        y.appendChild(text);
         document.body.appendChild(x);
+        document.body.appendChild(y);
         console.log(x.id);
     });
     // for (let i = 0; i < nodeNum; i++) {
@@ -270,6 +304,7 @@ function gotFile(file) {
     document.getElementById("loader").style.visibility= "visible";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
+    fileDiv.style.visibility= "hidden";
     // Assign a CSS class for styling (see index.html)
     fileDiv.class('file');
 
@@ -287,7 +322,7 @@ function gotFile(file) {
             // var paraText=  document.getElementsByClassName('text').innerHTML;
             paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-            var threshold = document.getElementById("textThreshold").value;
+            threshold = document.getElementById("textThreshold").value;
 
             if (threshold == "") {
                 alert("Enter THreshold First")
@@ -323,7 +358,7 @@ function pushHydeToServer(hydeInput, thresh) {
         if (request.readyState === 4 && request.status === 200) {
             createD3Graph();
         } else if (request.readyState === 4) {
-            document.write("<p>Error : " + request.status + "," + request.statusText);
+            // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
     }
 }
@@ -352,8 +387,9 @@ function pushStringToServer(triplets) {
 //         'src', 'data:image/png;base64,'+response);
             createD3Graph();
         } else if (request.readyState === 4) {
-            document.write("<p>Error : " + request.status + "," + request.statusText);
+            // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
+
     }
 }
 
@@ -382,7 +418,7 @@ function pushLeavesToServer(leaves) {
             createD3Graph();
 
         } else if (request.readyState == 4) {
-            document.write("<p>Error : " + request.status + "," + request.statusText);
+            // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
     }
 }
@@ -413,7 +449,7 @@ function pushChangeRootToServer(flag, tripRoot) {
                     'src', 'data:image/png;base64,' + response);
 
         } else if (request.readyState === 4) {
-            document.write("<p>Error : " + request.status + "," + request.statusText);
+            // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
     }
 }
