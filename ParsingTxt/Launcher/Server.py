@@ -156,6 +156,34 @@ def uploadHyde(thresh):
 
 
 # POST
+@app.route('/uploadNewick/', methods=['POST'])
+@cross_origin()
+def uploadParentheticalAndReturnDot():
+    """
+    predicts requested text whether it is ham or spam
+    :return: json
+    """
+    json = request.get_json()
+    print(json)
+    if len(json['text']) == 0:
+        return 'error invalid input'
+
+    parenthetical = json['text']
+
+    print(parenthetical)
+
+    ServerAction.newickToDot(parenthetical)
+
+    # ServerAction.convertDotToPNG('cExample1.dot')
+    # print('flag=', flag)
+    # if len(flag) > 0:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
+    # else:
+    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
+    return "work in progress"
+
+
+# POST
 @app.route('/upload/', methods=['POST'])
 @cross_origin()
 def uploadTripletsAndReturnDot():

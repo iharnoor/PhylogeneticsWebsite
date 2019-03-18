@@ -18,7 +18,7 @@
     <select class=button id="transfer_reason" name="transfer_reason"
             onchange="selectInputType(this.value)">
         <option value="type">Select file type</option>
-        <option value="pf">Patenthetical format</option>
+        <option value="pf">Parenthetical format</option>
         <option value="Triplets">Triplets</option>
         <option value="dna">DNA format</option>
         <option value="HYDE format">HYDE format</option>
@@ -33,6 +33,10 @@
     <br>
 
     <textarea id="textareabox" name="textarea1" placeholder="Enter Nodes To Be Removed"></textarea>
+    <br> <br>
+    <input id="parenthetical" type="text" placeholder="Enter Newick Format Here">
+
+
     <!--<button class="button" id="chooser" onclick="gotFile(file)">Choose file</button><br>-->
 
     <!-- <label for="file"><strong>Choose a file</strong></label> -->
@@ -42,7 +46,6 @@
 
     <!-- <input type="file" id="file" onclick="gotFile" />
     <label for="file" class="btn-2">upload</label> -->
-
     <br>
 
     <button class="button" onclick="createboxes()" id="boxes">Remove nodes</button>
@@ -51,7 +54,8 @@
     <!--<button class="button" onclick="dwnPFormat()">Download Parentheical format</button>-->
     <!--<br>-->
     <!--<button class="button" onclick="downloadImage()">Download PNG</button>-->
-
+    <br>
+    <button class="button" onclick="onClickCreateNetwork()" id="createNetwork">Create Network</button>
     <br>
     <button class="button" onclick="refreshGraph()" id="remove">Refresh Graph</button>
     <br>

@@ -83,7 +83,7 @@ h1 {
   &.animation-2, &.animation-3, &.animation-4 {
     animation: rotation 1s infinite;
   }
-  &.animation-3,
+  &.animation-3
   {
     .shape1 { border-top-left-radius: $shapeDimentions; }
     .shape2 { border-top-right-radius: $shapeDimentions; }

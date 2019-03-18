@@ -3,6 +3,7 @@ import pandas as pd
 import pydot
 import subprocess
 import numpy as np
+import ParentheticalToDot
 
 
 def parseHydeToTriplets(fileName, threshold):
@@ -126,6 +127,12 @@ def removeNodes(nodes):
         text_file.write(output)
 
 
+def newickToDot(newick):
+    dotFomat = ParentheticalToDot.newickToActualLabels(newick)
+    with open("upload.dot", "w+") as text_file:
+        text_file.write(dotFomat)
+
+
 if __name__ == '__main__':
     print("Hello")
     # tripletsToDot('cExample1.trips')
@@ -144,7 +151,10 @@ if __name__ == '__main__':
 
     # parseHydeToTriplets("results.txt", 0.05)
     # tripletsToDot('HydeToTriplets.txt')
-    convertDotToPNG('cExample1.dot')
+
+    newickToDot('((C,D)F,(A,G));')
+
+    # convertDotToPNG('cExample1.dot')
 
     # removeNodes('5,4,3')
 

@@ -26,18 +26,21 @@ def convertDotLabelsToActualLabels(fileName):
 
     print(dotFormat)
 
-    with open('actualLabels.dot', 'w+') as fileName:
+    with open('../ParentheticalToDot/actualLabels.dot', 'w+') as fileName:
         fileName.write(dotFormat)
     return dotFormat
 
 
 def convertNewickToDot(parenthetical):
-    cmd = 'echo \"' + parenthetical + '\" | ./a.out > converted.dot'
+    cmd = 'echo \"' + parenthetical + '\" | ../ParentheticalToDot/a.out > ../ParentheticalToDot/converted.dot'
     os.system(cmd)
 
 
-if __name__ == '__main__':
-    convertNewickToDot('((a_2,b_3),c_4);')
-    convertDotLabelsToActualLabels('converted.dot')
+def newickToActualLabels(newick):
+    convertNewickToDot(newick)
+    convertDotLabelsToActualLabels('../ParentheticalToDot/converted.dot')
+    return returnReducedDotFile('../ParentheticalToDot/actualLabels.dot')
 
-    print(returnReducedDotFile('actualLabels.dot'))
+
+if __name__ == '__main__':
+    print(newickToActualLabels('((a_2,b_3),c_4);'))
