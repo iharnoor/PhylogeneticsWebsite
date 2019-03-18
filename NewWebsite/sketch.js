@@ -3,14 +3,14 @@ var nodeVal = [];
 var nodesCheckedStr = "";
 var threshold;
 
-var b= document.getElementById("boxes");
-b.style.visibility="hidden";
+var b = document.getElementById("boxes");
+b.style.visibility = "hidden";
 
-var c= document.getElementById("remove");
-c.style.visibility="hidden";
+var c = document.getElementById("remove");
+// c.style.visibility="hidden";
 
-var d= document.getElementById("submit");
-d.style.visibility="hidden";
+var d = document.getElementById("submit");
+d.style.visibility = "hidden";
 
 function formdata() {
     var firstname1 = document.getElementById("rNodes").value;
@@ -40,8 +40,8 @@ var simulation = d3.forceSimulation()
 function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
-    document.getElementById("loader").style.visibility= "hidden";
-    b.style.visibility= "visible";
+    document.getElementById("loader").style.visibility = "hidden";
+    b.style.visibility = "visible";
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
 
@@ -169,6 +169,7 @@ function dragended(d) {
 //End of D3 code
 
 var bool = 0;
+var selectedDropDown = "Triplets";
 
 function setup() {
     noCanvas();
@@ -182,7 +183,6 @@ function setup() {
     inp.attribute("id", "file");
 
 
-
     // inpputForHyde = createFileInput(gotHydeFile, 'multiple');
 
     textAlign(CENTER);
@@ -190,23 +190,22 @@ function setup() {
 }
 
 function selectInputType(val) {
+    selectedDropDown = val;
     if (val === 'HYDE format') {
         bool = 1;
         let x = document.getElementById("file");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
-            x.style.visibility="visible";
+            x.style.visibility = "visible";
         }
-    }
-    else if (val === 'Triplets') {
+    } else if (val === 'Triplets') {
         let x = document.getElementById("file");
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
-            x.style.visibility="visible";
+            x.style.visibility = "visible";
         }
-
     }
 }
 
@@ -217,15 +216,15 @@ function createboxes() {
 
     // var loader = document.getElementsByI ("container");
     // loader.style.visibility= "visible";
-    c.style.visibility= "visible";
-    d.style.visibility= "visible";
+    c.style.visibility = "visible";
+    d.style.visibility = "visible";
     nodeVal.forEach(function (element) {
         var x = document.createElement("INPUT");
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
-        var y= document.createElement("p");
-        var text = document.createTextNode(""+ element);
+        var y = document.createElement("p");
+        var text = document.createTextNode("" + element);
         y.appendChild(text);
         document.body.appendChild(x);
         document.body.appendChild(y);
@@ -259,11 +258,9 @@ function checking() {
 // }
 
 function onClickCreateNetwork() {
-    var parentheticalText = inputForParenthetical.value();
-    // var tripRoot = input2.value();
+    var parentheticalText = document.getElementById("parenthetical").value;
 
-    // pushChangeRootToServer(flag, tripRoot)
-    greeting.html('Flag=' + parentheticalText);
+    pushParentheticalToServer(parentheticalText);
 }
 
 
@@ -301,10 +298,10 @@ function downloadImage() {
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
-    document.getElementById("loader").style.visibility= "visible";
+    document.getElementById("loader").style.visibility = "visible";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
-    fileDiv.style.visibility= "hidden";
+    fileDiv.style.visibility = "hidden";
     // Assign a CSS class for styling (see index.html)
     fileDiv.class('file');
 
@@ -315,7 +312,7 @@ function gotFile(file) {
         alert('image not accepted')
     } else if (file.type === 'text') {
 
-        if (bool === 1) {//HYDE Selected
+        if (selectedDropDown === "HYDE format") {//HYDE Selected
             var par = createP(file.data);
             par.class('text');
             var texts = selectAll('.text');
@@ -325,11 +322,11 @@ function gotFile(file) {
             threshold = document.getElementById("textThreshold").value;
 
             if (threshold == "") {
-                alert("Enter THreshold First")
+                alert("Enter Threshold First")
             } else {
                 pushHydeToServer(paraText, threshold);
             }
-        } else {
+        } else if (selectedDropDown == 'Triplets') {
             // Make a paragraph of text
             var par = createP(file.data);
             par.class('text');
@@ -362,6 +359,37 @@ function pushHydeToServer(hydeInput, thresh) {
         }
     }
 }
+
+function pushParentheticalToServer(parenthetical) {
+    var data = JSON.stringify({
+        "text": parenthetical
+    });
+
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://127.0.0.1:5001/uploadNewick/");
+    request.setRequestHeader("Content-Type", "application/json");
+    request.addEventListener("readystatechange", processRequest, false);
+    request.send(data);
+
+    function processRequest(e) {
+        // document.write("This is Working <p>");
+        if (request.readyState === 4 && request.status === 200) {
+//         var response = request.responseText;
+// //        document.write(response);
+//         // Convert Base64 to Image
+//         var img = createImg();
+//         img.class('thumb');
+//         img = document.getElementsByClassName('thumb')[0]
+//         .setAttribute(
+//         'src', 'data:image/png;base64,'+response);
+            createD3Graph();
+        } else if (request.readyState === 4) {
+            // document.write("<p>Error : " + request.status + "," + request.statusText);
+        }
+
+    }
+}
+
 
 function pushStringToServer(triplets) {
     var data = JSON.stringify({
