@@ -1,27 +1,91 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>TRIP 2 NET</title>
 
-	<link href="styles.css" rel="stylesheet">
-    <script src="libraries/p5.js" type="text/javascript"></script>
+    <title>DNA 2 NET</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
 
-    <script src="libraries/p5.dom.js" type="text/javascript"></script>
-    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+</head>
+<body>
 
-    <script src="sketch.js" type="text/javascript"></script>
-	
-  </head>
-  <body>
+<div class="top"><h1 class="center" style="color: #a4a4a4">DNA 2 NET</h1>
+</div>
 
-    <h1 class = "center" >TRIP 2 NET</h1>
+<div class="vbox">
+    <!-- <button class="button">Choose File</button> -->
+    <select class=button id="transfer_reason" name="transfer_reason"
+            onchange="selectInputType(this.value)">
+        <option value="type">Select file type</option>
+        <option value="pf">Patenthetical format</option>
+        <option value="Triplets">Triplets</option>
+        <option value="dna">DNA format</option>
+        <option value="HYDE format">HYDE format</option>
+    </select><br><br><br>
 
-    <p><h3>This example loads a file (or multiple files) that are selected by a user from their local drive.  If the file is an image, an image element is displayed.  For a text file, a paragraph element is created to display the text.</h3></p>
-	
-	<textarea id="textbox">Type something here</textarea> <button id="create">Create file</button> <a download="info.txt" id="downloadlink" style="display: none">Download</a>
+    <br>
+    <br>
+    <input id="textThreshold" type="text" placeholder="Threshold">
 
-<!--	<a id= "download" href="data:image/png;base64" download= "tree.png"> <button>Download</button></a>-->
-	
-  </body>
+    <br>
+
+    <br>
+
+    <textarea id="textareabox" name="textarea1" placeholder="Enter Nodes To Be Removed"></textarea>
+    <!--<button class="button" id="chooser" onclick="gotFile(file)">Choose file</button><br>-->
+
+    <!-- <label for="file"><strong>Choose a file</strong></label> -->
+    <!--
+            <input type="file" onclick="gotFile(file)"><br>
+            <label for="file" class="btn-2">upl</label> -->
+
+    <!-- <input type="file" id="file" onclick="gotFile" />
+    <label for="file" class="btn-2">upload</label> -->
+
+    <br>
+
+    <button class="button" onclick="createboxes()" id="boxes">Remove nodes</button>
+    <!--<button class="button" onclick="changeRootAction()">Change root</button>-->
+    <!--<br>-->
+    <!--<button class="button" onclick="dwnPFormat()">Download Parentheical format</button>-->
+    <!--<br>-->
+    <!--<button class="button" onclick="downloadImage()">Download PNG</button>-->
+
+    <br>
+    <button class="button" onclick="refreshGraph()" id="remove">Refresh Graph</button>
+    <br>
+    <button class="button" onclick="removeNodesAction()" id="submit">Submit Nodes</button>
+    <!--<br>-->
+    <!--<button class="button" onclick="check()">Submit</button>-->
+
+    <!--<div>-->
+    <!--<script type="text/javascript">-->
+    <!--createboxes();-->
+    <!--</script>-->
+
+    <!--</div>-->
+
+    <!--<form><br>-->
+    <!--Enter the nodes to be removed: <input type="text" id="rNodes"/><br><br>-->
+    <!--<input type="submit" value="Submit" onclick="check()"/><br>-->
+    <!--</form>-->
+</div>
+<div class="container" id="loader">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+</div>
+<!-- <h3>This example loads a file (or multiple files) that are selected by a user from their local drive.  If the file is an image, an image element is displayed.  For a text file, a paragraph element is created to display the text.</h3> -->
+<script src="libraries/d3.v4.min.js"></script>
+<script src="libraries/d3-dot-graph.js"></script>
+<script src="libraries/p5.js" type="text/javascript"></script>
+<script src="libraries/download.js" type="text/javascript"></script>
+<script src="libraries/p5.dom.js" type="text/javascript"></script>
+<script src="libraries/p5.sound.js" type="text/javascript"></script>
+<svg class="hi" width="800" height="800"></svg>
+<script src="sketch.js" type="text/javascript"></script>
+
+</body>
 </html>

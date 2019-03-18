@@ -5,7 +5,7 @@ import numpy as np
 # importing the datasets 4,5
 # Total 8 Columns
 
-def parseBiologistsFile(fileName, threshold):
+def parseHydeTxt(fileName, threshold):
     dataset = pd.read_table(fileName, delim_whitespace=True, header=None,
                             names=['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7'])
 
@@ -36,7 +36,7 @@ def parseBiologistsFile(fileName, threshold):
 
 
 if __name__ == '__main__':
-    parseBiologistsFile("sig.results.txt", 0.0005)
+    parseHydeTxt("sig.results.txt", 0.0005)
 
 # TODO : append these to the bottom of file1 and make the selection random (135 or 153 randomly) for Triplets more than the threshold.
 
