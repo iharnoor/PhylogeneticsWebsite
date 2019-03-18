@@ -1,0 +1,11 @@
+digraph G {
+id5[label=""];
+id3[label=""];
+a_2[label="a_2"];
+id3 ->  a_2
+b_3[label="b_3"];
+id3 ->  b_3
+id5 ->  id3
+c_4[label="c_4"];
+id5 ->  c_4
+}

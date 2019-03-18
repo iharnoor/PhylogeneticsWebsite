@@ -1,7 +1,0 @@
-// LEV1ATHAN Version 1.0, 21 september 2009
-// COMMENT: Pre-processing the input file to count the leaves
-Read line: 110	1	5
-Malformed line: each line should consist of three or four arguments separated by spaces, where the
-first three are names of leave, and the optional fourth (the weight)
-should be greater than or equal to zero.
-Problem reading file TripCombo.trips

@@ -2,13 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ParsingTxt/ParentheticalToDot/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeInput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeToTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/FortyEight.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Heuristic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Heuristic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/KSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Lev1athan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Lev1athan.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/NetworkParen.net" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Sim1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/TripCombo.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/TripCombo.trips" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/Tripcombo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/TripletSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/TripletsToDot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/WuAnswer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/WuWeighted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/biDAG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample1.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample1.trips" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.trips" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample2.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/cExample2.trips" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/dagExplore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/example.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/example.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/example.trips" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/exampleoutput.dot.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/foo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/genDAG.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/genExplore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/outfile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1Than/outfile.ps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/DocName.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/Lev1athan.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/cExample1.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/cExample1.trips" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/example.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1ThanJar/example.text" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Lev1athan.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/NetworkParen.net" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/NetworkParen.net" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/ParseTextFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/ParseTextFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/ServerAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/ServerAction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/TripCombo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/TripCombo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.trips" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/change-root.jl" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/change-root.jl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/example.out" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/example.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/hydetotriplets.out" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/hydetotriplets.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/leaves" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/leaves" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/leaves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/leaves.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/net.png" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/net.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/new-net.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/new-net.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/out_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/out_file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/plot-network.jl" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/plot-network.jl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/reduced-net.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/reduced-net.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/remove-leaves.jl" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/remove-leaves.jl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/result.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/sig.results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/sig.results.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload1.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +91,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+            <state relative-caret-position="34">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -33,17 +103,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2120">
-              <caret line="148" column="174" selection-start-line="148" selection-start-column="174" selection-end-line="148" selection-end-column="174" />
+            <state relative-caret-position="467">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -107,17 +177,16 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,12 +204,13 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551634534932" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552917005790" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -198,17 +268,18 @@
       <workItem from="1551504585194" duration="9588000" />
       <workItem from="1551884749435" duration="641000" />
       <workItem from="1551900407383" duration="9104000" />
+      <workItem from="1552915009521" duration="794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53847000" />
+    <option name="totallyTimeSpent" value="54641000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-1680" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.052771855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13247864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -321,24 +392,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
+        <state relative-caret-position="467">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2120">
-          <caret line="148" column="174" selection-start-line="148" selection-start-column="174" selection-end-line="148" selection-end-column="174" />
+        <state relative-caret-position="34">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>

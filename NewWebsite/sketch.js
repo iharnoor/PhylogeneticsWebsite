@@ -7,7 +7,7 @@ var b= document.getElementById("boxes");
 b.style.visibility="hidden";
 
 var c= document.getElementById("remove");
-c.style.visibility="hidden";
+// c.style.visibility="hidden";
 
 var d= document.getElementById("submit");
 d.style.visibility="hidden";
