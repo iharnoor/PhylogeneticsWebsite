@@ -23,6 +23,6 @@ for x in content:
     else:
         file.write(x.split()[0] + " " + x.split()[1] + " " + val + "\n")
         result[val] =[x.split()[0]+ "," + x.split()[1]]
-
+file.close()
 print(result)
 
