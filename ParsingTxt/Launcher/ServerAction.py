@@ -4,6 +4,7 @@ import pydot
 import subprocess
 import numpy as np
 import ParentheticalToDot
+from Launcher import removeDup
 
 
 def parseHydeToTriplets(fileName, threshold):
@@ -36,6 +37,7 @@ def parseHydeToTriplets(fileName, threshold):
         for f in read_files:
             with open(f, "rb") as infile:
                 outfile.write(infile.read())
+    removeDup.removeDupTriplets()
 
 
 def returnParentheticalFormat(fileName):
