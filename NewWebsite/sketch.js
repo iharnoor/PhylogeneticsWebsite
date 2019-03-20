@@ -7,10 +7,10 @@ var b = document.getElementById("boxes");
 b.style.visibility = "hidden";
 
 var c = document.getElementById("textareabox");
-c.style.visibility="hidden";
+c.style.visibility = "hidden";
 
 var btnRefresh = document.getElementById("remove");
-btnRefresh.style.visibility="hidden";
+btnRefresh.style.visibility = "hidden";
 
 var d = document.getElementById("submit");
 d.style.visibility = "hidden";
@@ -203,6 +203,9 @@ function setup() {
 function selectInputType(val) {
     selectedDropDown = val;
     if (val === 'HYDE format') {
+        // d.style.visibility = "visible";
+        createNetworkSelector.style.visibility = "visible";
+        parentheticalSelector.style.visibility = "visible";
         bool = 1;
         e.style.visibility = "visible";
         let x = document.getElementById("file");
@@ -219,8 +222,6 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
-        parentheticalSelector.style.visibility = "visible";
-    } else if (val === 'HYDE format') {
         parentheticalSelector.style.visibility = "visible";
     }
 }
@@ -466,7 +467,6 @@ function pushLeavesToServer(leaves) {
         }
     }
 }
-
 
 function pushChangeRootToServer(flag, tripRoot) {
     var data = JSON.stringify({
