@@ -224,6 +224,8 @@ function selectInputType(val) {
         }
     } else if (val === 'pf') {
         parentheticalSelector.style.visibility = "visible";
+        createNetworkSelector.style.visibility = "visible";
+
     }
 }
 
