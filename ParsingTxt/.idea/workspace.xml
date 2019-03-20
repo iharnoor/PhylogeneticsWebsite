@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InputFiles/baseline.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../InputFiles/baseline.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../InputFiles/n15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../InputFiles/n15.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeInput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeToTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParentheticalToDot/converted.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParentheticalToDot/converted.dot" afterDir="false" />
-    </list>
+    <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,27 +22,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="202">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/tokenize.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6645">
-              <caret line="451" selection-start-line="451" selection-end-line="451" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -353,12 +323,12 @@
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14691943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14691943" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3284974" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3564767" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3564767" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39896372" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -532,20 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/tokenize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6645">
-          <caret line="451" selection-start-line="451" selection-end-line="451" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -580,7 +536,25 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/tokenize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="451" column="32" selection-start-line="451" selection-start-column="32" selection-end-line="451" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

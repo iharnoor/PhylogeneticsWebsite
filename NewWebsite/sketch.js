@@ -6,14 +6,20 @@ var threshold;
 var b = document.getElementById("boxes");
 b.style.visibility = "hidden";
 
-var c = document.getElementById("remove");
-// c.style.visibility="hidden";
+var c = document.getElementById("textareabox");
+c.style.visibility="hidden";
+
+var btnRefresh = document.getElementById("remove");
+btnRefresh.style.visibility="hidden";
 
 var d = document.getElementById("submit");
 d.style.visibility = "hidden";
 
 var e = document.getElementById("textThreshold");
 e.style.visibility = "hidden";
+
+var createNetworkSelector = document.getElementById("createNetwork");
+createNetworkSelector.style.visibility = "hidden";
 
 var parentheticalSelector = document.getElementById("parenthetical");
 parentheticalSelector.style.visibility = "hidden";
@@ -213,6 +219,8 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
+        parentheticalSelector.style.visibility = "visible";
+    } else if (val === 'HYDE format') {
         parentheticalSelector.style.visibility = "visible";
     }
 }
