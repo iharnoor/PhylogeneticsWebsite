@@ -24,6 +24,8 @@ createNetworkSelector.style.visibility = "hidden";
 var parentheticalSelector = document.getElementById("parenthetical");
 parentheticalSelector.style.visibility = "hidden";
 
+var globalhydeFileData = "";
+
 function formdata() {
     var firstname1 = document.getElementById("rNodes").value;
 
@@ -205,7 +207,6 @@ function selectInputType(val) {
     if (val === 'HYDE format') {
         // d.style.visibility = "visible";
         createNetworkSelector.style.visibility = "visible";
-        parentheticalSelector.style.visibility = "visible";
         bool = 1;
         e.style.visibility = "visible";
         let x = document.getElementById("file");
@@ -275,9 +276,13 @@ function checking() {
 // }
 
 function onClickCreateNetwork() {
-    var parentheticalText = document.getElementById("parenthetical").value;
-
-    pushParentheticalToServer(parentheticalText);
+    if (selectedDropDown === "pf") {
+        var parentheticalText = document.getElementById("parenthetical").value;
+        pushParentheticalToServer(parentheticalText);
+    } else if (selectedDropDown === "HYDE format") {
+        threshold = document.getElementById("textThreshold").value;
+        pushHydeToServer(globalhydeFileData, threshold);
+    }
 }
 
 
@@ -336,13 +341,13 @@ function gotFile(file) {
             // var paraText=  document.getElementsByClassName('text').innerHTML;
             paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-            threshold = document.getElementById("textThreshold").value;
+            globalhydeFileData = paraText;
 
-            if (threshold == "") {
-                alert("Enter Threshold First")
-            } else {
-                pushHydeToServer(paraText, threshold);
-            }
+            // if (threshold == "") {
+            //     alert("Enter Threshold First")
+            // } else {
+            //     pushHydeToServer(paraText, threshold);
+            // }
         } else if (selectedDropDown == 'Triplets') {
             // Make a paragraph of text
             var par = createP(file.data);
