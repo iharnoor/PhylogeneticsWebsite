@@ -12,6 +12,12 @@ var c = document.getElementById("remove");
 var d = document.getElementById("submit");
 d.style.visibility = "hidden";
 
+var e = document.getElementById("textThreshold");
+e.style.visibility = "hidden";
+
+var parentheticalSelector = document.getElementById("parenthetical");
+parentheticalSelector.style.visibility = "hidden";
+
 function formdata() {
     var firstname1 = document.getElementById("rNodes").value;
 
@@ -182,7 +188,6 @@ function setup() {
     inp.addClass("chooseButton");
     inp.attribute("id", "file");
 
-
     // inpputForHyde = createFileInput(gotHydeFile, 'multiple');
 
     textAlign(CENTER);
@@ -193,6 +198,7 @@ function selectInputType(val) {
     selectedDropDown = val;
     if (val === 'HYDE format') {
         bool = 1;
+        e.style.visibility = "visible";
         let x = document.getElementById("file");
         if (x.style.display === "none") {
             x.style.display = "block";
@@ -206,6 +212,8 @@ function selectInputType(val) {
         } else {
             x.style.visibility = "visible";
         }
+    } else if (val === 'pf') {
+        parentheticalSelector.style.visibility = "visible";
     }
 }
 

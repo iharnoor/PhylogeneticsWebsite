@@ -1,8 +1,6 @@
 digraph G {
-F ->  C
-F ->  D
-id7 ->  F
-id6 ->  A
-id6 ->  G
-id7 ->  id6
+id3 ->  a
+id3 ->  b
+id5 ->  id3
+id5 ->  c
 }
