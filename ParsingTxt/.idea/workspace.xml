@@ -2,97 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Launcher/ParentheticalToDot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/Triplets3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/cExample1.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/cExample1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/reduced-net.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/converted.dot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/lex.yy.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/newick.l" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/newick.tab.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/newick.tab.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ParentheticalToDot/newick.y" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/removeDup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/google-loaders-redesign-master/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/google-loaders-redesign-master/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ParsingTxt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ParsingTxt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HydeInput.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HydeToTriplets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/FortyEight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Heuristic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Heuristic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/KSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Lev1athan.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Lev1athan.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/NetworkParen.net" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Sim1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/TripCombo.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/TripCombo.trips" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/Tripcombo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/TripletSet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/TripletsToDot.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/WuAnswer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/WuWeighted.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/biDAG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample1.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample1.trips" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeInput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample2.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/cExample2.trips" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/dagExplore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/example.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/example.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/example.trips" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/exampleoutput.dot.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/foo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/genDAG.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/genExplore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/outfile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1Than/outfile.ps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/DocName.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/Lev1athan.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/cExample1.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/cExample1.trips" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/cExample1.trips" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/example.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1ThanJar/example.text" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lev1athan.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NetworkParen.net" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeToTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParseTextFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/ParseTextFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerAction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/ServerAction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TripCombo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/TripCombo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/NetworkParen.net" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Triplets3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HydeToTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Triplets1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Triplets2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Triplets3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cExample1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cExample1.trips" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/change-root.jl" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/change-root.jl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example.out" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/example.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hydetotriplets.out" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/hydetotriplets.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leaves" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/leaves" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leaves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/leaves.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net.png" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/net.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-net.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/new-net.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/out_file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plot-network.jl" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/plot-network.jl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reduced-net.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/remove-leaves.jl" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/remove-leaves.jl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/retrievedTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sig.results.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/sig.results.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.dot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload1.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerAction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="-1186">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="21" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -115,74 +35,78 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
+        <entry file="file://$PROJECT_DIR$/cExample1.dot">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/results.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
               <folding>
-                <element signature="e#0#6#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/tokenize.py">
+        <entry file="file://$PROJECT_DIR$/HydeToTriplets.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="451" selection-start-line="451" selection-end-line="451" />
+            <state relative-caret-position="204">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot">
+        <entry file="file://$PROJECT_DIR$/test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="17">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ParentheticalToDot/converted.dot">
+        <entry file="file://$PROJECT_DIR$/removeDup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state relative-caret-position="391">
+              <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testfile.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/cExample1.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/cExample1.dot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
+            <state relative-caret-position="323">
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -221,8 +145,7 @@
       <find>thesh</find>
       <find>Thresh</find>
       <find>thresh</find>
-      <find>os</find>
-      <find>returndot</find>
+      <find>remo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -237,29 +160,25 @@
         <option value="$PROJECT_DIR$/leaves" />
         <option value="$PROJECT_DIR$/NetworkParen.net" />
         <option value="$PROJECT_DIR$/Lev1Than/TripletsToDot.py" />
+        <option value="$PROJECT_DIR$/cExample1.dot" />
         <option value="$PROJECT_DIR$/HydeToTriplets2.txt" />
         <option value="$PROJECT_DIR$/TripCombo.txt" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/upload.dot" />
         <option value="$PROJECT_DIR$/HydeToTriplets.txt" />
+        <option value="$PROJECT_DIR$/ServerAction.py" />
         <option value="$PROJECT_DIR$/Server.py" />
         <option value="$PROJECT_DIR$/results.txt" />
-        <option value="$PROJECT_DIR$/ParentheticalToDot.py" />
-        <option value="$PROJECT_DIR$/ServerAction.py" />
-        <option value="$PROJECT_DIR$/Lev1Than/cExample1.dot" />
-        <option value="$PROJECT_DIR$/cExample1.dot" />
-        <option value="$PROJECT_DIR$/Launcher/upload.dot" />
-        <option value="$PROJECT_DIR$/ParentheticalToDot/__init__.py" />
-        <option value="$PROJECT_DIR$/Launcher/ParentheticalToDot.py" />
-        <option value="$PROJECT_DIR$/Launcher/Server.py" />
-        <option value="$PROJECT_DIR$/Launcher/ServerAction.py" />
+        <option value="$PROJECT_DIR$/test.txt" />
+        <option value="$PROJECT_DIR$/removeDup.py" />
+        <option value="$PROJECT_DIR$/testfile.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1680" />
-    <option name="height" value="1049" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -275,21 +194,12 @@
               <item name="ParsingTxt" type="b2602c69:ProjectViewProjectNode" />
               <item name="ParsingTxt" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ParsingTxt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParsingTxt" type="462c0819:PsiDirectoryNode" />
-              <item name="Launcher" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParsingTxt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParsingTxt" type="462c0819:PsiDirectoryNode" />
-              <item name="ParentheticalToDot" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Course" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,10 +208,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Launcher" />
-      <recent name="$PROJECT_DIR$/Main" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hsingh9\Desktop\Research Website\ParsingTxt\Lev1Than" />
       <recent name="C:\Users\hsingh9\Desktop\Research Website\ParsingTxt\Lev1ThanJar" />
@@ -319,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Server">
+  <component name="RunManager" selected="Python.removeDup">
     <configuration name="Server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ParsingTxt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -332,49 +238,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/Server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Server" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ParsingTxt" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Launcher" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Launcher/Server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ServerAction (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ParsingTxt" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Launcher" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Launcher/ServerAction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -395,7 +259,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main/ServerAction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerAction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -404,7 +268,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="TripletsToDot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ParsingTxt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -412,11 +276,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ParentheticalToDot" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lev1Than" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Launcher/ParentheticalToDot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lev1Than/TripletsToDot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ParsingTxt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="removeDup" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ParsingTxt" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/removeDup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -427,18 +333,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.Server (1)" />
-      <item itemvalue="Python.ServerAction (1)" />
       <item itemvalue="Python.ServerAction" />
-      <item itemvalue="Python.Server" />
-      <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.TripletsToDot" />
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.removeDup" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Server" />
-        <item itemvalue="Python.ServerAction (1)" />
-        <item itemvalue="Python.__init__ (1)" />
-        <item itemvalue="Python.Server (1)" />
+        <item itemvalue="Python.removeDup" />
         <item itemvalue="Python.ServerAction" />
+        <item itemvalue="Python.Server (1)" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.TripletsToDot" />
       </list>
     </recent_temporary>
   </component>
@@ -456,14 +362,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14691943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10642782" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3284974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3564767" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34579438" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39896372" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.40602285" />
+      <window_info anchor="bottom" id="Python Console" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10642782" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3284974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34579438" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39896372" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -476,15 +402,20 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Launcher/__init__.py</url>
+          <url>file://$PROJECT_DIR$/__init__.py</url>
           <line>1</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ServerAction.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -494,7 +425,7 @@
     <entry file="file://$PROJECT_DIR$/output.txt" />
     <entry file="file://$PROJECT_DIR$/head.html" />
     <entry file="file://$PROJECT_DIR$/GridWorld.py" />
-    <entry file="file://$PROJECT_DIR$/Launcher/out_file.txt">
+    <entry file="file://$PROJECT_DIR$/out_file.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
@@ -533,7 +464,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../Reinforcement_Learning_for_Stock_Prediction/venv/Lib/site-packages/pydot.py" />
-    <entry file="file://$PROJECT_DIR$/Launcher/reduced-net.txt">
+    <entry file="file://$PROJECT_DIR$/reduced-net.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" />
@@ -547,17 +478,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/leaves">
+    <entry file="file://$PROJECT_DIR$/leaves">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/new-net.txt">
+    <entry file="file://$PROJECT_DIR$/new-net.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/NetworkParen.net">
+    <entry file="file://$PROJECT_DIR$/NetworkParen.net">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="44" selection-start-column="44" selection-end-column="44" />
@@ -570,7 +501,7 @@
     <entry file="file://$PROJECT_DIR$/Lev1Than/TripCombo.trips">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/ParseTextFile.py">
+    <entry file="file://$PROJECT_DIR$/ParseTextFile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
@@ -597,14 +528,14 @@
     <entry file="file://$PROJECT_DIR$/Lev1Than/cExample1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/cExample1.trips">
+    <entry file="file://$PROJECT_DIR$/cExample1.trips">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/sig.results.txt">
+    <entry file="file://$PROJECT_DIR$/sig.results.txt">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="240">
           <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
@@ -614,8 +545,11 @@
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/typing.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lev1Than/cExample1.dot">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/cExample.dot" />
-    <entry file="file://$PROJECT_DIR$/Launcher/result.txt">
+    <entry file="file://$PROJECT_DIR$/result.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
@@ -623,146 +557,122 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HydeToTriplets2.txt" />
-    <entry file="file://$PROJECT_DIR$/Launcher/__init__.py">
+    <entry file="file://$PROJECT_DIR$/upload.dot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/TripCombo.txt">
+    <entry file="file://$PROJECT_DIR$/TripCombo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Triplets3.txt">
+    <entry file="file://$PROJECT_DIR$/Triplets3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Triplets2.txt">
+    <entry file="file://$PROJECT_DIR$/Triplets2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Triplets1.txt">
+    <entry file="file://$PROJECT_DIR$/Triplets1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/HydeInput.txt">
+    <entry file="file://$PROJECT_DIR$/HydeInput.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/cExample1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/HydeToTriplets.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/hydetotriplets.out">
+    <entry file="file://$PROJECT_DIR$/hydetotriplets.out">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="19" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/net.png">
+    <entry file="file://$PROJECT_DIR$/net.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lev1Than/cExample1.dot">
+    <entry file="file://$PROJECT_DIR$/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/cExample1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/cExample1.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParentheticalToDot/converted.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalToDot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="459">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
           <folding>
-            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/tokenize.py">
+    <entry file="file://$PROJECT_DIR$/results.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="451" selection-start-line="451" selection-end-line="451" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
+    <entry file="file://$PROJECT_DIR$/ServerAction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="168" column="36" selection-start-line="168" selection-start-column="36" selection-end-line="168" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="-1186">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cExample1.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/removeDup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HydeToTriplets.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testfile.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
