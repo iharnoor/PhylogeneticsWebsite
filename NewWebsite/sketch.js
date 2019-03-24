@@ -109,13 +109,15 @@ function createD3Graph() {
                 .on("start", dragstarted)
                 .on("drag", dragged)
                 .on("end", dragended));
+
         // alert(nodeVal);
         // add the text
         node.append("text")
             .attr("x", 12)
             .attr("dy", ".35em")
             .text(function (d) {
-                return d.id;
+                // return d.id;
+                return (parseInt(d.id.toString()) < 1000) ? d.id : "";
             });
 
         simulation

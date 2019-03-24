@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeInput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/HydeToTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/Triplets3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/retrievedTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParentheticalToDot/actualLabels.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParentheticalToDot/converted.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParentheticalToDot/converted.dot" afterDir="false" />
-    </list>
+    <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,23 +10,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+            <state relative-caret-position="495">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -370,6 +347,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1681736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,9 +476,6 @@
     <entry file="file://$PROJECT_DIR$/Launcher/Triplets2.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Triplets1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/HydeInput.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -559,16 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="119" column="8" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParentheticalToDot/converted.dot">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -613,7 +578,24 @@
     <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/Triplets1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
