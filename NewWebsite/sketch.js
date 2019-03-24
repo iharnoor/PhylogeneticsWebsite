@@ -2,6 +2,7 @@ var nodeNum = 0;
 var nodeVal = [];
 var nodesCheckedStr = "";
 var threshold;
+var paraText = "";
 
 var b = document.getElementById("boxes");
 b.style.visibility = "hidden";
@@ -219,6 +220,7 @@ function selectInputType(val) {
         }
     } else if (val === 'Triplets') {
         let x = document.getElementById("file");
+        createNetworkSelector.style.visibility = "visible";
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -286,6 +288,9 @@ function onClickCreateNetwork() {
     } else if (selectedDropDown === "HYDE format") {
         threshold = document.getElementById("textThreshold").value;
         pushHydeToServer(globalhydeFileData, threshold);
+    } else if (selectedDropDown == "Triplets") {
+        paraText = document.getElementsByClassName('text')[0].innerHTML;
+        pushStringToServer(paraText);
     }
 }
 
@@ -357,10 +362,10 @@ function gotFile(file) {
             var par = createP(file.data);
             par.class('text');
             var texts = selectAll('.text');
-            // var paraText=  document.getElementsByClassName('text').innerHTML;
-            paraText = document.getElementsByClassName('text')[0].innerHTML;
+            var paraText=  document.getElementsByClassName('text').innerHTML;
+            // paraText = document.getElementsByClassName('text')[0].innerHTML;
 
-            pushStringToServer(paraText);
+            // pushStringToServer(paraText);
         }
     }
 }
