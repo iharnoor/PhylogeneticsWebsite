@@ -1,8 +1,8 @@
 digraph G {
 id5[label=""];
 id3[label=""];
-a[label="a"];
-id3 ->  a
+id3[label="id3"];
+id3 ->  id3
 b[label="b"];
 id3 ->  b
 id5 ->  id3
