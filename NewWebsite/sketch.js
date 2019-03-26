@@ -34,8 +34,8 @@ function formdata() {
     alert(firstname1);
 }
 
-var lineD3 = d3.line()
-    .curve(d3.curveCatmullRom.alpha(0.5));
+// var lineD3 = d3.line();
+// .curve(d3.curveCatmullRom.alpha(0.5));
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -147,15 +147,7 @@ function createD3Graph() {
 
         function ticked() {
             path.attr("d", function (d) {
-                var dx = d.target.x - d.source.x,
-                    dy = d.target.y - d.source.y,
-                    dr = Math.sqrt(dx * dx + dy * dy);
-                return "M" +
-                    d.source.x + "," +
-                    d.source.y + "A" +
-                    dr + "," + dr + " 0 0,1 " +
-                    d.target.x + "," +
-                    d.target.y;
+                return "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
             });
             node
                 .attr("transform", function (d) {
@@ -362,7 +354,7 @@ function gotFile(file) {
             var par = createP(file.data);
             par.class('text');
             var texts = selectAll('.text');
-            var paraText=  document.getElementsByClassName('text').innerHTML;
+            var paraText = document.getElementsByClassName('text').innerHTML;
             // paraText = document.getElementsByClassName('text')[0].innerHTML;
 
             // pushStringToServer(paraText);

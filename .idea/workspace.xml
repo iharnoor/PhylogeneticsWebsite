@@ -4,12 +4,9 @@
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeInput.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeToTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="194">
+              <caret line="28" column="66" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -41,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/NewWebsite/filereader.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -49,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4303">
-              <caret line="422" lean-forward="true" selection-start-line="422" selection-end-line="422" />
+            <state relative-caret-position="310">
+              <caret line="127" column="30" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -66,12 +63,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hidden</find>
-      <find>submi</find>
-      <find>d.</find>
-      <find>refresh</find>
-      <find>pate</find>
-      <find>selectInputType</find>
       <find>bool = 1</find>
       <find>HYDE format</find>
       <find>threshold</find>
@@ -96,6 +87,12 @@
       <find>onclickcreate</find>
       <find>triplets</find>
       <find>paratext</find>
+      <find>curve</find>
+      <find>line</find>
+      <find>svg.append</find>
+      <find>edges</find>
+      <find>var</find>
+      <find>link</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,7 +112,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1811" />
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -125,8 +123,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,12 +139,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553460918726" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553571657102" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -208,18 +206,19 @@
       <workItem from="1551900407383" duration="9104000" />
       <workItem from="1552915009521" duration="3779000" />
       <workItem from="1553042599171" duration="4342000" />
-      <workItem from="1553454840447" duration="3043000" />
+      <workItem from="1553454840447" duration="3479000" />
+      <workItem from="1553569607008" duration="1499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68190000" />
+    <option name="totallyTimeSpent" value="70125000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="-1680" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13614164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15750916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -331,21 +330,21 @@
     <entry file="file://$PROJECT_DIR$/NewWebsite/filereader.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="194">
+          <caret line="28" column="66" lean-forward="true" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4303">
-          <caret line="422" lean-forward="true" selection-start-line="422" selection-end-line="422" />
+        <state relative-caret-position="310">
+          <caret line="127" column="30" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="30" />
         </state>
       </provider>
     </entry>
