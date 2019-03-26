@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeInput.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/HydeToTriplets.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Triplets3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,22 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NewWebsite/input.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NewWebsite/filereader.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="63">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -49,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4303">
-              <caret line="422" lean-forward="true" selection-start-line="422" selection-end-line="422" />
+            <state relative-caret-position="630">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -66,23 +55,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hidden</find>
-      <find>submi</find>
-      <find>d.</find>
-      <find>refresh</find>
-      <find>pate</find>
-      <find>selectInputType</find>
-      <find>bool = 1</find>
-      <find>HYDE format</find>
-      <find>threshold</find>
-      <find>onclickcrea</find>
-      <find>pushstring</find>
-      <find>pushparenthetical</find>
       <find>threshol</find>
       <find>textThreshold</find>
       <find>parenthetical</find>
       <find>create network</find>
-      <find>remove</find>
       <find>pushto</find>
       <find>hyde form</find>
       <find>createnetwork</find>
@@ -94,8 +70,21 @@
       <find>svg</find>
       <find>refre</find>
       <find>onclickcreate</find>
-      <find>triplets</find>
       <find>paratext</find>
+      <find>locat</find>
+      <find>submit</find>
+      <find>filediv</find>
+      <find>hidden</find>
+      <find>selecteddr</find>
+      <find>server</find>
+      <find>create</find>
+      <find>threshold</find>
+      <find>triplets</find>
+      <find>e.style.visibility = &quot;hidden&quot;;</find>
+      <find>thresh</find>
+      <find>remove</find>
+      <find>createnetworkselector</find>
+      <find>loader</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,6 +103,9 @@
         <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
       </list>
     </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -213,13 +205,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68190000" />
+    <option name="totallyTimeSpent" value="71858000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13614164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11940298" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -337,15 +329,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="63">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4303">
-          <caret line="422" lean-forward="true" selection-start-line="422" selection-end-line="422" />
+        <state relative-caret-position="630">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
         </state>
       </provider>
     </entry>

@@ -25,6 +25,11 @@ createNetworkSelector.style.visibility = "hidden";
 var parentheticalSelector = document.getElementById("parenthetical");
 parentheticalSelector.style.visibility = "hidden";
 
+var selectbutton = document.getElementById("transfer_reason");
+
+var refresher = document.getElementById("refresh");
+refresher.style.visibility="hidden";
+
 var globalhydeFileData = "";
 
 function formdata() {
@@ -56,6 +61,8 @@ function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
+    refresher.style.visibility="visible";
+    selectbutton.style.visibility="hidden";
     b.style.visibility = "visible";
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
@@ -207,10 +214,14 @@ function setup() {
 
 function selectInputType(val) {
     selectedDropDown = val;
+
+    // location.reload();
     if (val === 'HYDE format') {
+        removeGraph()
+        // location.reload(true);
         // d.style.visibility = "visible";
+
         createNetworkSelector.style.visibility = "visible";
-        bool = 1;
         e.style.visibility = "visible";
         let x = document.getElementById("file");
         if (x.style.display === "none") {
@@ -219,6 +230,11 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'Triplets') {
+        removeGraph()
+
+        // location.reload(true);
+        // var e = document.getElementById("textThreshold");
+        e.style.visibility = "hidden";
         let x = document.getElementById("file");
         createNetworkSelector.style.visibility = "visible";
         if (x.style.display === "none") {
@@ -227,6 +243,8 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
+        removeGraph()
+        // location.reload(true);
         parentheticalSelector.style.visibility = "visible";
         createNetworkSelector.style.visibility = "visible";
 
@@ -319,17 +337,19 @@ function refreshGraph() {
     createD3Graph();
 }
 
-function downloadImage() {
-    var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
-    url = document.getElementsByClassName('thumb')[0].src;//url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
-    url = url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
-    window.open(url, 'image.png');
-//  window.location= "buf/image.png";
-}
+// function downloadImage() {
+//     var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+//     url = document.getElementsByClassName('thumb')[0].src;//url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+//     url = url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+//     window.open(url, 'image.png');
+// //  window.location= "buf/image.png";
+// }
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
     document.getElementById("loader").style.visibility = "visible";
+    refresher.style.visibility="visible";
+    selectbutton.style.visibility="hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     fileDiv.style.visibility = "hidden";
@@ -359,6 +379,7 @@ function gotFile(file) {
             // }
         } else if (selectedDropDown == 'Triplets') {
             // Make a paragraph of text
+
             var par = createP(file.data);
             par.class('text');
             var texts = selectAll('.text');
