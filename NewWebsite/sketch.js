@@ -28,7 +28,7 @@ parentheticalSelector.style.visibility = "hidden";
 var selectbutton = document.getElementById("transfer_reason");
 
 var refresher = document.getElementById("refresh");
-refresher.style.visibility="hidden";
+refresher.style.visibility = "hidden";
 
 var globalhydeFileData = "";
 
@@ -61,8 +61,8 @@ function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
-    refresher.style.visibility="visible";
-    selectbutton.style.visibility="hidden";
+    refresher.style.visibility = "visible";
+    selectbutton.style.visibility = "hidden";
     b.style.visibility = "visible";
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
@@ -222,7 +222,7 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'Triplets') {
-        removeGraph()
+        removeGraph();
 
         // location.reload(true);
         // var e = document.getElementById("textThreshold");
@@ -235,11 +235,12 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
-        removeGraph()
+        removeGraph();
         // location.reload(true);
         parentheticalSelector.style.visibility = "visible";
         createNetworkSelector.style.visibility = "visible";
-
+        let x = document.getElementById("file");
+        x.style.visibility = "visible";
     }
 }
 
@@ -294,7 +295,12 @@ function checking() {
 function onClickCreateNetwork() {
     if (selectedDropDown === "pf") {
         var parentheticalText = document.getElementById("parenthetical").value;
-        pushParentheticalToServer(parentheticalText);
+        if (parentheticalText === "") {
+            paraText = document.getElementsByClassName('text')[0].innerHTML;
+            pushParentheticalToServer(paraText);
+        } else {
+            pushParentheticalToServer(parentheticalText);
+        }
     } else if (selectedDropDown === "HYDE format") {
         threshold = document.getElementById("textThreshold").value;
         pushHydeToServer(globalhydeFileData, threshold);
@@ -340,8 +346,8 @@ function refreshGraph() {
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
     document.getElementById("loader").style.visibility = "visible";
-    refresher.style.visibility="visible";
-    selectbutton.style.visibility="hidden";
+    refresher.style.visibility = "visible";
+    selectbutton.style.visibility = "hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     fileDiv.style.visibility = "hidden";
@@ -370,6 +376,16 @@ function gotFile(file) {
             //     pushHydeToServer(paraText, threshold);
             // }
         } else if (selectedDropDown == 'Triplets') {
+            // Make a paragraph of text
+
+            var par = createP(file.data);
+            par.class('text');
+            var texts = selectAll('.text');
+            var paraText = document.getElementsByClassName('text').innerHTML;
+            // paraText = document.getElementsByClassName('text')[0].innerHTML;
+
+            // pushStringToServer(paraText);
+        } else if (selectedDropDown == 'pf') {
             // Make a paragraph of text
 
             var par = createP(file.data);
