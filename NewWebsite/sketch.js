@@ -4,32 +4,38 @@ var nodesCheckedStr = "";
 var threshold;
 var paraText = "";
 
-var b = document.getElementById("boxes");
-b.style.visibility = "hidden";
 
-var c = document.getElementById("textareabox");
-c.style.visibility = "hidden";
 
-var btnRefresh = document.getElementById("remove");
-btnRefresh.style.visibility = "hidden";
+var btnRemoveNodes = document.getElementById("boxes");
+// b.style.visibility = "hidden";
+btnRemoveNodes.disabled= true;
+// var c = document.getElementById("textareabox");
+// c.style.visibility = "hidden";
 
-var d = document.getElementById("submit");
-d.style.visibility = "hidden";
+// var btnRefresh = document.getElementById("remove");
+// btnRefresh.style.visibility = "hidden";
+
+var btnUpdateNet = document.getElementById("updateNetwork");
+// btnUpdateNet.style.visibility = "hidden";
+btnUpdateNet.disabled= true;
 
 var e = document.getElementById("textThreshold");
 e.style.visibility = "hidden";
 
-var createNetworkSelector = document.getElementById("createNetwork");
-createNetworkSelector.style.visibility = "hidden";
+var newickField = document.getElementById("parenthetical");
+newickField.style.visibility = "hidden";
 
+var createNetworkSelector = document.getElementById("createNetwork");
+// createNetworkSelector.style.visibility = "hidden";
+createNetworkSelector.disabled= true;
 var parentheticalSelector = document.getElementById("parenthetical");
 parentheticalSelector.style.visibility = "hidden";
 
 var selectbutton = document.getElementById("transfer_reason");
 
 var refresher = document.getElementById("refresh");
-refresher.style.visibility="hidden";
-
+// refresher.style.visibility="hidden";
+refresher.disabled= true;
 var globalhydeFileData = "";
 
 function formdata() {
@@ -62,8 +68,13 @@ function createD3Graph() {
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
     refresher.style.visibility="visible";
-    selectbutton.style.visibility="hidden";
-    b.style.visibility = "visible";
+    refresher.disabled= false;
+
+    // selectbutton.style.visibility="hidden";
+    selectbutton.disabled = true;
+    // b.style.visibility = "visible";
+    btnRemoveNodes.disabled= false;
+    // createboxes();
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
 
@@ -75,7 +86,7 @@ function createD3Graph() {
             .data(["end"])      // Different link/path types can be defined here
             .enter().append("svg:marker")    // This section adds in the arrows
             .attr("id", String)
-            .attr("viewBox", "0 -5 10 10")
+            .attr("viewBox", "10 10 10 10")
             .attr("refX", 15)
             .attr("refY", -0.5)
             .attr("markerWidth", 6)
@@ -170,6 +181,7 @@ function createD3Graph() {
                 });
         }
     });
+    // createboxes();
     // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
@@ -217,12 +229,15 @@ function selectInputType(val) {
 
     // location.reload();
     if (val === 'HYDE format') {
-        removeGraph()
+        removeGraph();
+        // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
         // d.style.visibility = "visible";
 
         createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled= false;
         e.style.visibility = "visible";
+        newickField.style.visibility= "hidden";
         let x = document.getElementById("file");
         if (x.style.display === "none") {
             x.style.display = "block";
@@ -230,46 +245,53 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'Triplets') {
-        removeGraph()
-
+        removeGraph();
+        // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
         // var e = document.getElementById("textThreshold");
+        newickField.style.visibility= "hidden";
         e.style.visibility = "hidden";
         let x = document.getElementById("file");
-        createNetworkSelector.style.visibility = "visible";
+        // createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled = false;
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
-        removeGraph()
+        removeGraph();
+        e.style.visibility = "hidden";
         // location.reload(true);
+        newickField.style.visibility="visible";
         parentheticalSelector.style.visibility = "visible";
-        createNetworkSelector.style.visibility = "visible";
-
+        // createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled= false;
     }
 }
 
 function createboxes() {
-    // alert("Hello");
-    // print(nodeNum);
-    // let loc = 400;
-
-    // var loader = document.getElementsByI ("container");
-    // loader.style.visibility= "visible";
-    c.style.visibility = "visible";
-    d.style.visibility = "visible";
+    // b.style.visibility= "hidden";
+    btnRemoveNodes.disabled= true;
+    createNetworkSelector.disabled= true;
+    // createNetworkSelector.style.visibility = "hidden";
+    // c.style.visibility = "visible";
+    // btnUpdateNet.style.visibility = "visible";
+    btnUpdateNet.disabled= false;
     nodeVal.forEach(function (element) {
+        linebreak = document.createElement("br");
         var x = document.createElement("INPUT");
+        x.checked= true;
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
-        document.body.appendChild(x);
-        document.body.appendChild(y);
+        document.getElementById("placeholder").appendChild(x);
+        document.getElementById("placeholder").appendChild(y);
+        document.getElementById("placeholder").appendChild(linebreak);
+        // document.body.appendChild(y);
         console.log(x.id);
     });
     // for (let i = 0; i < nodeNum; i++) {
@@ -300,6 +322,8 @@ function checking() {
 // }
 
 function onClickCreateNetwork() {
+    createNetworkSelector.disabled= true;
+    document.getElementById("loader").style.visibility = "visible";
     if (selectedDropDown === "pf") {
         var parentheticalText = document.getElementById("parenthetical").value;
         pushParentheticalToServer(parentheticalText);
@@ -309,7 +333,19 @@ function onClickCreateNetwork() {
     } else if (selectedDropDown == "Triplets") {
         paraText = document.getElementsByClassName('text')[0].innerHTML;
         pushStringToServer(paraText);
+        // document.getElementById("graph").click();
+        // alert("hello");
+        document.getElementById("graph").dispatchEvent(new MouseEvent("click"));
+        // var img = document.getElementById("graph");
+        // var rect = img.getBoundingClientRect();
+        // document.elementFromPoint(rect.left, rect.top).click();
     }
+    // var img = document.getElementById("graph");
+    // var rect = img.getBoundingClientRect();
+    // document.elementFromPoint(rect.left, rect.top).click();
+    // alert(rect.left + " " + rect.top);
+    // document.getElementById("graph").click();
+    // eventFire(document.getElementById('graph'), 'click');
 }
 
 
@@ -323,9 +359,12 @@ function changeRootAction() {
 
 function removeNodesAction() {
     // var leaves = document.getElementById("textareabox").value;
+
     nodesCheckedStr = nodesCheckedStr.substr(0, nodesCheckedStr.length - 1);
 
     pushLeavesToServer(nodesCheckedStr)
+    // b.style.visibility= "hidden";
+    btnRemoveNodes.disabled= true;
 }
 
 function removeGraph() {
@@ -337,6 +376,16 @@ function refreshGraph() {
     createD3Graph();
 }
 
+// function eventFire(el, etype){
+//     if (el.fireEvent) {
+//         el.fireEvent('on' + etype);
+//     } else {
+//         var evObj = document.createEvent('Events');
+//         evObj.initEvent(etype, true, false);
+//         el.dispatchEvent(evObj);
+//     }
+// }
+
 // function downloadImage() {
 //     var url = document.getElementsByClassName('thumb')[0].getAttribute('src');//response;//img.src.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
 //     url = document.getElementsByClassName('thumb')[0].src;//url.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
@@ -347,19 +396,20 @@ function refreshGraph() {
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
-    document.getElementById("loader").style.visibility = "visible";
-    refresher.style.visibility="visible";
-    selectbutton.style.visibility="hidden";
+
+    // refresher.style.visibility="visible";
+    refresher.disabled= false;
+    // selectbutton.style.visibility="hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     fileDiv.style.visibility = "hidden";
+    fileDiv.addClass("boxText1");
+
     // Assign a CSS class for styling (see index.html)
     fileDiv.class('file');
 
     // Hanlde image and text differently
     if (file.type === 'image') {
-        // var img = createImg(file.data);
-        // img.class('thumb');
         alert('image not accepted')
     } else if (file.type === 'text') {
 
@@ -389,6 +439,8 @@ function gotFile(file) {
             // pushStringToServer(paraText);
         }
     }
+    var boxnums= document.getElementsByClassName("boxText1");
+    boxnums.style.visibility ="hidden";
 }
 
 function pushHydeToServer(hydeInput, thresh) {
@@ -474,6 +526,7 @@ function pushStringToServer(triplets) {
 }
 
 function pushLeavesToServer(leaves) {
+    btnRemoveNodes.disabled= true;
     var data = JSON.stringify({
         "text": leaves
     });
@@ -501,6 +554,7 @@ function pushLeavesToServer(leaves) {
             // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
     }
+    btnRemoveNodes.disabled= true;
 }
 
 function pushChangeRootToServer(flag, tripRoot) {

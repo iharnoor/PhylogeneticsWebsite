@@ -5999,7 +5999,7 @@ pulse = function () {
       if (w <= 1 && w >= 0) {
         this.w = w;
         // set delay time based on PWM width
-        // var mW = map(this.w, 0, 1.0, 0, 1/this.f);
+        // var mW = map(this.w, 0, 1.0, 0, 1/this.newickField);
         var mW = this.w / this.oscillator.frequency.value;
         this.dNode.delayTime.value = mW;
       }
@@ -7028,7 +7028,7 @@ delay = function () {
    *                                  modulate this param
    */
   p5.Delay.prototype.feedback = function (f) {
-    // if f is an audio node...
+    // if newickField is an audio node...
     if (typeof f !== 'number') {
       f.connect(this._leftGain.gain);
       f.connect(this._rightGain.gain);
