@@ -149,7 +149,7 @@ def retainActualLabelDot(fileName):
     dotFormat = ''
 
     for line in list(open(fileName)):
-        line = re.sub(r"(1[0-9][0-9][0-9])", r"\1p", line)
+        line = re.sub(r"(1[0-9][0-9][0-9])", r"\1", line)
 
         dotFormat += line
         # if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
