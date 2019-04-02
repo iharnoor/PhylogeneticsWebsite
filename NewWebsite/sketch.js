@@ -3,6 +3,8 @@ var nodeVal = [];
 var nodesCheckedStr = "";
 var threshold;
 var paraText = "";
+var reg1000 = new RegExp("^([a-z0-9]{5,})$");
+var reg1000P = new RegExp("^([a-z0-9]{5,})$");
 
 var b = document.getElementById("boxes");
 b.style.visibility = "hidden";
@@ -124,8 +126,8 @@ function createD3Graph() {
             .attr("x", 12)
             .attr("dy", ".35em")
             .text(function (d) {
-                // return d.id;
-                return (parseInt(d.id.toString()) < 1000) ? d.id : "";
+                return d.id;
+                // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
             });
 
         simulation

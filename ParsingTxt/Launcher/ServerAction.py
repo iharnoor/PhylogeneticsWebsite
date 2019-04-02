@@ -5,6 +5,7 @@ import subprocess
 import numpy as np
 import ParentheticalToDot
 from Launcher import removeDup
+import re
 
 
 def parseHydeToTriplets(fileName, threshold):
@@ -135,6 +136,66 @@ def newickToDot(newick):
         text_file.write(dotFomat)
 
 
+def returnReducedDotFile(fileName):
+    retainActualLabels2(fileName)
+    dotFormat = ''
+    for line in list(open('cExample1_m.dot')):
+        if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
+            dotFormat += line
+    return dotFormat.rstrip()
+
+
+def retainActualLabelDot(fileName):
+    dotFormat = ''
+
+    for line in list(open(fileName)):
+        line = re.sub(r"(1[0-9][0-9][0-9])", r"\1p", line)
+
+        dotFormat += line
+        # if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
+        #     dotFormat += line
+
+
+    with open('cExample1_m.dot', 'w+') as f:
+        f.write(dotFormat)
+
+
+
+def retainActualLabels2(fileName):
+    dotFormat = ''
+    dictionary = {}
+
+    for line in list(open(fileName)):
+        temp = re.search(r'("[0-9]+)', line)
+        if temp:
+            actualName = temp.group(1)
+            temp2 = re.search(r'(\d+[\s]\[)', line)
+            fakeName = temp2.group(1)
+            # print(found[1] + "  :  " + found2[:-1])
+
+            dictionary[fakeName[:-1].strip()] = actualName[1]
+
+    print(dictionary)
+    # newLine = ''
+    # for line in open(fileName):
+    with open(fileName, 'r') as file:
+        fileStr = file.read()
+
+    for key, value in dictionary.items():
+        # newLine = line.replace(key, value)
+        fileStr = fileStr.replace("\n" + key + " ", "\n" + value + "Δ ")
+        fileStr = fileStr.replace(" " + key + "\n", " " + value + "Δ\n")
+
+    fileStr = fileStr.replace('Δ', '')
+    dotFormat = fileStr
+
+    with open('cExample1_m.dot', 'w+') as f:
+        f.write(dotFormat)
+
+    retainActualLabelDot('cExample1_m.dot')
+
+
+
 if __name__ == '__main__':
     print("Hello")
     # tripletsToDot('cExample1.trips')
@@ -154,8 +215,10 @@ if __name__ == '__main__':
     # parseHydeToTriplets("results.txt", 0.05)
     # tripletsToDot('HydeToTriplets.txt')
 
-    newickToDot('((C,D)F,(A,G));')
+    # newickToDot('((C,D)F,(A,G));')
 
+    # print(retainActualLabels2('cExample1.dot'))
+    print(returnReducedDotFile('cExample1.dot'))
     # convertDotToPNG('cExample1.dot')
 
     # removeNodes('5,4,3')

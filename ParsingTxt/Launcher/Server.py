@@ -9,14 +9,6 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
-def returnReducedDotFile(fileName):
-    dotFormat = ''
-    for line in list(open(fileName)):
-        if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
-            dotFormat += line
-    return dotFormat.rstrip()
-
-
 # # POST
 # @app.route('/upload/<flag>', methods=['POST'])
 # def uploadTriplets(flag):
@@ -146,7 +138,7 @@ def uploadHyde(thresh):
     # TODO: uncomment the following done
     ServerAction.tripletsToDot('HydeToTriplets.txt')
     # ServerAction.tripletsToDot('hydetotriplets.out')
-    dotFile = returnReducedDotFile('cExample1.dot')
+    dotFile = ServerAction.returnReducedDotFile('cExample1.dot')
 
     with open('upload.dot', 'w+') as f:
         f.write(dotFile)
@@ -203,7 +195,7 @@ def uploadTripletsAndReturnDot():
         f.write(triplets)
 
     ServerAction.tripletsToDot('retrievedTriplets.txt')
-    dotFile = returnReducedDotFile('cExample1.dot')
+    dotFile = ServerAction.returnReducedDotFile('cExample1.dot')
 
     with open('upload.dot', 'w+') as f:
         f.write(dotFile)
