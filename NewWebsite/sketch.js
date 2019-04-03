@@ -6,32 +6,36 @@ var paraText = "";
 var reg1000 = new RegExp("^([a-z0-9]{5,})$");
 var reg1000P = new RegExp("^([a-z0-9]{5,})$");
 
-var b = document.getElementById("boxes");
-b.style.visibility = "hidden";
+var removeNodeBool = false;
 
-var c = document.getElementById("textareabox");
-c.style.visibility = "hidden";
+// i hid textarea box
+// var c = document.getElementById("textareabox");
+// c.style.visibility = "hidden";
 
-var btnRefresh = document.getElementById("remove");
-btnRefresh.style.visibility = "visible";
+// var btnRefresh = document.getElementById("remove");
+// btnRefresh.style.visibility = "hidden";
 
-var d = document.getElementById("submit");
-d.style.visibility = "hidden";
+var btnUpdateNet = document.getElementById("updateNetwork");
+// btnUpdateNet.style.visibility = "hidden";
+btnUpdateNet.disabled = true;
 
 var e = document.getElementById("textThreshold");
 e.style.visibility = "hidden";
 
-var createNetworkSelector = document.getElementById("createNetwork");
-createNetworkSelector.style.visibility = "hidden";
+var newickField = document.getElementById("parenthetical");
+newickField.style.visibility = "hidden";
 
+var createNetworkSelector = document.getElementById("createNetwork");
+// createNetworkSelector.style.visibility = "hidden";
+createNetworkSelector.disabled = true;
 var parentheticalSelector = document.getElementById("parenthetical");
 parentheticalSelector.style.visibility = "hidden";
 
 var selectbutton = document.getElementById("transfer_reason");
 
 var refresher = document.getElementById("refresh");
-refresher.style.visibility = "hidden";
-
+// refresher.style.visibility="hidden";
+refresher.disabled = true;
 var globalhydeFileData = "";
 
 function formdata() {
@@ -66,6 +70,14 @@ function createD3Graph() {
     refresher.style.visibility = "visible";
     selectbutton.style.visibility = "hidden";
     b.style.visibility = "visible";
+    refresher.style.visibility = "visible";
+    refresher.disabled = false;
+
+    // selectbutton.style.visibility="hidden";
+    selectbutton.disabled = true;
+    // b.style.visibility = "visible";
+    // btnRemoveNodes.disabled= false;
+    // createboxes();
     d3.dot("http://localhost:5001/readDot", function (graph) {
         // d3.dot("cExample.dot", function (graph) {
 
@@ -77,7 +89,7 @@ function createD3Graph() {
             .data(["end"])      // Different link/path types can be defined here
             .enter().append("svg:marker")    // This section adds in the arrows
             .attr("id", String)
-            .attr("viewBox", "0 -5 10 10")
+            .attr("viewBox", "10 10 10 10")
             .attr("refX", 15)
             .attr("refY", -0.5)
             .attr("markerWidth", 6)
@@ -111,7 +123,12 @@ function createD3Graph() {
                     nodeVal.push(valueOfNode);
                 return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
             })
+
             .style("fill", function (d) {
+                if (removeNodeBool === false) {
+                    createboxes();
+                    removeNodeBool = true;
+                }
                 return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
             })
             //.attr("fill", function(d) { return color(d.group); })
@@ -164,6 +181,7 @@ function createD3Graph() {
                 });
         }
     });
+
     // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
@@ -211,12 +229,15 @@ function selectInputType(val) {
 
     // location.reload();
     if (val === 'HYDE format') {
-        removeGraph()
+        removeGraph();
+        // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
         // d.style.visibility = "visible";
 
         createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled = false;
         e.style.visibility = "visible";
+        newickField.style.visibility = "hidden";
         let x = document.getElementById("file");
         if (x.style.display === "none") {
             x.style.display = "block";
@@ -225,12 +246,14 @@ function selectInputType(val) {
         }
     } else if (val === 'Triplets') {
         removeGraph();
-
+        // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
         // var e = document.getElementById("textThreshold");
+        newickField.style.visibility = "hidden";
         e.style.visibility = "hidden";
         let x = document.getElementById("file");
-        createNetworkSelector.style.visibility = "visible";
+        // createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled = false;
         if (x.style.display === "none") {
             x.style.display = "block";
         } else {
@@ -238,63 +261,54 @@ function selectInputType(val) {
         }
     } else if (val === 'pf') {
         removeGraph();
+        e.style.visibility = "hidden";
         // location.reload(true);
+        newickField.style.visibility = "visible";
         parentheticalSelector.style.visibility = "visible";
         createNetworkSelector.style.visibility = "visible";
         let x = document.getElementById("file");
         x.style.visibility = "visible";
+        // createNetworkSelector.style.visibility = "visible";
+        createNetworkSelector.disabled = false;
     }
 }
 
 function createboxes() {
-    // alert("Hello");
-    // print(nodeNum);
-    // let loc = 400;
 
-    // var loader = document.getElementsByI ("container");
-    // loader.style.visibility= "visible";
-    c.style.visibility = "visible";
-    d.style.visibility = "visible";
+    // b.style.visibility= "hidden";
+    // btnRemoveNodes.disabled= true;
+    createNetworkSelector.disabled = true;
+    // createNetworkSelector.style.visibility = "hidden";
+    // c.style.visibility = "visible";
+    // btnUpdateNet.style.visibility = "visible";
+    btnUpdateNet.disabled = false;
     nodeVal.forEach(function (element) {
+        linebreak = document.createElement("br");
         var x = document.createElement("INPUT");
+        x.checked= true;
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
-        document.body.appendChild(x);
-        document.body.appendChild(y);
+        document.getElementById("placeholder").appendChild(x);
+        document.getElementById("placeholder").appendChild(y);
+        document.getElementById("placeholder").appendChild(linebreak);
+        // document.body.appendChild(y);
         console.log(x.id);
     });
-    // for (let i = 0; i < nodeNum; i++) {
-    //     // alert("Here in the loop");
-    //     var x = document.createElement("INPUT");
-    //     x.setAttribute("type", "checkbox");
-    //     // x.position(loc, 400);
-    //     // loc+= 10;
-    //     document.body.appendChild(x);
-    // }
 }
 
-//new Array(nodeVal.length).fill(0);
 
 function checking() {
     nodesCheckedStr += this.id.toString() + ",";
     // alert(nodesCheckedStr);
 }
 
-// function check() {
-//     nodeVal.forEach(function(element){
-//         var check= document.getElementById("element");
-//         alert(check.checked);
-//         // if(check.checked === true){
-//         //     console.log(element);
-//         // }
-//     });
-// }
-
 function onClickCreateNetwork() {
+    createNetworkSelector.disabled = true;
+    document.getElementById("loader").style.visibility = "visible";
     if (selectedDropDown === "pf") {
         var parentheticalText = document.getElementById("parenthetical").value;
         if (parentheticalText === "") {
@@ -309,7 +323,14 @@ function onClickCreateNetwork() {
     } else if (selectedDropDown == "Triplets") {
         paraText = document.getElementsByClassName('text')[0].innerHTML;
         pushStringToServer(paraText);
+        // document.getElementById("graph").click();
+        // alert("hello");
+        document.getElementById("graph").dispatchEvent(new MouseEvent("click"));
+        // var img = document.getElementById("graph");
+        // var rect = img.getBoundingClientRect();
+        // document.elementFromPoint(rect.left, rect.top).click();
     }
+    createboxes();
 }
 
 
@@ -335,6 +356,7 @@ function removeGraph() {
 function refreshGraph() {
     // svg.selectAll("svg").remove();
     createD3Graph();
+
 }
 
 // function downloadImage() {
@@ -350,16 +372,20 @@ function gotFile(file) {
     document.getElementById("loader").style.visibility = "visible";
     refresher.style.visibility = "visible";
     selectbutton.style.visibility = "hidden";
+
+    // refresher.style.visibility="visible";
+    refresher.disabled= false;
+    // selectbutton.style.visibility="hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     fileDiv.style.visibility = "hidden";
+    fileDiv.addClass("boxText1");
+
     // Assign a CSS class for styling (see index.html)
     fileDiv.class('file');
 
     // Hanlde image and text differently
     if (file.type === 'image') {
-        // var img = createImg(file.data);
-        // img.class('thumb');
         alert('image not accepted')
     } else if (file.type === 'text') {
 
@@ -399,6 +425,8 @@ function gotFile(file) {
             // pushStringToServer(paraText);
         }
     }
+    var boxnums= document.getElementsByClassName("boxText1");
+    // boxnums.style.visibility ="hidden";
 }
 
 function pushHydeToServer(hydeInput, thresh) {
@@ -416,6 +444,7 @@ function pushHydeToServer(hydeInput, thresh) {
         // document.write("This is Working <p>");
         if (request.readyState === 4 && request.status === 200) {
             createD3Graph();
+
         } else if (request.readyState === 4) {
             // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
@@ -445,6 +474,7 @@ function pushParentheticalToServer(parenthetical) {
 //         .setAttribute(
 //         'src', 'data:image/png;base64,'+response);
             createD3Graph();
+
         } else if (request.readyState === 4) {
             // document.write("<p>Error : " + request.status + "," + request.statusText);
         }
@@ -476,6 +506,7 @@ function pushStringToServer(triplets) {
 //         .setAttribute(
 //         'src', 'data:image/png;base64,'+response);
             createD3Graph();
+
         } else if (request.readyState === 4) {
             // document.write("<p>Error : " + request.status + "," + request.statusText);
         }

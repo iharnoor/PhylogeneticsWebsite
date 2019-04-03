@@ -44,7 +44,7 @@ var cffStandardStrings = [
     'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'colon', 'semicolon', 'less', 'equal', 'greater',
     'question', 'at', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
     'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'bracketleft', 'backslash', 'bracketright', 'asciicircum', 'underscore',
-    'quoteleft', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+    'quoteleft', 'a', 'b', 'c', 'd', 'e', 'newickField', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
     'u', 'v', 'w', 'x', 'y', 'z', 'braceleft', 'bar', 'braceright', 'asciitilde', 'exclamdown', 'cent', 'sterling',
     'fraction', 'yen', 'florin', 'section', 'currency', 'quotesingle', 'quotedblleft', 'guillemotleft',
     'guilsinglleft', 'guilsinglright', 'fi', 'fl', 'endash', 'dagger', 'daggerdbl', 'periodcentered', 'paragraph',
@@ -90,7 +90,7 @@ var cffStandardEncoding = [
     'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'colon', 'semicolon', 'less', 'equal', 'greater',
     'question', 'at', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
     'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'bracketleft', 'backslash', 'bracketright', 'asciicircum', 'underscore',
-    'quoteleft', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+    'quoteleft', 'a', 'b', 'c', 'd', 'e', 'newickField', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
     'u', 'v', 'w', 'x', 'y', 'z', 'braceleft', 'bar', 'braceright', 'asciitilde', '', '', '', '', '', '', '', '',
     '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
     'exclamdown', 'cent', 'sterling', 'fraction', 'yen', 'florin', 'section', 'currency', 'quotesingle',
@@ -136,7 +136,7 @@ var standardNames = [
     'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'colon', 'semicolon', 'less',
     'equal', 'greater', 'question', 'at', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
     'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'bracketleft', 'backslash', 'bracketright',
-    'asciicircum', 'underscore', 'grave', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+    'asciicircum', 'underscore', 'grave', 'a', 'b', 'c', 'd', 'e', 'newickField', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
     'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'braceleft', 'bar', 'braceright', 'asciitilde',
     'Adieresis', 'Aring', 'Ccedilla', 'Eacute', 'Ntilde', 'Odieresis', 'Udieresis', 'aacute', 'agrave',
     'acircumflex', 'adieresis', 'atilde', 'aring', 'ccedilla', 'eacute', 'egrave', 'ecircumflex', 'edieresis',
@@ -4691,7 +4691,7 @@ encode.REAL = function(v) {
         }
     }
 
-    nibbles += (nibbles.length & 1) ? 'f' : 'ff';
+    nibbles += (nibbles.length & 1) ? 'newickField' : 'ff';
     var out = [30];
     for (i = 0, ii = nibbles.length; i < ii; i += 2) {
         out.push(parseInt(nibbles.substr(i, 2), 16));
@@ -11507,7 +11507,7 @@ p5.Element.prototype.drop = function (callback, fxn) {
 function attachListener(ev, fxn, ctx) {
   // LM removing, not sure why we had this?
   // var _this = ctx;
-  // var f = function (e) { fxn(e, _this); };
+  // var newickField = function (e) { fxn(e, _this); };
   var f = fxn.bind(ctx);
   ctx.elt.addEventListener(ev, f, false);
   ctx._events[ev] = f;
@@ -24548,10 +24548,10 @@ p5.Vector.prototype.lerp = function (x, y, z, amt) {
  * <div class="norender">
  * <code>
  * var v = createVector(10.0, 20.0, 30.0);
- * var f = v.array();
- * println(f[0]); // Prints "10.0"
- * println(f[1]); // Prints "20.0"
- * println(f[2]); // Prints "30.0"
+ * var newickField = v.array();
+ * println(newickField[0]); // Prints "10.0"
+ * println(newickField[1]); // Prints "20.0"
+ * println(newickField[2]); // Prints "30.0"
  * </code>
  * </div>
  */
@@ -27979,7 +27979,7 @@ p5.prototype.split = function(str, delim) {
  * <br><br>
  * If no delim characters are specified, any whitespace character is used to
  * split. Whitespace characters include tab (\t), line feed (\n), carriage
- * return (\r), form feed (\f), and space.
+ * return (\r), form feed (\newickField), and space.
  *
  * @method splitTokens
  * @param  {String} value   the String to be split
@@ -28778,7 +28778,7 @@ p5.prototype.loadModel = function () {
  * v -0.5 0.5 -0.5
  * v -0.5 0.5 0.5
  *
- * f 4 3 2 1
+ * newickField 4 3 2 1
  */
 function parseObj( model, lines ) {
   // OBJ allows a face to specify an index for a vertex (in the above example),
@@ -28814,7 +28814,7 @@ function parseObj( model, lines ) {
         // It will have two numeric parameters.
         var texVertex = [parseFloat(tokens[1]), parseFloat(tokens[2])];
         loadedVerts[tokens[0]].push(texVertex);
-      } else if (tokens[0] === 'f') {
+      } else if (tokens[0] === 'newickField') {
         // Check if this line describes a face.
         // OBJ faces can have more than three points. Triangulate points.
         for (var tri = 3; tri < tokens.length; ++tri) {

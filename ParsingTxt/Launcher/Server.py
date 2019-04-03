@@ -24,8 +24,8 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 #     triplets = json['text']
 #
 #     print(triplets)
-#     with open('retrievedTriplets.txt', 'w+') as f:
-#         f.write(triplets)
+#     with open('retrievedTriplets.txt', 'w+') as newickField:
+#         newickField.write(triplets)
 #
 #     ServerAction.tripletsToDot('retrievedTriplets.txt')
 #     # ServerAction.convertDotToPNG('cExample1.dot')
@@ -218,10 +218,10 @@ def receiveDot():
     # TODO change done
     # dotFile = returnReducedDotFile('cExample1.dot')
 
-    # with open('upload.dot', 'w+') as f:
-    #     f.write(dotFile)
+    # with open('upload.dot', 'w+') as newickField:
+    #     newickField.write(dotFile)
 
-    # with open("upload1.dot", "r") as f:
+    # with open("upload1.dot", "r") as newickField:
     with open("upload.dot", "r") as f:
         return Response(f.read(), mimetype='text/plain')
 

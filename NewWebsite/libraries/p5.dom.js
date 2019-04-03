@@ -128,8 +128,8 @@
    * var c = selectAll('button', '#myContainer');
    * var d = select('#container');
    * var e = selectAll('p', d);
-   * var f = document.getElementById('beep');
-   * var g = select('.blah', f);
+   * var newickField = document.getElementById('beep');
+   * var g = select('.blah', newickField);
    * </code></div>
    *
    */
