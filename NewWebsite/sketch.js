@@ -69,7 +69,7 @@ function createD3Graph() {
     document.getElementById("loader").style.visibility = "hidden";
     refresher.style.visibility = "visible";
     selectbutton.style.visibility = "hidden";
-    b.style.visibility = "visible";
+    // b.style.visibility = "visible";
     refresher.style.visibility = "visible";
     refresher.disabled = false;
 
