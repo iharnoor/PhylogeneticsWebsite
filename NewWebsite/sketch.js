@@ -118,18 +118,17 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
-                var valueOfNode = (parseInt(d.id.toString()));
-                if (valueOfNode < 1000)
+                var valueOfNode = d.id.toString();
+                if (!reg1000P.test(valueOfNode))
+                // if (valueOfNode < 1000)
                     nodeVal.push(valueOfNode);
-                return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
+                // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
+                return (!reg1000P.test(valueOfNode) || valueOfNode==="internal1000") ? 10 : 5;
             })
-
             .style("fill", function (d) {
-                if (removeNodeBool === false) {
-                    createboxes();
-                    removeNodeBool = true;
-                }
-                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
+                var valueOfNode = d.id.toString();
+                return (!reg1000P.test(valueOfNode) ) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
+                // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
