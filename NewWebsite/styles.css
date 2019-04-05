@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+
 .button {
     background-color: #af9965;
     border: none;
@@ -111,10 +112,12 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
     position: relative;
     width: 180px;
-    height:100px;
+    height:300px;
     overflow-y: scroll;
+    text-align: center;
 
 }
+
 .links path {
     fill: none;
     stroke: #666;

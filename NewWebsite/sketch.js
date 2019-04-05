@@ -67,8 +67,9 @@ function createD3Graph() {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
-    refresher.style.visibility = "visible";
-    selectbutton.style.visibility = "hidden";
+    // refresher.style.visibility = "visible";
+    // selectbutton.style.visibility = "hidden";
+    selectbutton.disabled= true;
     // b.style.visibility = "visible";
     refresher.style.visibility = "visible";
     refresher.disabled = false;
@@ -182,12 +183,14 @@ function createD3Graph() {
     });
 
     // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 }
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
     d.fy = d.y;
+
 }
 
 function dragged(d) {
@@ -258,6 +261,7 @@ function selectInputType(val) {
         } else {
             x.style.visibility = "visible";
         }
+
     } else if (val === 'pf') {
         removeGraph();
         e.style.visibility = "hidden";
@@ -272,6 +276,11 @@ function selectInputType(val) {
     }
 }
 
+function simulateClick(x, y) {
+    jQuery(document.elementFromPoint(315, 205)).click();
+    alert("clicking"+ x + " " + y);
+}
+
 function createboxes() {
 
     // b.style.visibility= "hidden";
@@ -280,9 +289,12 @@ function createboxes() {
     // createNetworkSelector.style.visibility = "hidden";
     // c.style.visibility = "visible";
     // btnUpdateNet.style.visibility = "visible";
+
+
+
     btnUpdateNet.disabled = false;
     nodeVal.forEach(function (element) {
-        linebreak = document.createElement("br");
+        linebreak = document.createElement("hr");
         var x = document.createElement("INPUT");
         x.checked= true;
         x.setAttribute("type", "checkbox");
@@ -297,6 +309,7 @@ function createboxes() {
         // document.body.appendChild(y);
         console.log(x.id);
     });
+
 }
 
 
@@ -330,6 +343,10 @@ function onClickCreateNetwork() {
         // document.elementFromPoint(rect.left, rect.top).click();
     }
     createboxes();
+    // simulateClick();
+    simulateClick(309, 203);
+    // var coordinates = document.getElementById("graph").getBoundingClientRect();
+    // simulateClick(coordinates.left, coordinates.top);
 }
 
 
@@ -368,9 +385,11 @@ function refreshGraph() {
 
 // file is a p5.File object that has metadata, and the file's contents
 function gotFile(file) {
-    document.getElementById("loader").style.visibility = "visible";
-    refresher.style.visibility = "visible";
-    selectbutton.style.visibility = "hidden";
+    // document.getElementById("loader").style.visibility = "visible";
+    // refresher.style.visibility = "visible";
+    refresher.disabled= false;
+    // selectbutton.style.visibility = "hidden";
+    selectbutton.disabled= true;
 
     // refresher.style.visibility="visible";
     refresher.disabled= false;
@@ -378,10 +397,11 @@ function gotFile(file) {
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
     fileDiv.style.visibility = "hidden";
-    fileDiv.addClass("boxText1");
+    // fileDiv.addClass("boxText1");
 
     // Assign a CSS class for styling (see index.html)
-    fileDiv.class('file');
+    fileDiv.class('files');
+    var hideinfo = document.getElementsByClassName("files");
 
     // Hanlde image and text differently
     if (file.type === 'image') {
