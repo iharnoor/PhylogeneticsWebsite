@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/cExample1.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/retrievedTriplets.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -112,11 +109,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1680" />
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1027" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -213,10 +210,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78078000" />
+    <option name="totallyTimeSpent" value="78676000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.05970149" />
