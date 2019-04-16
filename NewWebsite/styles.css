@@ -6,6 +6,14 @@ body {
 
     /*background-color: #74b9ff;*/
 }
+hr{
+    margin-bottom: -5px;
+    margin-top: -5px;
+    padding-bottom: -2px;
+    font-size:2px;
+    /*line-height: 0px;*/
+    line-height: 0.7;
+}
 p {
     display: inline-block;
 }
