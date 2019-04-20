@@ -44,8 +44,24 @@ def returnDictionary(newick):
     return Graph
 
 
+def dictToDot(dict):
+    dotString = 'strict digraph G1 {' + '\n'
+
+    for key, value in dict.items():
+        for i in value:
+            dotString += key + ' -> ' + i + '\n'
+
+    dotString += '}'
+    print(dotString)
+
+    with open('uploadNaman.dot','w+') as f:
+        f.write(dotString)
+
+
 if __name__ == '__main__':
     newick = "(dog,((cat,cow)carrot,bird));"
-    grph = returnDictionary(newick)
+    diction = returnDictionary(newick)
 
-    print(grph)
+    dictToDot(diction)
+
+    print(diction)
