@@ -123,11 +123,11 @@ function createD3Graph() {
                 // if (valueOfNode < 1000)
                     nodeVal.push(valueOfNode);
                 // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
-                return (!reg1000P.test(valueOfNode) || valueOfNode==="internal1000") ? 10 : 5;
+                return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") ? 10 : 5;
             })
             .style("fill", function (d) {
                 var valueOfNode = d.id.toString();
-                return (!reg1000P.test(valueOfNode) ) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
+                return (!reg1000P.test(valueOfNode)) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
                 // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
             })
             //.attr("fill", function(d) { return color(d.group); })
@@ -142,7 +142,9 @@ function createD3Graph() {
             .attr("x", 12)
             .attr("dy", ".35em")
             .text(function (d) {
-                return d.id;
+                // return d.id;
+                var valueOfNode = d.id.toString();
+                return (!reg1000P.test(valueOfNode)) ? d.id : "";
                 // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
             });
 
@@ -284,7 +286,7 @@ function createboxes() {
     nodeVal.forEach(function (element) {
         linebreak = document.createElement("br");
         var x = document.createElement("INPUT");
-        x.checked= true;
+        x.checked = true;
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
@@ -373,7 +375,7 @@ function gotFile(file) {
     selectbutton.style.visibility = "hidden";
 
     // refresher.style.visibility="visible";
-    refresher.disabled= false;
+    refresher.disabled = false;
     // selectbutton.style.visibility="hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
@@ -424,7 +426,7 @@ function gotFile(file) {
             // pushStringToServer(paraText);
         }
     }
-    var boxnums= document.getElementsByClassName("boxText1");
+    var boxnums = document.getElementsByClassName("boxText1");
     // boxnums.style.visibility ="hidden";
 }
 
