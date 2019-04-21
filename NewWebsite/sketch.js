@@ -119,10 +119,12 @@ function createD3Graph() {
             .append("circle")
             // .attr("r", 5)
             .attr("r", function (d) {
-                var valueOfNode = (parseInt(d.id.toString()));
-                if (valueOfNode < 1000)
+                var valueOfNode = d.id.toString();
+                if (!reg1000P.test(valueOfNode))
+                // if (valueOfNode < 1000)
                     nodeVal.push(valueOfNode);
-                return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
+                // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
+                return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") ? 10 : 5;
             })
 
             .style("fill", function (d) {
@@ -131,6 +133,9 @@ function createD3Graph() {
                     removeNodeBool = true;
                 }
                 return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
+                var valueOfNode = d.id.toString();
+                return (!reg1000P.test(valueOfNode)) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
+                // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
@@ -144,7 +149,9 @@ function createD3Graph() {
             .attr("x", 12)
             .attr("dy", ".35em")
             .text(function (d) {
-                return d.id;
+                // return d.id;
+                var valueOfNode = d.id.toString();
+                return (!reg1000P.test(valueOfNode)) ? d.id : "";
                 // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
             });
 
@@ -184,14 +191,12 @@ function createD3Graph() {
     });
 
     // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 }
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
     d.fy = d.y;
-
 }
 
 function dragged(d) {
@@ -262,7 +267,6 @@ function selectInputType(val) {
         } else {
             x.style.visibility = "visible";
         }
-
     } else if (val === 'pf') {
         removeGraph();
         e.style.visibility = "hidden";
@@ -297,7 +301,7 @@ function createboxes() {
     nodeVal.forEach(function (element) {
         linebreak = document.createElement("hr");
         var x = document.createElement("INPUT");
-        x.checked= true;
+        x.checked = true;
         x.setAttribute("type", "checkbox");
         x.setAttribute("id", element);
         x.onclick = checking;
@@ -310,7 +314,6 @@ function createboxes() {
         // document.body.appendChild(y);
         console.log(x.id);
     });
-
 }
 
 
@@ -393,7 +396,7 @@ function gotFile(file) {
     selectbutton.disabled= true;
 
     // refresher.style.visibility="visible";
-    refresher.disabled= false;
+    refresher.disabled = false;
     // selectbutton.style.visibility="hidden";
     // Make a div to display info about the file
     var fileDiv = createDiv(file.name + ' ' + file.type + ' ' + file.subtype + ' ' + file.size + ' bytes');
@@ -445,7 +448,7 @@ function gotFile(file) {
             // pushStringToServer(paraText);
         }
     }
-    var boxnums= document.getElementsByClassName("boxText1");
+    var boxnums = document.getElementsByClassName("boxText1");
     // boxnums.style.visibility ="hidden";
 }
 
