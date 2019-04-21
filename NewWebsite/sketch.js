@@ -132,7 +132,7 @@ function createD3Graph() {
                     createboxes();
                     removeNodeBool = true;
                 }
-                return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
+                // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
                 var valueOfNode = d.id.toString();
                 return (!reg1000P.test(valueOfNode)) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
                 // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
@@ -348,7 +348,7 @@ function onClickCreateNetwork() {
     }
     createboxes();
     // simulateClick();
-    simulateClick(309, 203);
+    // simulateClick(309, 203);
     // var coordinates = document.getElementById("graph").getBoundingClientRect();
     // simulateClick(coordinates.left, coordinates.top);
 }
