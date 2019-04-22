@@ -7,7 +7,7 @@ def createTree(v1, v2):
     global count
     global Graph
 
-    parent = "internalNode" + str(count) + ""
+    parent = "internal" + str(count) + ""
     count += 1
     Graph[parent] = (v1, v2)
     # print(Graph)
@@ -76,7 +76,7 @@ def dictToDot(dict):
 
 
 if __name__ == '__main__':
-    newick = "((A:1,B:4.1):4,C:5e-1);"
+    newick = "(B,(C,(A,D)));"
     diction = returnDictionary(newick)
 
     dictToDot(diction)
