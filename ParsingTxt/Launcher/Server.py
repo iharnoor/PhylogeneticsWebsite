@@ -1,4 +1,4 @@
-from Launcher import ServerAction
+from Launcher import ServerAction, ParentheticalConvertorNaman
 from flask import Flask, request, Response
 from flask_cors import CORS, cross_origin
 
@@ -164,7 +164,8 @@ def uploadParentheticalAndReturnDot():
 
     print(parenthetical)
 
-    ServerAction.newickToDot(parenthetical)
+    # ServerAction.newickToDot(parenthetical)
+    ParentheticalConvertorNaman.newickToDot(parenthetical)
 
     # ServerAction.convertDotToPNG('cExample1.dot')
     # print('flag=', flag)

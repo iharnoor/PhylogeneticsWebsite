@@ -13,6 +13,7 @@ def createTree(v1, v2):
     # print(Graph)
     return parent[::-1]
 
+
 def createTreeLabel(v1, v2, label):
     global Graph
 
@@ -20,20 +21,22 @@ def createTreeLabel(v1, v2, label):
     Graph[parent] = (v1, v2)
     return parent[::-1]
 
+
 def returnDictionary(newick):
+    global Graph
     val1 = ""
     val2 = ""
     parent = ""
-    length = len(newick)-1
+    length = len(newick) - 1
     i = 0
-    while i < len(newick)-1:
+    while i < len(newick) - 1:
         if newick[i] == ")":
-            nextChr = newick[i+1]
+            nextChr = newick[i + 1]
             increment = 1
             while nextChr != ',' and nextChr != ')' and nextChr != ';' and (i + increment) < len(newick):
                 parent += nextChr
                 increment += 1
-                nextChr = newick[i+increment]
+                nextChr = newick[i + increment]
 
             j = stack.pop()
             while j != ",":
@@ -62,6 +65,7 @@ def returnDictionary(newick):
 
 
 def dictToDot(dict):
+    print('diction: ', dict)
     dotString = 'strict digraph G1 {' + '\n'
 
     for key, value in dict.items():
@@ -71,14 +75,18 @@ def dictToDot(dict):
     dotString += '}'
     print(dotString)
 
-    with open('uploadNaman.dot','w+') as f:
+    with open('upload.dot', 'w') as f:
         f.write(dotString)
 
 
-if __name__ == '__main__':
-    newick = "(B,(C,(A,D)));"
+def newickToDot(newick):
     diction = returnDictionary(newick)
-
     dictToDot(diction)
+    global Graph, count
+    count = 1000
+    Graph = {}
 
-    print(diction)
+
+if __name__ == '__main__':
+    newick = "(((A,C),D),E);"
+    newickToDot(newick)
