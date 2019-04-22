@@ -1,5 +1,5 @@
 stack = []
-count = 1
+count = 1000
 Graph = {}
 
 
@@ -13,14 +13,28 @@ def createTree(v1, v2):
     # print(Graph)
     return parent[::-1]
 
+def createTreeLabel(v1, v2, label):
+    global Graph
+
+    parent = label
+    Graph[parent] = (v1, v2)
+    return parent[::-1]
 
 def returnDictionary(newick):
     val1 = ""
     val2 = ""
-    for i in newick:
-        if i == ")":
-            # nextChr = string[i+1]
-            # if nextChr != "" || nextChr != ",":
+    parent = ""
+    length = len(newick)-1
+    i = 0
+    while i < len(newick)-1:
+        if newick[i] == ")":
+            nextChr = newick[i+1]
+            increment = 1
+            while nextChr != ',' and nextChr != ')' and nextChr != ';' and (i + increment) < len(newick):
+                parent += nextChr
+                increment += 1
+                nextChr = newick[i+increment]
+
             j = stack.pop()
             while j != ",":
                 val2 += str(j)
@@ -31,16 +45,19 @@ def returnDictionary(newick):
                 val1 += j
                 j = stack.pop()
             val1 = val1[::-1]
-            # stack.pop() # skip over the ")"
-            node = createTree(val1, val2)
+
+            if increment != 1:
+                node = createTreeLabel(val1, val2, parent)
+                i += (increment - 1)
+            else:
+                node = createTree(val1, val2)
             val1, val2 = "", ""
-            # if node[0] != str(count-1):
-            #     print(node[0] + "   " + str(count-1))
-            #     node.replace("internalNode"+ str(count), "")
-            #     print(node)
+            parent = ""
+
             stack.append(node)
         else:
-            stack.append(i)
+            stack.append(newick[i])
+        i += 1
     return Graph
 
 
@@ -59,7 +76,7 @@ def dictToDot(dict):
 
 
 if __name__ == '__main__':
-    newick = "(dog,((cat,cow)carrot,bird));"
+    newick = "((A:1,B:4.1):4,C:5e-1);"
     diction = returnDictionary(newick)
 
     dictToDot(diction)
