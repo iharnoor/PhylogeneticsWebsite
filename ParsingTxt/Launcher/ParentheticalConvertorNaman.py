@@ -1,33 +1,30 @@
 stack = []
-count = 1000
+count = 1001
 Graph = {}
 
 
-def createTree(v1, v2):
+
+def createTreeLabel(valueList, label):
+    global Graph
+
+    parent = "internalNode_" + label
+    Graph[parent] = tuple(valueList)
+    return parent
+
+def createTree(valueList):
     global count
     global Graph
 
-    parent = "internal" + str(count) + ""
+    parent = "internal_" + str(count) + ""
     count += 1
-    Graph[parent] = (v1, v2)
+    Graph[parent] = tuple(valueList)
     # print(Graph)
-    return parent[::-1]
-
-
-def createTreeLabel(v1, v2, label):
-    global Graph
-
-    parent = label
-    Graph[parent] = (v1, v2)
-    return parent[::-1]
-
+    return parent
 
 def returnDictionary(newick):
     global Graph
-    val1 = ""
-    val2 = ""
+    val = ""
     parent = ""
-    length = len(newick) - 1
     i = 0
     while i < len(newick) - 1:
         if newick[i] == ")":
@@ -39,22 +36,21 @@ def returnDictionary(newick):
                 nextChr = newick[i + increment]
 
             j = stack.pop()
-            while j != ",":
-                val2 += str(j)
-                j = stack.pop()
-            val2 = val2[::-1]
-            j = stack.pop()  # skip over ","
             while j != "(":
-                val1 += j
+                val += j
                 j = stack.pop()
-            val1 = val1[::-1]
+            val += j
+            val = val[::-1]
+            listVals = readParameters(val)
+
 
             if increment != 1:
-                node = createTreeLabel(val1, val2, parent)
+                node = createTreeLabel(listVals, parent)
                 i += (increment - 1)
             else:
-                node = createTree(val1, val2)
-            val1, val2 = "", ""
+                node = createTree(listVals)
+            listVals = []
+            val = ""
             parent = ""
 
             stack.append(node)
@@ -63,13 +59,34 @@ def returnDictionary(newick):
         i += 1
     return Graph
 
+def readParameters(input):
+    # print("input: " + input)
+    value = ""
+    listOfvals = []
+    for i in input[::-1]:
+        if i == ",":
+            listOfvals.append(value)
+            value = ""
+        elif i == "(":
+            listOfvals.append(value)
+            value = ""
+        else:
+            value += i
+    # print(listOfvals)
+    return listOfvals
 
 def dictToDot(dict):
-    print('diction: ', dict)
+    global count
+    # print("count: " + str(count))
+    # print('diction: ', dict)
     dotString = 'strict digraph G1 {' + '\n'
 
     for key, value in dict.items():
+        if key == "internal_" + str(count-1):
+            key = "internal_1000"
         for i in value:
+            # if i == "internal_" + str(count):
+                # i = "internal_1000"
             dotString += key + ' -> ' + i + '\n'
 
     dotString += '}'
@@ -88,5 +105,6 @@ def newickToDot(newick):
 
 
 if __name__ == '__main__':
-    newick = "(((A,C),D),E);"
+    newick = "(((A,B),C),D);"
     newickToDot(newick)
+
