@@ -7,7 +7,7 @@ Graph = {}
 def createTreeLabel(valueList, label):
     global Graph
 
-    parent = "internalNode_" + label
+    parent = "internalNode" + label
     Graph[parent] = tuple(valueList)
     return parent
 
@@ -15,7 +15,7 @@ def createTree(valueList):
     global count
     global Graph
 
-    parent = "internal_" + str(count) + ""
+    parent = "internalNode" + str(count) + ""
     count += 1
     Graph[parent] = tuple(valueList)
     # print(Graph)
@@ -82,8 +82,8 @@ def dictToDot(dict):
     dotString = 'strict digraph G1 {' + '\n'
 
     for key, value in dict.items():
-        if key == "internal_" + str(count-1):
-            key = "internal_1000"
+        if key == "internal" + str(count-1):
+            key = "internalNode1000"
         for i in value:
             # if i == "internal_" + str(count):
                 # i = "internal_1000"
