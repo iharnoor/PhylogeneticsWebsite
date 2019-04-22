@@ -1,8 +1,8 @@
 strict digraph G1 {
-internalNode1 -> cat
-internalNode1 -> cow
-internalNode2 -> internalNode1carrot
-internalNode2 -> bird
-internalNode3 -> dog
-internalNode3 -> internalNode2
+internal1000 -> A
+internal1000 -> D
+internal1001 -> C
+internal1001 -> internal1000
+internal1002 -> B
+internal1002 -> internal1001
 }
