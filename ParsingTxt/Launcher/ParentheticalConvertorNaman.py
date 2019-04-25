@@ -3,23 +3,24 @@ count = 1001
 Graph = {}
 
 
-
 def createTreeLabel(valueList, label):
     global Graph
 
-    parent = "internalNode" + label
+    parent = "internal" + label
     Graph[parent] = tuple(valueList)
     return parent
+
 
 def createTree(valueList):
     global count
     global Graph
 
-    parent = "internalNode" + str(count) + ""
+    parent = "internal" + str(count) + ""
     count += 1
     Graph[parent] = tuple(valueList)
     # print(Graph)
     return parent
+
 
 def returnDictionary(newick):
     global Graph
@@ -43,7 +44,6 @@ def returnDictionary(newick):
             val = val[::-1]
             listVals = readParameters(val)
 
-
             if increment != 1:
                 node = createTreeLabel(listVals, parent)
                 i += (increment - 1)
@@ -58,6 +58,7 @@ def returnDictionary(newick):
             stack.append(newick[i])
         i += 1
     return Graph
+
 
 def readParameters(input):
     # print("input: " + input)
@@ -75,6 +76,7 @@ def readParameters(input):
     # print(listOfvals)
     return listOfvals
 
+
 def dictToDot(dict):
     global count
     # print("count: " + str(count))
@@ -82,11 +84,11 @@ def dictToDot(dict):
     dotString = 'strict digraph G1 {' + '\n'
 
     for key, value in dict.items():
-        if key == "internal" + str(count-1):
-            key = "internalNode1000"
+        if key == "internal" + str(count - 1):
+            key = "internal1000"
         for i in value:
             # if i == "internal_" + str(count):
-                # i = "internal_1000"
+            # i = "internal_1000"
             dotString += key + ' -> ' + i + '\n'
 
     dotString += '}'
@@ -99,6 +101,7 @@ def dictToDot(dict):
 def newickToDot(newick):
     diction = returnDictionary(newick)
     dictToDot(diction)
+    print(diction)
     global Graph, count
     count = 1000
     Graph = {}
@@ -107,4 +110,3 @@ def newickToDot(newick):
 if __name__ == '__main__':
     newick = "(((A,B),C),D);"
     newickToDot(newick)
-

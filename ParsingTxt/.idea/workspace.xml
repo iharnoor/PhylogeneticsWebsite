@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Launcher/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="312">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -31,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
+            <state relative-caret-position="15">
               <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -40,20 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Launcher/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-712">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+            <state relative-caret-position="279">
+              <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -69,9 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>removelea</find>
-      <find>re</find>
-      <find>read</find>
       <find>hyde</find>
       <find>thesh</find>
       <find>Thresh</find>
@@ -99,6 +87,9 @@
       <find>dictToDot</find>
       <find>print</find>
       <find>inter</find>
+      <find>intern</find>
+      <find>internalnode</find>
+      <find>node</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,17 +122,16 @@
         <option value="$PROJECT_DIR$/Launcher/cExample1.dot" />
         <option value="$PROJECT_DIR$/Launcher/upload.dot" />
         <option value="$PROJECT_DIR$/Launcher/ServerAction.py" />
-        <option value="$PROJECT_DIR$/Launcher/test.py" />
         <option value="$PROJECT_DIR$/Launcher/Server.py" />
+        <option value="$PROJECT_DIR$/Launcher/test.py" />
         <option value="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="929" />
-    <option name="y" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -198,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ParentheticalConvertorNaman">
+  <component name="RunManager" selected="Python.Server">
     <configuration name="ParentheticalConvertorNaman" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ParsingTxt" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,8 +303,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ParentheticalConvertorNaman" />
         <item itemvalue="Python.Server" />
+        <item itemvalue="Python.ParentheticalConvertorNaman" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.ServerAction (1)" />
         <item itemvalue="Python.__init__" />
@@ -335,16 +325,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.14225501" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913043" visible="true" weight="0.14225437" />
       <window_info id="Structure" order="1" sideWeight="0.5005192" side_tool="true" weight="0.14225501" />
-      <window_info id="Favorites" order="2" sideWeight="0.5008696" side_tool="true" visible="true" weight="0.14225501" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008696" side_tool="true" weight="0.14225501" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3284974" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40290758" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39875388" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40213904" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39786097" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -548,23 +537,6 @@
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/urllib/parse.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py" />
     <entry file="file://$USER_HOME$/Desktop/Spring 2019/skill-sample-python-colorpicker-master/skill-sample-python-colorpicker-master/lambda/py/lambda_function.py" />
-    <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Launcher/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-712">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -603,20 +575,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="41" column="25" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="129" column="31" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="312">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="85" column="31" selection-start-line="85" selection-start-column="31" selection-end-line="85" selection-end-column="31" />
+        <state relative-caret-position="279">
+          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
         </state>
       </provider>
     </entry>
