@@ -1,3 +1,4 @@
+import re
 stack = []
 count = 1001
 Graph = {}
@@ -86,9 +87,13 @@ def dictToDot(dict):
     for key, value in dict.items():
         if key == "internal" + str(count - 1):
             key = "internal1000"
+        elif key.find("#") > -1:
+            key = "" + key
+            key = key.replace("internal", "")
         for i in value:
-            # if i == "internal_" + str(count):
-            # i = "internal_1000"
+            if i.find("#") > -1:
+                i = i.replace("internal", "")
+                i = "" + i
             dotString += key + ' -> ' + i + '\n'
 
     dotString += '}'
@@ -101,12 +106,15 @@ def dictToDot(dict):
 def newickToDot(newick):
     diction = returnDictionary(newick)
     dictToDot(diction)
-    print(diction)
+    # print(diction)
     global Graph, count
     count = 1000
     Graph = {}
 
 
 if __name__ == '__main__':
-    newick = "(((A,B),C),D);"
+    newick = "(((a,(b)#H),(#H,c)),d);"
+    # newick = "((A:1, B:4.1):4, C:5e-1);"
+    newick = re.sub(":[0-9]+[e1\-\.]*","", newick)
+    print(newick)
     newickToDot(newick)
