@@ -68,9 +68,13 @@ def readParameters(input):
     listOfvals = []
     for i in input[::-1]:
         if i == ",":
+            if value.find("internal") < 0:
+                value = value[::-1]
             listOfvals.append(value)
             value = ""
         elif i == "(":
+            if value.find("internal") < 0:
+                value = value[::-1]
             listOfvals.append(value)
             value = ""
         else:
@@ -90,11 +94,13 @@ def dictToDot(dict):
             key = "internal1000"
         elif key.find("#") > -1:
             key = "" + key
-            key = key.replace("internal", "")
+            key = key.replace("internal#", "HASH")
+            key = key.replace("#","HASH")
         for i in value:
             if i.find("#") > -1:
-                i = i.replace("internal", "")
                 i = "" + i
+                i = i.replace("internal#", "Hash")
+                i = i.replace("#", "HASH")
             dotString += key + ' -> ' + i + '\n'
 
     dotString += '}'
