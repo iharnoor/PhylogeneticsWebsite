@@ -1,9 +1,9 @@
 strict digraph G1 {
-#H -> b
-internal1001 -> #H
+internalHash#H -> b
+internal1001 -> internalHash#H
 internal1001 -> a
 internal1002 -> c
-internal1002 -> H#
+internal1002 -> Hash#H
 internal1003 -> internal1002
 internal1003 -> internal1001
 internal1000 -> d

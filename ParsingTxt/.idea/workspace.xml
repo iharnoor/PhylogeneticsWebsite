@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
     </list>
@@ -42,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-757">
-              <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state relative-caret-position="408">
+              <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -386,11 +384,6 @@
           <line>184</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py</url>
-          <line>48</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -610,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="69" column="35" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        <state relative-caret-position="408">
+          <caret line="98" column="41" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
         </state>
       </provider>
     </entry>
