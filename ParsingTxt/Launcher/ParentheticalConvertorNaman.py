@@ -1,4 +1,5 @@
 import re
+
 stack = []
 count = 1001
 Graph = {}
@@ -104,17 +105,19 @@ def dictToDot(dict):
 
 
 def newickToDot(newick):
+    newick = re.sub(":[0-9]+[e1\-\.]*", "", newick)
     diction = returnDictionary(newick)
     dictToDot(diction)
     # print(diction)
-    global Graph, count
+    global Graph, count, stack
     count = 1000
     Graph = {}
+    stack = []
 
 
 if __name__ == '__main__':
     newick = "(((a,(b)#H),(#H,c)),d);"
     # newick = "((A:1, B:4.1):4, C:5e-1);"
-    newick = re.sub(":[0-9]+[e1\-\.]*","", newick)
+
     print(newick)
     newickToDot(newick)

@@ -69,7 +69,7 @@ function createD3Graph() {
     document.getElementById("loader").style.visibility = "hidden";
     // refresher.style.visibility = "visible";
     // selectbutton.style.visibility = "hidden";
-    selectbutton.disabled= true;
+    selectbutton.disabled = true;
     // b.style.visibility = "visible";
     refresher.style.visibility = "visible";
     refresher.disabled = false;
@@ -151,8 +151,9 @@ function createD3Graph() {
             .text(function (d) {
                 // return d.id;
                 var valueOfNode = d.id.toString();
-                return (!reg1000P.test(valueOfNode)) ? d.id : "";
+                // return (!reg1000P.test(valueOfNode)) ? d.id : "";
                 // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
+                return d.id;
             });
 
         simulation
@@ -283,7 +284,7 @@ function selectInputType(val) {
 
 function simulateClick(x, y) {
     jQuery(document.elementFromPoint(315, 205)).click();
-    alert("clicking"+ x + " " + y);
+    alert("clicking" + x + " " + y);
 }
 
 function createboxes() {
@@ -294,7 +295,6 @@ function createboxes() {
     // createNetworkSelector.style.visibility = "hidden";
     // c.style.visibility = "visible";
     // btnUpdateNet.style.visibility = "visible";
-
 
 
     btnUpdateNet.disabled = false;
@@ -391,9 +391,9 @@ function refreshGraph() {
 function gotFile(file) {
     // document.getElementById("loader").style.visibility = "visible";
     // refresher.style.visibility = "visible";
-    refresher.disabled= false;
+    refresher.disabled = false;
     // selectbutton.style.visibility = "hidden";
-    selectbutton.disabled= true;
+    selectbutton.disabled = true;
 
     // refresher.style.visibility="visible";
     refresher.disabled = false;
