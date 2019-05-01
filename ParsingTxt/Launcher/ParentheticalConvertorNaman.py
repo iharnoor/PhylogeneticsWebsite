@@ -94,13 +94,13 @@ def dictToDot(dict):
             key = "internal1000"
         elif key.find("#") > -1:
             key = "" + key
-            key = key.replace("internal#", "HASH")
-            key = key.replace("#","HASH")
+            key = key.replace("internal#", "Hash")
+            key = key.replace("#", "Hash")
         for i in value:
             if i.find("#") > -1:
                 i = "" + i
                 i = i.replace("internal#", "Hash")
-                i = i.replace("#", "HASH")
+                i = i.replace("#", "Hash")
             dotString += key + ' -> ' + i + '\n'
 
     dotString += '}'
