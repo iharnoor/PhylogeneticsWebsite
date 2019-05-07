@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/sketch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/upload.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -586,7 +582,7 @@
     <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>

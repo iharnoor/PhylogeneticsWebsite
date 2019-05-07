@@ -110,9 +110,6 @@ def dictToDot(dict):
 
     with open('upload.dot', 'w') as f:
         f.write(dotString)
-    stack = []
-    count = 1001
-    Graph = {}
 
 
 
@@ -122,7 +119,7 @@ def newickToDot(newick):
     dictToDot(diction)
     # print(diction)
     global Graph, count, stack
-    count = 1000
+    count = 1001
     Graph = {}
     stack = []
 
