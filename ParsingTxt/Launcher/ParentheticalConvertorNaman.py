@@ -85,6 +85,8 @@ def readParameters(input):
 
 def dictToDot(dict):
     global count
+    global Graph
+    global stack
     # print("count: " + str(count))
     # print('diction: ', dict)
     dotString = 'strict digraph G1 {' + '\n'
@@ -108,10 +110,14 @@ def dictToDot(dict):
 
     with open('upload.dot', 'w') as f:
         f.write(dotString)
+    stack = []
+    count = 1001
+    Graph = {}
+
 
 
 def newickToDot(newick):
-    newick = re.sub(":[0-9]+[e1\-\.]*", "", newick)
+    newick = re.sub(":[0-9]+[eE1\-\.]*[0-9]*", "", newick)
     diction = returnDictionary(newick)
     dictToDot(diction)
     # print(diction)
@@ -122,7 +128,7 @@ def newickToDot(newick):
 
 
 if __name__ == '__main__':
-    newick = "(((a,(b)#H),(#H,c)),d);"
+    newick = "((a-2,b-3),c-4);"
     # newick = "((A:1, B:4.1):4, C:5e-1);"
 
     print(newick)

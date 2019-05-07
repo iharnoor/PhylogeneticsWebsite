@@ -3,8 +3,8 @@ var nodeVal = [];
 var nodesCheckedStr = "";
 var threshold;
 var paraText = "";
-var reg1000 = new RegExp("^([a-z0-9]{5,})$");
-var reg1000P = new RegExp("^([a-z0-9]{5,})$");
+var reg1000P = new RegExp("internal([0-9]{4})");
+var regHash = new RegExp("Hash[A-Za-z]+");
 
 var removeNodeBool = false;
 
@@ -134,8 +134,7 @@ function createD3Graph() {
                 }
                 // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
                 var valueOfNode = d.id.toString();
-                return (!reg1000P.test(valueOfNode)) ? "blue" : (valueOfNode === "internal1000") ? "red" : "gray";
-                // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
+                return (regHash.test(valueOfNode) ? "green" : (valueOfNode === "internal1000" ? "red" : reg1000P.test(valueOfNode) ? "gray" : "blue" ));
             })
             //.attr("fill", function(d) { return color(d.group); })
             .call(d3.drag()
