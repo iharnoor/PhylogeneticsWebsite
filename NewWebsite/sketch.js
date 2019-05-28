@@ -326,11 +326,14 @@ function createboxes() {
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
-        document.getElementById("placeholder").appendChild(x);
-        document.getElementById("placeholder").appendChild(y);
-        document.getElementById("placeholder").appendChild(linebreak);
+        alert(y.textContent);
+        if(!y.textContent.includes("Hash")) {
+            document.getElementById("placeholder").appendChild(x);
+            document.getElementById("placeholder").appendChild(y);
+            document.getElementById("placeholder").appendChild(linebreak);
+        }
         // document.body.appendChild(y);
-        console.log(x.id);
+        // console.log(x.id);
     });
 }
 
@@ -341,6 +344,8 @@ function checking() {
 }
 
 function onClickCreateNetwork() {
+    parentheticalSelector.disabled= true;
+
     createNetworkSelector.disabled = true;
     document.getElementById("loader").style.visibility = "visible";
     if (selectedDropDown === "pf") {
