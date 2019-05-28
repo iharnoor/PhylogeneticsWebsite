@@ -63,7 +63,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 
-function createD3Graph() {
+function createD3Graph(nodesRemoveArr, isRemoveSelected) {
     removeGraph();
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
@@ -80,117 +80,136 @@ function createD3Graph() {
     // btnRemoveNodes.disabled= false;
     // createboxes();
     d3.dot("http://localhost:5001/readDot", function (graph) {
-        // d3.dot("cExample.dot", function (graph) {
+            // d3.dot("cExample.dot", function (graph) {
 
-        // d3.select("svg").remove();
+            // d3.select("svg").remove();
 
-        //if (error) throw error;
-        // build the arrow.
-        svg.append("svg:defs").selectAll("marker")
-            .data(["end"])      // Different link/path types can be defined here
-            .enter().append("svg:marker")    // This section adds in the arrows
-            .attr("id", String)
-            .attr("viewBox", "10 10 10 10")
-            .attr("refX", 15)
-            .attr("refY", -0.5)
-            .attr("markerWidth", 6)
-            .attr("markerHeight", 6)
-            .attr("orient", "auto")
-            .append("svg:path")
-            .attr("d", "M0,-5L10,0L0,5");
+            //if (error) throw error;
+            // build the arrow.
+            svg.append("svg:defs").selectAll("marker")
+                .data(["end"])      // Different link/path types can be defined here
+                .enter().append("svg:marker")    // This section adds in the arrows
+                .attr("id", String)
+                .attr("viewBox", "10 10 10 10")
+                .attr("refX", 15)
+                .attr("refY", -0.5)
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .append("svg:path")
+                .attr("d", "M0,-5L10,0L0,5");
 
-        // add the links and the arrows
-        var path = svg.append("svg:g").attr("class", "links").selectAll("path")
-            .data(graph.links)
-            .enter().append("svg:path")
-            //    .attr("class", function(d) { return "link " + d.type; })
-            .attr("marker-end", "url(#end)");
-        // alert(Object.values(graph.nodes.name));
-        // alert(graph.nodes);
-        nodeNum = graph.nodes.length;
+            if (isRemoveSelected) {
+                for (let i = 0; i < graph.nodes.length; i++)
+                    for (let j = 0; j < nodesRemoveArr.length; j++) {
+                        if (graph.nodes[i].id === nodesRemoveArr[j]) {
+                            graph.nodes.splice(i, 1); //remove 1 item at index i
+                        }
+                    }
 
-
-        var node = svg.append("g")
-            .selectAll("circle")
-            .data(graph.nodes)
-            .enter().append("g");
-
-        node
-            .append("circle")
-            // .attr("r", 5)
-            .attr("r", function (d) {
-                var valueOfNode = d.id.toString();
-                if (!reg1000P.test(valueOfNode))
-                // if (valueOfNode < 1000)
-                    nodeVal.push(valueOfNode);
-                // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
-                return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") ? 10 : 5;
-            })
-
-            .style("fill", function (d) {
-                if (removeNodeBool === false) {
-                    createboxes();
-                    removeNodeBool = true;
+                for (let i = 0; i < graph.links.length; i++) {
+                    for (let j = 0; j < nodesRemoveArr.length; j++) {
+                        if (graph.links[i].target === nodesRemoveArr[j]) {
+                            graph.links.splice(i, 1); //remove 1 item at index i
+                        }
+                    }
                 }
-                // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
-                var valueOfNode = d.id.toString();
-                return (regHash.test(valueOfNode) ? "green" : (valueOfNode === "internal1000" ? "red" : reg1000P.test(valueOfNode) ? "gray" : "blue" ));
-            })
-            //.attr("fill", function(d) { return color(d.group); })
-            .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
+            }
 
-        // alert(nodeVal);
-        // add the text
-        node.append("text")
-            .attr("x", 12)
-            .attr("dy", ".35em")
-            .text(function (d) {
-                // return d.id;
-                var valueOfNode = d.id.toString();
-                // return (!reg1000P.test(valueOfNode)) ? d.id : "";
-                // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
-                return d.id;
-            });
-
-        simulation
-            .nodes(graph.nodes)
-            .on("tick", ticked);
-
-        simulation.force("link")
-            .links(graph.links);
-
-        let linkGen = d3.linkVertical().x(function (d) {
-            return d.x;
-        })
-            .y(function (d) {
-                return d.y;
-            });
+            // add the links and the arrows
+            var path = svg.append("svg:g").attr("class", "links").selectAll("path")
+                .data(graph.links)
+                .enter().append("svg:path")
+                //    .attr("class", function(d) { return "link " + d.type; })
+                .attr("marker-end", "url(#end)");
+            // alert(Object.values(graph.nodes.name));
+            // alert(graph.nodes);
+            nodeNum = graph.nodes.length;
 
 
-        var linkRad = d3.linkRadial()
-            .angle(function (d) {
+            var node = svg.append("g")
+                .selectAll("circle")
+                .data(graph.nodes)
+                .enter().append("g");
+
+            node
+                .append("circle")
+                // .attr("r", 5)
+                .attr("r", function (d) {
+                    var valueOfNode = d.id.toString();
+                    if (!reg1000P.test(valueOfNode))
+                    // if (valueOfNode < 1000)
+                        nodeVal.push(valueOfNode);
+                    // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
+                    return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") ? 10 : 5;
+                })
+
+                .style("fill", function (d) {
+                    if (removeNodeBool === false) {
+                        createboxes();
+                        removeNodeBool = true;
+                    }
+                    // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
+                    var valueOfNode = d.id.toString();
+                    return (regHash.test(valueOfNode) ? "green" : (valueOfNode === "internal1000" ? "red" : reg1000P.test(valueOfNode) ? "gray" : "blue"));
+                })
+                //.attr("fill", function(d) { return color(d.group); })
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            // alert(nodeVal);
+            // add the text
+            node.append("text")
+                .attr("x", 12)
+                .attr("dy", ".35em")
+                .text(function (d) {
+                    // return d.id;
+                    var valueOfNode = d.id.toString();
+                    // return (!reg1000P.test(valueOfNode)) ? d.id : "";
+                    // return (parseInt(d.id.toString()) < 1000) ? d.id : "";
+                    return d.id;
+                });
+
+            simulation
+                .nodes(graph.nodes)
+                .on("tick", ticked);
+
+            simulation.force("link")
+                .links(graph.links);
+
+            let linkGen = d3.linkVertical().x(function (d) {
                 return d.x;
             })
-            .radius(function (d) {
-                return d.y;
-            });
-
-
-        function ticked() {
-            path.attr("d", function (d) {
-                return "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
-            });
-            node
-                .attr("transform", function (d) {
-                    return "translate(" + d.x + "," + d.y + ")";
+                .y(function (d) {
+                    return d.y;
                 });
-        }
-    });
 
-    // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            var linkRad = d3.linkRadial()
+                .angle(function (d) {
+                    return d.x;
+                })
+                .radius(function (d) {
+                    return d.y;
+                });
+
+
+            function ticked() {
+                path.attr("d", function (d) {
+                    return "M" + d.source.x + "," + d.source.y + "L" + d.target.x + "," + d.target.y;
+                });
+                node
+                    .attr("transform", function (d) {
+                        return "translate(" + d.x + "," + d.y + ")";
+                    });
+            }
+        }
+    )
+    ;
+
+// document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
 function dragstarted(d) {
@@ -365,7 +384,12 @@ function removeNodesAction() {
     // var leaves = document.getElementById("textareabox").value;
     nodesCheckedStr = nodesCheckedStr.substr(0, nodesCheckedStr.length - 1);
 
-    pushLeavesToServer(nodesCheckedStr)
+    console.log(nodesCheckedStr);
+
+    var strArr = nodesCheckedStr.split(',');
+
+    createD3Graph(strArr, true)
+    // pushLeavesToServer(nodesCheckedStr)
 }
 
 function removeGraph() {
