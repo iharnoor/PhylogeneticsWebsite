@@ -322,6 +322,8 @@ function checking() {
 }
 
 function onClickCreateNetwork() {
+    parentheticalSelector.disabled= true;
+
     createNetworkSelector.disabled = true;
     document.getElementById("loader").style.visibility = "visible";
     if (selectedDropDown === "pf") {
