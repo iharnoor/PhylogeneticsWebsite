@@ -1,4 +1,11 @@
 strict digraph G1 {
-internal1000 ->  y
-internal1000 -> x
+HashH -> b
+internal1001 -> HashH
+internal1001 -> a
+internal1002 -> c
+internal1002 -> HashH
+internal1003 -> internal1002
+internal1003 -> internal1001
+internal1000 -> d
+internal1000 -> internal1003
 }
