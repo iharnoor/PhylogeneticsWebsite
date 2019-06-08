@@ -7,7 +7,7 @@ var reg1000P = new RegExp("internal([0-9]{4})");
 var regHash = new RegExp("Hash[A-Za-z]+");
 
 var removeNodeBool = false;
-
+var checkedNodes =[];
 // i hid textarea box
 // var c = document.getElementById("textareabox");
 // c.style.visibility = "hidden";
@@ -326,7 +326,9 @@ function createboxes() {
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
-        alert(y.textContent);
+        // alert(y.textContent);
+        checkedNodes.push(y.textContent);
+        alert(checkedNodes);
         if(!y.textContent.includes("Hash")) {
             document.getElementById("placeholder").appendChild(x);
             document.getElementById("placeholder").appendChild(y);
