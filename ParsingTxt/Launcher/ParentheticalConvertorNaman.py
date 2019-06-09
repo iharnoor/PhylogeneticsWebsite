@@ -125,7 +125,7 @@ def newickToDot(newick):
 
 
 if __name__ == '__main__':
-    newick = "((a-2,b-3),c-4);"
+    newick = "(X,(Y,Z))W;"
     # newick = "((A:1, B:4.1):4, C:5e-1);"
 
     print(newick)
