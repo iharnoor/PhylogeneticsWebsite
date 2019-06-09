@@ -118,10 +118,22 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                         }
                     }
                 }
+                // for (let i = 0; i < trackRemovedNodes; i++) {
+                //     for (let j = 0; j < checkedNodes; j++) {
+                //         if (i.id === checkedNodes[j]) {
+                //             graph.nodes.push(i)
+                //         }
+                //     }
+                // }
+                // for (let i = 0; i < trackRemovedLinks; i++) {
+                //     for (let j = 0; j < checkedNodes; j++) {
+                //         if (i.target === checkedNodes[j]) {
+                //             graph.links.push(i)
+                //         }
+                //     }
+                // }
+                // alert(trackRemovedNodes + "\n" + trackRemovedLinks)
             }
-            // else {
-            //     alert(trackRemovedNodes + "\n" + trackRemovedLinks)
-            // }
 
             // add the links and the arrows
             var path = svg.append("svg:g").attr("class", "links").selectAll("path")
