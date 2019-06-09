@@ -326,7 +326,7 @@ function createboxes() {
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
-        alert(y.textContent);
+        // alert(y.textContent);
         if(!y.textContent.includes("Hash")) {
             document.getElementById("placeholder").appendChild(x);
             document.getElementById("placeholder").appendChild(y);
