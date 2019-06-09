@@ -4,6 +4,8 @@ var nodesCheckedStr = "";
 var threshold;
 var paraText = "";
 var reg1000P = new RegExp("internal([0-9]{4})");
+var regInternalHybrid = new RegExp("internal[a-zA-Z]");
+
 var regHash = new RegExp("Hash[A-Za-z]+");
 
 var removeNodeBool = false;
@@ -160,7 +162,7 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                     // if (valueOfNode < 1000)
                         nodeVal.push(valueOfNode);
                     // return (parseInt(d.id.toString()) <= 1000) ? 10 : 5;
-                    return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") ? 10 : 5;
+                    return (!reg1000P.test(valueOfNode) || valueOfNode === "internal1000") && !regInternalHybrid.test(valueOfNode) ? 10 : 5;
                 })
 
                 .style("fill", function (d) {
@@ -170,7 +172,7 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                     }
                     // return (parseInt(d.id.toString()) < 1000) ? "blue" : (parseInt(d.id.toString()) === 1000) ? "red" : "gray";
                     var valueOfNode = d.id.toString();
-                    return (regHash.test(valueOfNode) ? "green" : (valueOfNode === "internal1000" ? "red" : reg1000P.test(valueOfNode) ? "gray" : "blue"));
+                    return (regHash.test(valueOfNode) ? "green" : (valueOfNode === "internal1000" ? "red" : reg1000P.test(valueOfNode) || regInternalHybrid.test(valueOfNode) ? "gray" : "blue"));
                 })
                 //.attr("fill", function(d) { return color(d.group); })
                 .call(d3.drag()

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+            <state relative-caret-position="231">
+              <caret line="164" column="128" selection-start-line="164" selection-start-column="128" selection-end-line="164" selection-end-column="128" />
             </state>
           </provider>
         </entry>
@@ -48,8 +47,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>refreshGraph</find>
-      <find>refres</find>
       <find>hr</find>
       <find>br</find>
       <find>createbo</find>
@@ -78,6 +75,8 @@
       <find>trackRemovedNodes</find>
       <find>checked</find>
       <find>checkedNodes</find>
+      <find>internal</find>
+      <find>reg1000P</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,7 +137,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560115454416" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560115697856" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -213,11 +212,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99111000" />
+    <option name="totallyTimeSpent" value="99373000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -357,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="135" column="13" lean-forward="true" selection-start-line="135" selection-start-column="13" selection-end-line="135" selection-end-column="13" />
+        <state relative-caret-position="231">
+          <caret line="164" column="128" selection-start-line="164" selection-start-column="128" selection-end-line="164" selection-end-column="128" />
         </state>
       </provider>
     </entry>
