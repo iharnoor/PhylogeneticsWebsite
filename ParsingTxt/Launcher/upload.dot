@@ -1,8 +1,6 @@
 strict digraph G1 {
-internalF -> D
-internalF -> C
-internal1001 -> G
-internal1001 -> A
+internal1001 -> b
+internal1001 -> a
+internal1000 -> c
 internal1000 -> internal1001
-internal1000 -> internalF
 }

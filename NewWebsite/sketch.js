@@ -7,7 +7,9 @@ var reg1000P = new RegExp("internal([0-9]{4})");
 var regHash = new RegExp("Hash[A-Za-z]+");
 
 var removeNodeBool = false;
-var checkedNodes =[];
+var checkedNodes = [];
+var trackRemovedNodes = [];
+var trackRemovedLinks = [];
 // i hid textarea box
 // var c = document.getElementById("textareabox");
 // c.style.visibility = "hidden";
@@ -100,21 +102,26 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                 .attr("d", "M0,-5L10,0L0,5");
 
             if (isRemoveSelected) {
-                for (let i = 0; i < graph.nodes.length; i++)
+                for (let i = 0; i < graph.nodes.length; i++) {
                     for (let j = 0; j < nodesRemoveArr.length; j++) {
                         if (graph.nodes[i].id === nodesRemoveArr[j]) {
+                            trackRemovedNodes.push(graph.nodes[i]);
                             graph.nodes.splice(i, 1); //remove 1 item at index i
                         }
                     }
-
+                }
                 for (let i = 0; i < graph.links.length; i++) {
                     for (let j = 0; j < nodesRemoveArr.length; j++) {
                         if (graph.links[i].target === nodesRemoveArr[j]) {
+                            trackRemovedLinks.push(graph.links[i]);
                             graph.links.splice(i, 1); //remove 1 item at index i
                         }
                     }
                 }
             }
+            // else {
+            //     alert(trackRemovedNodes + "\n" + trackRemovedLinks)
+            // }
 
             // add the links and the arrows
             var path = svg.append("svg:g").attr("class", "links").selectAll("path")
@@ -302,7 +309,7 @@ function selectInputType(val) {
 
 function simulateClick(x, y) {
     jQuery(document.elementFromPoint(315, 205)).click();
-    alert("clicking" + x + " " + y);
+    // alert("clicking" + x + " " + y);
 }
 
 function createboxes() {
@@ -328,8 +335,8 @@ function createboxes() {
         y.appendChild(text);
         // alert(y.textContent);
         checkedNodes.push(y.textContent);
-        alert(checkedNodes);
-        if(!y.textContent.includes("Hash")) {
+        // alert(checkedNodes);
+        if (!y.textContent.includes("Hash")) {
             document.getElementById("placeholder").appendChild(x);
             document.getElementById("placeholder").appendChild(y);
             document.getElementById("placeholder").appendChild(linebreak);
@@ -346,7 +353,7 @@ function checking() {
 }
 
 function onClickCreateNetwork() {
-    parentheticalSelector.disabled= true;
+    parentheticalSelector.disabled = true;
 
     createNetworkSelector.disabled = true;
     document.getElementById("loader").style.visibility = "visible";
