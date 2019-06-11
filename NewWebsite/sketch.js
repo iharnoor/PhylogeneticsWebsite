@@ -335,7 +335,7 @@ function createboxes() {
     // c.style.visibility = "visible";
     // btnUpdateNet.style.visibility = "visible";
 
-
+    checkedNodes = [];
     btnUpdateNet.disabled = false;
     nodeVal.forEach(function (element) {
         linebreak = document.createElement("hr");
