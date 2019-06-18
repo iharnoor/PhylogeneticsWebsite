@@ -9,7 +9,7 @@ var regInternalHybrid = new RegExp("internal[a-zA-Z]");
 var regHash = new RegExp("Hash[A-Za-z]+");
 
 var removeNodeBool = false;
-var checkedNodes = [];
+var totalLeafNodes = [];
 var trackRemovedNodes = [];
 var trackRemovedLinks = [];
 // i hid textarea box
@@ -67,8 +67,10 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 
-function createD3Graph(nodesRemoveArr, isRemoveSelected) {
-    removeGraph();
+function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddSelected) {
+    if (!isAddSelected) {
+        removeGraph();
+    }
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
     // refresher.style.visibility = "visible";
@@ -120,16 +122,35 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                         }
                     }
                 }
-                // for (let i = 0; i < trackRemovedNodes; i++) {
-                //     for (let j = 0; j < checkedNodes; j++) {
-                //         if (i.id === checkedNodes[j]) {
+
+                if (isAddSelected) {
+                    for (let i = 0; i < trackRemovedNodes.length; i++) {
+                        for (let j = 0; j < newCheckedArray.length; j++) {
+                            if (trackRemovedNodes[i].id === newCheckedArray[j]) {
+                                graph.links.add(trackRemovedNodes[i]); //remove 1 item at index i
+                            }
+                        }
+                    }
+                    for (let i = 0; i < trackRemovedLinks.length; i++) {
+                        for (let j = 0; j < newCheckedArray.length; j++) {
+                            if (trackRemovedLinks[i].target === newCheckedArray[j]) {
+                                graph.links.add(trackRemovedLinks[i]); //remove 1 item at index i
+                            }
+                        }
+                    }
+                }
+
+                // alert(totalLeafNodes);
+                // for (let i = 0; i < trackRemovedNodes.length; i++) {
+                //     for (let j = 0; j < totalLeafNodes; j++) {
+                //         if (i.id.toString() === totalLeafNodes[j]) {
                 //             graph.nodes.push(i)
                 //         }
                 //     }
                 // }
-                // for (let i = 0; i < trackRemovedLinks; i++) {
-                //     for (let j = 0; j < checkedNodes; j++) {
-                //         if (i.target === checkedNodes[j]) {
+                // for (let i = 0; i < trackRemovedLinks.length; i++) {
+                //     for (let j = 0; j < totalLeafNodes; j++) {
+                //         if (i.target.toString() === totalLeafNodes[j]) {
                 //             graph.links.push(i)
                 //         }
                 //     }
@@ -227,9 +248,7 @@ function createD3Graph(nodesRemoveArr, isRemoveSelected) {
                     });
             }
         }
-    )
-    ;
-
+    );
 // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
@@ -335,23 +354,30 @@ function createboxes() {
     // c.style.visibility = "visible";
     // btnUpdateNet.style.visibility = "visible";
 
-    checkedNodes = [];
+    totalLeafNodes = [];
     btnUpdateNet.disabled = false;
     nodeVal.forEach(function (element) {
+
+        console.log("element: " + element);
+
         linebreak = document.createElement("hr");
-        var x = document.createElement("INPUT");
-        x.checked = true;
-        x.setAttribute("type", "checkbox");
-        x.setAttribute("id", element);
-        x.onclick = checking;
+
+        var checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.name = element;
+        checkbox.id = element;
+        checkbox.value = element;
+        checkbox.checked = true;
+
+        checkbox.onclick = checking;
         var y = document.createElement("p");
         var text = document.createTextNode("" + element);
         y.appendChild(text);
         // alert(y.textContent);
-        checkedNodes.push(y.textContent);
-        // alert(checkedNodes);
-        if (!y.textContent.includes("Hash")) {
-            document.getElementById("placeholder").appendChild(x);
+        totalLeafNodes.push(y.textContent);
+        // alert(totalLeafNodes);
+        if (!y.textContent.includes("Hash") && !y.textContent.includes("internal")) {
+            document.getElementById("placeholder").appendChild(checkbox);
             document.getElementById("placeholder").appendChild(y);
             document.getElementById("placeholder").appendChild(linebreak);
         }
@@ -362,8 +388,10 @@ function createboxes() {
 
 
 function checking() {
-    nodesCheckedStr += this.id.toString() + ",";
-    // alert(nodesCheckedStr);
+    if (this.checked) {
+        nodesCheckedStr += this.id.toString() + ",";
+    }
+// alert(nodesCheckedStr);
 }
 
 function onClickCreateNetwork() {
@@ -409,16 +437,84 @@ function changeRootAction() {
 }
 
 function removeNodesAction() {
-    // var leaves = document.getElementById("textareabox").value;
+    // unselected node
     nodesCheckedStr = nodesCheckedStr.substr(0, nodesCheckedStr.length - 1);
-
     console.log(nodesCheckedStr);
 
-    var strArr = nodesCheckedStr.split(',');
+    var newCheckedNodes = nodesCheckedStr.split(',');
 
-    createD3Graph(strArr, true)
+    // TODO not updating every time
+    var uncheckedNodes = [];
+    var checkedNodes = [];
+
+    for (let i = 0; i < totalLeafNodes.length; i++) {
+        var test = document.getElementById(totalLeafNodes[i]);
+        console.log(test.checked);
+        if (!test.checked) {
+            uncheckedNodes.push(totalLeafNodes[i])
+        } else {
+            checkedNodes.push(totalLeafNodes[i])
+        }
+    }
+
+    for (let i = 0; i < newCheckedNodes.length; i++) {
+        var test = document.getElementById(newCheckedNodes[i]);
+
+        if (newCheckedNodes[i] == "" || !test.checked) {
+            newCheckedNodes.splice(i, 1);
+        }
+    }
+
+    uniqueArray = newCheckedNodes.filter(function (item, pos, self) {
+        return self.indexOf(item) == pos;
+    });
+
+    // newCheckedArray = "";
+    // alert(totalLeafNodes + " t: " + uniqueArray);
+    createD3Graph(uncheckedNodes, uniqueArray, true, false)
     // pushLeavesToServer(nodesCheckedStr)
 }
+
+function addNodesAction() {
+    // unselected node
+    nodesCheckedStr = nodesCheckedStr.substr(0, nodesCheckedStr.length - 1);
+    console.log(nodesCheckedStr);
+
+    var newCheckedNodes = nodesCheckedStr.split(',');
+
+    // TODO not updating every time
+    var uncheckedNodes = [];
+    var checkedNodes = [];
+
+    for (let i = 0; i < totalLeafNodes.length; i++) {
+        var test = document.getElementById(totalLeafNodes[i]);
+        console.log(test.checked);
+        if (!test.checked) {
+            uncheckedNodes.push(totalLeafNodes[i])
+        } else {
+            checkedNodes.push(totalLeafNodes[i])
+        }
+    }
+
+    for (let i = 0; i < newCheckedNodes.length; i++) {
+        var test = document.getElementById(newCheckedNodes[i]);
+
+        if (newCheckedNodes[i] == "" || !test.checked) {
+            newCheckedNodes.splice(i, 1);
+        }
+    }
+
+    uniqueArray = newCheckedNodes.filter(function (item, pos, self) {
+        return self.indexOf(item) == pos;
+    });
+
+    // newCheckedArray = "";
+    // alert(totalLeafNodes + " t: " + uniqueArray);
+    createD3Graph(uncheckedNodes, uniqueArray, false, true)
+    // pushLeavesToServer(nodesCheckedStr)
+}
+
+
 
 function removeGraph() {
     $(".hi").empty();
