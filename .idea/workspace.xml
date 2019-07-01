@@ -4,9 +4,7 @@
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="605">
+              <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -34,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="69" column="90" lean-forward="true" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+            <state relative-caret-position="385">
+              <caret line="115" column="17" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -96,8 +94,8 @@
         <option value="$PROJECT_DIR$/NewWebsite/google-loaders-redesign-master/style.scss" />
         <option value="$PROJECT_DIR$/InputFiles/parenttext.txt" />
         <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
-        <option value="$PROJECT_DIR$/NewWebsite/index.html" />
         <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
+        <option value="$PROJECT_DIR$/NewWebsite/index.html" />
       </list>
     </option>
   </component>
@@ -105,8 +103,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -134,14 +132,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560828004460" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561943660352" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -213,18 +211,19 @@
       <workItem from="1559039055697" duration="677000" />
       <workItem from="1559039750524" duration="2896000" />
       <workItem from="1560768797275" duration="5745000" />
+      <workItem from="1561943409547" duration="217000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113317000" />
+    <option name="totallyTimeSpent" value="113992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49823943" visible="true" weight="0.22310969" />
-      <window_info id="Structure" order="1" sideWeight="0.50176054" side_tool="true" visible="true" weight="0.22310969" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980198" visible="true" weight="0.22523962" />
+      <window_info id="Structure" order="1" sideWeight="0.5019802" side_tool="true" visible="true" weight="0.22523962" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -233,7 +232,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327551" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34010696" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.43762377" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43762377" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -274,25 +273,21 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
           <line>440</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
           <line>443</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
           <line>74</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
           <line>512</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
@@ -391,8 +386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="605">
+          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -401,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="69" column="90" lean-forward="true" selection-start-line="69" selection-start-column="90" selection-end-line="69" selection-end-column="90" />
+        <state relative-caret-position="385">
+          <caret line="115" column="17" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="17" />
         </state>
       </provider>
     </entry>

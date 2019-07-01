@@ -85,6 +85,20 @@ def uploadRootToBeChanged(root):
     return encoded_string
 
 
+def symbolReplacement(val):
+    val2 = ""
+    for i in val:
+        asciiVal = ord(i)
+        if (47 < asciiVal < 60) or (asciiVal == 0) or 96 < asciiVal < 123 or (
+                64 < asciiVal < 91) or asciiVal == 40 or asciiVal == 41 or asciiVal == 44:
+            val2 += i
+        else:
+            val.replace(i, str(asciiVal))
+            val2 += "ASC" + str(asciiVal)
+
+    return val2
+
+
 # POST
 @app.route('/uploadParenthetical/<flag>', methods=['POST'])
 def uploadParentheticalFormat(flag):
@@ -96,6 +110,8 @@ def uploadParentheticalFormat(flag):
     parentheticalFormat = json['text']
 
     print(parentheticalFormat)
+
+    parentheticalFormat = symbolReplacement(parentheticalFormat)
 
     ServerAction.parentheticalFormatToPNG(parentheticalFormat, flag)
 
@@ -162,6 +178,8 @@ def uploadParentheticalAndReturnDot():
 
     parenthetical = json['text']
 
+    print(parenthetical)
+    parenthetical = symbolReplacement(parenthetical)
     print(parenthetical)
 
     # ServerAction.newickToDot(parenthetical)
