@@ -374,7 +374,9 @@ function createboxes() {
         var text = document.createTextNode("" + element);
         y.appendChild(text);
         // alert(y.textContent);
-        totalLeafNodes.push(y.textContent);
+        if (!y.textContent.includes("Hash")){
+            totalLeafNodes.push(y.textContent);
+        }
         // alert(totalLeafNodes);
         if (!y.textContent.includes("Hash") && !y.textContent.includes("internal")) {
             document.getElementById("placeholder").appendChild(checkbox);
@@ -469,6 +471,9 @@ function removeNodesAction() {
         return self.indexOf(item) == pos;
     });
 
+    console.log("unchecked Nodes1: " + uncheckedNodes);
+    console.log("checked Nodes1: " + uniqueArray);
+
     // newCheckedArray = "";
     // alert(totalLeafNodes + " t: " + uniqueArray);
     createD3Graph(uncheckedNodes, uniqueArray, true, false)
@@ -513,7 +518,6 @@ function addNodesAction() {
     createD3Graph(uncheckedNodes, uniqueArray, false, true)
     // pushLeavesToServer(nodesCheckedStr)
 }
-
 
 
 function removeGraph() {

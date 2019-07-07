@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Launcher/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+            <state relative-caret-position="230">
+              <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -32,8 +34,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="115" column="17" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="17" />
+            <state relative-caret-position="318">
+              <caret line="378" column="9" lean-forward="true" selection-start-line="378" selection-start-column="9" selection-end-line="378" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -49,8 +60,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>link&quot;</find>
-      <find>links</find>
       <find>force</find>
       <find>append</find>
       <find>&quot;circle</find>
@@ -79,6 +88,8 @@
       <find>removenodesac</find>
       <find>checking</find>
       <find>remove</find>
+      <find>removenodes</find>
+      <find>totalLeafNodes</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,8 +105,8 @@
         <option value="$PROJECT_DIR$/NewWebsite/google-loaders-redesign-master/style.scss" />
         <option value="$PROJECT_DIR$/InputFiles/parenttext.txt" />
         <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
-        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
         <option value="$PROJECT_DIR$/NewWebsite/index.html" />
+        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
       </list>
     </option>
   </component>
@@ -103,8 +114,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -139,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561943660352" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562527698807" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -211,19 +222,20 @@
       <workItem from="1559039055697" duration="677000" />
       <workItem from="1559039750524" duration="2896000" />
       <workItem from="1560768797275" duration="5745000" />
-      <workItem from="1561943409547" duration="217000" />
+      <workItem from="1561943409547" duration="420000" />
+      <workItem from="1562520640052" duration="2295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113992000" />
+    <option name="totallyTimeSpent" value="116490000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4980198" visible="true" weight="0.22523962" />
-      <window_info id="Structure" order="1" sideWeight="0.5019802" side_tool="true" visible="true" weight="0.22523962" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4963768" visible="true" weight="0.22771673" />
+      <window_info id="Structure" order="1" sideWeight="0.5036232" side_tool="true" visible="true" weight="0.22771673" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -232,7 +244,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327551" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34010696" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43762377" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4367347" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -272,23 +284,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>440</line>
+          <line>442</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>443</line>
+          <line>445</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>74</line>
-          <option name="timeStamp" value="21" />
+          <line>517</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>512</line>
-          <option name="timeStamp" value="22" />
+          <line>452</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -297,13 +310,6 @@
     <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3-dot-graph.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-818" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117285">
-          <caret line="7819" column="36" selection-start-line="7819" selection-start-column="36" selection-end-line="7819" selection-end-column="36" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
@@ -386,18 +392,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
+        <state relative-caret-position="230">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="115" column="17" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="17" />
+        <state relative-caret-position="318">
+          <caret line="378" column="9" lean-forward="true" selection-start-line="378" selection-start-column="9" selection-end-line="378" selection-end-column="9" />
         </state>
       </provider>
     </entry>
