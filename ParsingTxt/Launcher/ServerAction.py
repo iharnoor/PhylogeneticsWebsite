@@ -111,6 +111,27 @@ def tripletsToDot(tripletsFName):
     os.system(cmd)
 
 
+def symbolReplacement(inputStr):
+    outputStr = ""
+    for i in inputStr:
+        asciiVal = ord(i)
+        if (47 < asciiVal < 60) or (asciiVal == 0) or 96 < asciiVal < 123 or (57 < asciiVal < 60) or (
+                64 < asciiVal < 91) or asciiVal == 40 or asciiVal == 41 or asciiVal == 44 or asciiVal == 35:
+            outputStr += i
+        else:
+            inputStr.replace(i, str(asciiVal))
+
+            strAsciiVal = str(asciiVal)
+            if len(strAsciiVal) > 2:
+                outputStr += "ASC" + strAsciiVal
+            elif len(strAsciiVal) > 1:
+                outputStr += "ASC0" + strAsciiVal
+            else:
+                outputStr += "ASC00" + strAsciiVal
+
+    return outputStr
+
+
 def removeNodes(nodes):
     output = ''
     nodes = nodes.split(',')
@@ -155,10 +176,8 @@ def retainActualLabelDot(fileName):
         # if line.__contains__('{') or line.__contains__('}') or line.__contains__('->'):
         #     dotFormat += line
 
-
     with open('cExample1_m.dot', 'w+') as f:
         f.write(dotFormat)
-
 
 
 def retainActualLabels2(fileName):
@@ -193,7 +212,6 @@ def retainActualLabels2(fileName):
         f.write(dotFormat)
 
     retainActualLabelDot('cExample1_m.dot')
-
 
 
 if __name__ == '__main__':

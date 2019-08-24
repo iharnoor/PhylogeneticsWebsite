@@ -9,36 +9,6 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
-# # POST
-# @app.route('/upload/<flag>', methods=['POST'])
-# def uploadTriplets(flag):
-#     """
-#     predicts requested text whether it is ham or spam
-#     :return: json
-#     """
-#     json = request.get_json()
-#     print(json)
-#     if len(json['text']) == 0:
-#         return 'error invalid input'
-#
-#     triplets = json['text']
-#
-#     print(triplets)
-#     with open('retrievedTriplets.txt', 'w+') as newickField:
-#         newickField.write(triplets)
-#
-#     ServerAction.tripletsToDot('retrievedTriplets.txt')
-#     # ServerAction.convertDotToPNG('cExample1.dot')
-#     print('flag=', flag)
-#     if len(flag) > 0:
-#         ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-#     else:
-#         ServerAction.convertDotToPNGJulia('cExample1.dot')
-#
-#     with open("net.png", "rb") as image_file:
-#         encoded_string = base64.b64encode(image_file.read())
-#     return encoded_string
-
 # POST
 @app.route('/uploadLeaves/', methods=['POST'])
 @cross_origin()
@@ -79,42 +49,6 @@ def uploadRootToBeChanged(root):
     print(flag)
 
     ServerAction.changeRoot(flag, root)
-    with open("net.png", "rb") as image_file:
-        encoded_string = base64.b64encode(image_file.read())
-    print(encoded_string)
-    return encoded_string
-
-
-def symbolReplacement(val):
-    val2 = ""
-    for i in val:
-        asciiVal = ord(i)
-        if (47 < asciiVal < 60) or (asciiVal == 0) or 96 < asciiVal < 123 or (
-                64 < asciiVal < 91) or asciiVal == 40 or asciiVal == 41 or asciiVal == 44 or asciiVal == 35:
-            val2 += i
-        else:
-            val.replace(i, str(asciiVal))
-            val2 += "ASC" + str(asciiVal)
-
-    return val2
-
-
-# POST
-@app.route('/uploadParenthetical/<flag>', methods=['POST'])
-def uploadParentheticalFormat(flag):
-    json = request.get_json()
-    print(json)
-    if len(json['text']) == 0:
-        return 'error invalid input'
-
-    parentheticalFormat = json['text']
-
-    print(parentheticalFormat)
-
-    parentheticalFormat = symbolReplacement(parentheticalFormat)
-
-    ServerAction.parentheticalFormatToPNG(parentheticalFormat, flag)
-
     with open("net.png", "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
     print(encoded_string)
@@ -179,19 +113,13 @@ def uploadParentheticalAndReturnDot():
     parenthetical = json['text']
 
     print(parenthetical)
-    parenthetical = symbolReplacement(parenthetical)
+    parenthetical = ServerAction.symbolReplacement(parenthetical)
     print(parenthetical)
 
     # ServerAction.newickToDot(parenthetical)
     ParentheticalConvertorNaman.newickToDot(parenthetical)
 
-    # ServerAction.convertDotToPNG('cExample1.dot')
-    # print('flag=', flag)
-    # if len(flag) > 0:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-    # else:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
-    return "work in progress"
+    return "Executing"
 
 
 # POST
@@ -226,7 +154,7 @@ def uploadTripletsAndReturnDot():
     # else:
     #     ServerAction.convertDotToPNGJulia('cExample1.dot')
     print(dotFile)
-    return "work in progress"
+    return "Executing"
 
 
 # GET
