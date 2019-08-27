@@ -7,7 +7,6 @@ import ParentheticalConvertorNaman
 import ServerAction
 
 app = Flask(__name__)
-# app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
@@ -28,13 +27,8 @@ def uploadLeavesToBeRemoved():
 
     print(leaves)
 
-    # ServerAction.removeLeaves(leaves + '')
-    # convertDotToPNG('cExample1.dot')
     ServerAction.removeNodes(leaves)
 
-    # with open("net.png", "rb") as image_file:
-    #     encoded_string = base64.b64encode(image_file.read())
-    # print(encoded_string)
     return "working"
 
 
@@ -96,7 +90,7 @@ def uploadHyde(thresh):
         f.write(dotFile)
 
     print(dotFile)
-    return "work in progress"
+    return "executiing"
 
 
 # POST
@@ -118,7 +112,6 @@ def uploadParentheticalAndReturnDot():
     parenthetical = ServerAction.symbolReplacement(parenthetical)
     print(parenthetical)
 
-    # ServerAction.newickToDot(parenthetical)
     ParentheticalConvertorNaman.newickToDot(parenthetical)
 
     return "Executing"
@@ -149,12 +142,6 @@ def uploadTripletsAndReturnDot():
     with open('upload.dot', 'w+') as f:
         f.write(dotFile)
 
-    # ServerAction.convertDotToPNG('cExample1.dot')
-    # print('flag=', flag)
-    # if len(flag) > 0:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot', flag)
-    # else:
-    #     ServerAction.convertDotToPNGJulia('cExample1.dot')
     print(dotFile)
     return "Executing"
 
