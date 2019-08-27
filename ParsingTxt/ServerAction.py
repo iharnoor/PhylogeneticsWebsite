@@ -1,11 +1,43 @@
 import os
+import re
+
+import numpy as np
 import pandas as pd
 import pydot
-import subprocess
-import numpy as np
+
+# import ParentheticalToDot
+# from Launcher import removeDup
 import ParentheticalToDot
-from Launcher import removeDup
-import re
+
+
+def isDup(pairs, a, b):
+    for x in pairs:
+        if a in x and b in x:
+            return 0
+    return 1
+
+
+
+def removeDupTriplets():
+    with open("HydeToTriplets.txt") as f:
+        content = f.readlines()
+    result = dict()
+    file = open("HydeToTriplets.txt", "w")
+
+    for x in content:
+        val = x.split()[2]
+        if val in result:
+            pairs = result[val]
+            if isDup(pairs, x.split()[0], x.split()[1]):
+                file.write(x.split()[0] + " " + x.split()[1] + " " + val + "\n")
+                pairs.append(x.split()[0] + "," + x.split()[1])
+            result[val] = pairs
+        else:
+            file.write(x.split()[0] + " " + x.split()[1] + " " + val + "\n")
+            result[val] = [x.split()[0] + "," + x.split()[1]]
+    file.close()
+    print(result)
+
 
 
 def parseHydeToTriplets(fileName, threshold):
@@ -38,7 +70,7 @@ def parseHydeToTriplets(fileName, threshold):
         for f in read_files:
             with open(f, "rb") as infile:
                 outfile.write(infile.read())
-    removeDup.removeDupTriplets()
+    removeDupTriplets()
 
 
 def returnParentheticalFormat(fileName):
@@ -107,18 +139,11 @@ dot file as compared the same command via Python.
 
 def tripletsToDot(tripletsFName):
     cmd = 'java -jar Lev1athan.jar ' + tripletsFName + ' > cExample1.dot --nopostprocess'
-    # cmd = 'java -jar Lev1athan.jar cExample1.trips > cExample1.dot --nopostprocess'
     os.system(cmd)
 
 
 def symbolReplacement(inputStr):
     outputStr = ""
-    if inputStr.endswith(";") and inputStr[len(inputStr)-2] != ")":
-        for i in range(len(inputStr)-2, -1, -1):
-            if (inputStr[i] == ")"):
-                break
-            else:
-                inputStr.replace(inputStr[i], "")
     for i in inputStr:
         asciiVal = ord(i)
         if (47 < asciiVal < 60) or (asciiVal == 0) or 96 < asciiVal < 123 or (57 < asciiVal < 60) or (
@@ -201,11 +226,13 @@ def retainActualLabels2(fileName):
             dictionary[fakeName[:-1].strip()] = actualName[1]
 
     print(dictionary)
+    # newLine = ''
+    # for line in open(fileName):
     with open(fileName, 'r') as file:
         fileStr = file.read()
 
     for key, value in dictionary.items():
-
+        # newLine = line.replace(key, value)
         fileStr = fileStr.replace("\n" + key + " ", "\n" + value + "Δ ")
         fileStr = fileStr.replace(" " + key + "\n", " " + value + "Δ\n")
 
@@ -220,6 +247,26 @@ def retainActualLabels2(fileName):
 
 if __name__ == '__main__':
     print("Hello")
+    # tripletsToDot('cExample1.trips')
+    # # convertDotToPNG('cExample1.dot')
+    # # removeLeaves('1\n5')
+    # convertDotToPNGJulia('cExample1.dot')
+    # print("Hello")
+
+    # lines_seen = set()  # holds lines already seen
+    # outfile = open('HydeToTriplets.txt', "w")
+    # for line in open('HydeToTriplets.txt', "r"):
+    #     if line not in lines_seen:  # not a duplicate
+    #         outfile.write(line)
+    #         lines_seen.add(line)
+    # outfile.close()
+
+    # parseHydeToTriplets("results.txt", 0.05)
+    # tripletsToDot('HydeToTriplets.txt')
+
+    # newickToDot('((C,D)F,(A,G));')
+
+    # print(retainActualLabels2('cExample1.dot'))
     print(returnReducedDotFile('cExample1.dot'))
     # convertDotToPNG('cExample1.dot')
 
