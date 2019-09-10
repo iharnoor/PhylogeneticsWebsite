@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewWebsite/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/NewWebsite/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,23 +20,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            <state relative-caret-position="158">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="299" column="70" selection-start-line="299" selection-start-column="70" selection-end-line="299" selection-end-column="70" />
+            <state relative-caret-position="177">
+              <caret line="55" column="9" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewWebsite/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -40,7 +63,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44715">
+            <state relative-caret-position="3339">
               <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
             </state>
           </provider>
@@ -57,15 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>force</find>
-      <find>append</find>
-      <find>&quot;circle</find>
-      <find>&quot;text</find>
-      <find>for</find>
-      <find>nodeVal.forEach(function (element) {</find>
-      <find>foreach</find>
-      <find>removenodesaction</find>
-      <find>removenode</find>
       <find>created</find>
       <find>trackRemovedNodes</find>
       <find>checked</find>
@@ -87,6 +101,15 @@
       <find>remove</find>
       <find>removenodes</find>
       <find>totalLeafNodes</find>
+      <find>.graph</find>
+      <find>graph</find>
+      <find>hi</find>
+      <find>title</find>
+      <find>parenthetical</find>
+      <find>HYDE</find>
+      <find>DNA</find>
+      <find>dna</find>
+      <find>svg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -101,8 +124,8 @@
         <option value="$PROJECT_DIR$/NewWebsite/get_data.php" />
         <option value="$PROJECT_DIR$/NewWebsite/google-loaders-redesign-master/style.scss" />
         <option value="$PROJECT_DIR$/InputFiles/parenttext.txt" />
-        <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
         <option value="$PROJECT_DIR$/NewWebsite/index.html" />
+        <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
         <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
       </list>
     </option>
@@ -110,16 +133,17 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -142,6 +166,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,13 +255,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120392000" />
+    <option name="totallyTimeSpent" value="126181000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.24297924" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.15031983" />
       <window_info id="Structure" order="1" sideWeight="0.5069307" side_tool="true" weight="0.20713525" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -246,7 +271,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327551" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34010696" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42376238" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3561786" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -276,33 +301,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>126</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>107</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>444</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>447</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>521</line>
+          <line>508</line>
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/NewWebsite/sketch.js</url>
-          <line>454</line>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -367,20 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/input.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -392,27 +378,42 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../mobileapp4360/app/src/main/java/com/example/mobileapp/camera/CameraActivity.java" />
-    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="3339">
+          <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
+    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44715">
-          <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
+        <state relative-caret-position="399">
+          <caret line="42" column="25" lean-forward="true" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="299" column="70" selection-start-line="299" selection-start-column="70" selection-end-line="299" selection-end-column="70" />
+        <state relative-caret-position="177">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="9" />
         </state>
       </provider>
     </entry>

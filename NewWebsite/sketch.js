@@ -140,22 +140,6 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
                     }
                 }
 
-                // alert(totalLeafNodes);
-                // for (let i = 0; i < trackRemovedNodes.length; i++) {
-                //     for (let j = 0; j < totalLeafNodes; j++) {
-                //         if (i.id.toString() === totalLeafNodes[j]) {
-                //             graph.nodes.push(i)
-                //         }
-                //     }
-                // }
-                // for (let i = 0; i < trackRemovedLinks.length; i++) {
-                //     for (let j = 0; j < totalLeafNodes; j++) {
-                //         if (i.target.toString() === totalLeafNodes[j]) {
-                //             graph.links.push(i)
-                //         }
-                //     }
-                // }
-                // alert(trackRemovedNodes + "\n" + trackRemovedLinks)
             }
 
             // add the links and the arrows
@@ -296,6 +280,7 @@ function selectInputType(val) {
 
     // location.reload();
     if (val === 'HYDE format') {
+        document.getElementById("instruct").innerHTML = "Please upload a HYDE format file and provide threshold";
         removeGraph();
         // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
@@ -312,6 +297,7 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'Triplets') {
+        document.getElementById("instruct").innerHTML = "Please upload a triplet format file";
         removeGraph();
         // document.getElementById("parenthetical").style.visibility ="hidden";
         // location.reload(true);
@@ -327,6 +313,7 @@ function selectInputType(val) {
             x.style.visibility = "visible";
         }
     } else if (val === 'pf') {
+        document.getElementById("instruct").innerHTML = "Please upload a file in Newick format OR type an expression";
         removeGraph();
         e.style.visibility = "hidden";
         // location.reload(true);
@@ -572,11 +559,7 @@ function gotFile(file) {
 
             globalhydeFileData = paraText;
 
-            // if (threshold == "") {
-            //     alert("Enter Threshold First")
-            // } else {
-            //     pushHydeToServer(paraText, threshold);
-            // }
+
         } else if (selectedDropDown == 'Triplets') {
             // Make a paragraph of text
 
@@ -600,7 +583,7 @@ function gotFile(file) {
         }
     }
     var boxnums = document.getElementsByClassName("boxText1");
-    // boxnums.style.visibility ="hidden";
+
 }
 
 function pushHydeToServer(hydeInput, thresh) {
@@ -639,14 +622,7 @@ function pushParentheticalToServer(parenthetical) {
     function processRequest(e) {
         // document.write("This is Working <p>");
         if (request.readyState === 4 && request.status === 200) {
-//         var response = request.responseText;
-// //        document.write(response);
-//         // Convert Base64 to Image
-//         var img = createImg();
-//         img.class('thumb');
-//         img = document.getElementsByClassName('thumb')[0]
-//         .setAttribute(
-//         'src', 'data:image/png;base64,'+response);
+
             createD3Graph();
 
         } else if (request.readyState === 4) {
@@ -669,16 +645,8 @@ function pushStringToServer(triplets) {
     request.send(data);
 
     function processRequest(e) {
-        // document.write("This is Working <p>");
+
         if (request.readyState === 4 && request.status === 200) {
-//         var response = request.responseText;
-// //        document.write(response);
-//         // Convert Base64 to Image
-//         var img = createImg();
-//         img.class('thumb');
-//         img = document.getElementsByClassName('thumb')[0]
-//         .setAttribute(
-//         'src', 'data:image/png;base64,'+response);
             createD3Graph();
 
         } else if (request.readyState === 4) {
@@ -702,14 +670,6 @@ function pushLeavesToServer(leaves) {
     function processRequest(e) {
         // document.write("This is Working <p>");
         if (request.readyState === 4 && request.status === 200) {
-//             var response = request.responseText;
-// //        document.write(response);
-//             // Convert Base64 to Image
-//             var img = createImg();
-//             img.class('thumb');
-//             document.getElementsByClassName('thumb')[0]
-//                 .setAttribute(
-//                     'src', 'data:image/png;base64,' + response);
             createD3Graph();
 
         } else if (request.readyState == 4) {
