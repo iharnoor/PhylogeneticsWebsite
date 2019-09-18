@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="883">
-              <caret line="68" column="42" lean-forward="true" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+            <state relative-caret-position="403">
+              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -29,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4260">
-              <caret line="284" column="70" selection-start-line="284" selection-start-column="70" selection-end-line="284" selection-end-column="70" />
+            <state relative-caret-position="971">
+              <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -150,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568087141710" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568121991426" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Spring 2019/WebDev/Assignment4/Assignment4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -229,18 +231,18 @@
       <workItem from="1566658412752" duration="457000" />
       <workItem from="1566675270870" duration="417000" />
       <workItem from="1566858203409" duration="1161000" />
-      <workItem from="1568010576777" duration="495000" />
+      <workItem from="1568010576777" duration="2384000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126431000" />
+    <option name="totallyTimeSpent" value="128320000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.2454739" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.2814408" />
       <window_info id="Structure" order="1" sideWeight="0.5069307" side_tool="true" weight="0.20713525" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -250,7 +252,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.327551" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.34010696" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3561786" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3561786" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -380,8 +382,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="68" column="42" lean-forward="true" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+        <state relative-caret-position="403">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -391,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4260">
-          <caret line="284" column="70" selection-start-line="284" selection-start-column="70" selection-end-line="284" selection-end-column="70" />
+        <state relative-caret-position="971">
+          <caret line="192" column="36" lean-forward="true" selection-start-line="192" selection-start-column="36" selection-end-line="192" selection-end-column="36" />
         </state>
       </provider>
     </entry>

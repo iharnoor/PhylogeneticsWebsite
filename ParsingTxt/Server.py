@@ -79,8 +79,7 @@ def uploadHyde(thresh):
     print(hyde)
     with open('HydeInput.txt', 'w+') as f:
         f.write(hyde)
-
-    ServerAction.parseHydeToTriplets("HydeInput.txt", float(thresh))
+     ServerAction.parseHydeToTriplets("HydeInput.txt", float(thresh))
     # TODO: uncomment the following done
     ServerAction.tripletsToDot('HydeToTriplets.txt')
     # ServerAction.tripletsToDot('hydetotriplets.out')
