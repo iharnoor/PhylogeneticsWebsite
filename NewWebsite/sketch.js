@@ -73,7 +73,6 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
     }
     // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
-    document.getElementById("instruct").innerHTML = "Click on Try another one to create a new graph";
     // refresher.style.visibility = "visible";
     // selectbutton.style.visibility = "hidden";
     selectbutton.disabled = true;
@@ -234,6 +233,7 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
             }
         }
     );
+// document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
 function dragstarted(d) {
