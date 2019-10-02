@@ -10,6 +10,24 @@ app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 
+def quotifyTheFile(fileName):
+    strF = ""
+    with open(fileName, 'r') as f:
+        strF = f.read()
+
+    writeContent = ""
+
+    for line in strF.split('\n'):
+        if line.__contains__("->"):
+            arr = line.split(" -> ")
+            line = "\"" + arr[0] + "\" -> \"" + arr[1] + "\""
+
+        writeContent += line
+        print(line)
+
+    return writeContent
+
+
 # POST
 @app.route('/uploadLeaves/', methods=['POST'])
 @cross_origin()
@@ -79,7 +97,7 @@ def uploadHyde(thresh):
     print(hyde)
     with open('HydeInput.txt', 'w+') as f:
         f.write(hyde)
-     ServerAction.parseHydeToTriplets("HydeInput.txt", float(thresh))
+    ServerAction.parseHydeToTriplets("HydeInput.txt", float(thresh))
     # TODO: uncomment the following done
     ServerAction.tripletsToDot('HydeToTriplets.txt')
     # ServerAction.tripletsToDot('hydetotriplets.out')
@@ -107,8 +125,8 @@ def uploadParentheticalAndReturnDot():
 
     parenthetical = json['text']
 
-    print(parenthetical)
-    parenthetical = ServerAction.symbolReplacement(parenthetical)
+    # print(parenthetical)
+    # parenthetical = ServerAction.symbolReplacement(parenthetical)
     print(parenthetical)
 
     ParentheticalConvertorNaman.newickToDot(parenthetical)
@@ -157,8 +175,8 @@ def receiveDot():
     #     newickField.write(dotFile)
 
     # with open("upload1.dot", "r") as newickField:
-    with open("upload.dot", "r") as f:
-        return Response(f.read(), mimetype='text/plain')
+
+    return Response(quotifyTheFile('upload.dot'), mimetype='text/plain')
 
     # return "working"
 

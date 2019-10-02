@@ -35,8 +35,27 @@ def parseHydeTxt(fileName, threshold):
                 outfile.write(infile.read())
 
 
+def quotifyTheFile(fileName):
+    strF = ""
+    with open(fileName, 'r') as f:
+        strF = f.read()
+
+    writeContent = ""
+
+    for line in strF.split('\n'):
+        if line.__contains__("->"):
+            arr = line.split(" -> ")
+            line = "\"" + arr[0] + "\" -> \"" + arr[1] + "\""
+
+        writeContent+=line
+        print(line)
+
+    return writeContent
+
+
 if __name__ == '__main__':
-    parseHydeTxt("sig.results.txt", 0.0005)
+    # parseHydeTxt("sig.results.txt", 0.0005)
+    quotifyTheFile('upload.dot')
 
 # TODO : append these to the bottom of file1 and make the selection random (135 or 153 randomly) for Triplets more than the threshold.
 

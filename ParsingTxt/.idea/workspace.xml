@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0dc4825b-eb8e-4e15-903a-08004d8c3fe6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NewWebsite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../NewWebsite/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Launcher/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Launcher/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/upload.dot" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Launcher/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state relative-caret-position="183">
+              <caret line="37" selection-start-line="37" selection-end-line="53" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -33,11 +34,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="131" column="58" lean-forward="true" selection-start-line="131" selection-start-column="58" selection-end-line="131" selection-end-column="58" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerAction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload.dot">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -62,8 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>s</find>
-      <find>returnReducedDotFile</find>
       <find>gadha</find>
       <find>-&gt;</find>
       <find>p</find>
@@ -87,11 +104,13 @@
       <find>paren</find>
       <find>parenthetical</find>
       <find>58</find>
-      <find>symbol</find>
       <find>work</find>
       <find>symbolreplacement</find>
       <find>symbo</find>
       <find>sym</find>
+      <find>&quot;r</find>
+      <find>upload.dot</find>
+      <find>symbol</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +128,6 @@
         <option value="$PROJECT_DIR$/HydeToTriplets2.txt" />
         <option value="$PROJECT_DIR$/TripCombo.txt" />
         <option value="$PROJECT_DIR$/__init__.py" />
-        <option value="$PROJECT_DIR$/upload.dot" />
         <option value="$PROJECT_DIR$/HydeToTriplets.txt" />
         <option value="$PROJECT_DIR$/results.txt" />
         <option value="$PROJECT_DIR$/ParentheticalToDot.py" />
@@ -119,7 +137,6 @@
         <option value="$PROJECT_DIR$/ParentheticalToDot/__init__.py" />
         <option value="$PROJECT_DIR$/Launcher/ParentheticalToDot.py" />
         <option value="$PROJECT_DIR$/Launcher/removeDup.py" />
-        <option value="$PROJECT_DIR$/Launcher/__init__.py" />
         <option value="$PROJECT_DIR$/Launcher/cExample1.dot" />
         <option value="$PROJECT_DIR$/Launcher/upload.dot" />
         <option value="$PROJECT_DIR$/Launcher/test.py" />
@@ -130,14 +147,16 @@
         <option value="$PROJECT_DIR$/Launcher/ParentheticalConvertorNaman.py" />
         <option value="$PROJECT_DIR$/Launcher/Server.py" />
         <option value="$PROJECT_DIR$/Launcher/ServerAction.py" />
+        <option value="$PROJECT_DIR$/upload.dot" />
+        <option value="$PROJECT_DIR$/Launcher/__init__.py" />
         <option value="$PROJECT_DIR$/Server.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="53" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,7 +184,7 @@
     <property name="SearchEverywhereHistoryKey" value="Network&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/NetworkParen.net&#10;remove-lea&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/remove-leaves.jl&#10;reduced&#9;FILE&#9;file://C:/Users/hsingh9/Documents/GitHub/PhylogeneticsWebsite/ParsingTxt/reduced-net.txt&#10;serverac&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/ServerAction.py&#10;server.py&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Server.py&#10;tripcombo&#9;FILE&#9;file://C:/Users/hsingh9/Desktop/Research Website/ParsingTxt/Lev1Than/Tripcombo.png&#10;increase font&#9;ACTION&#9;EditorIncreaseFontSize" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -253,7 +272,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="apoorv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ParsingTxt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,7 +284,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Launcher/apoorv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Launcher/__init__.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,17 +317,17 @@
     <list>
       <item itemvalue="Python.Rough" />
       <item itemvalue="Python.Server" />
-      <item itemvalue="Python.apoorv" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.Server (1)" />
+      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Server (1)" />
+        <item itemvalue="Python.__init__" />
         <item itemvalue="Python.Server" />
         <item itemvalue="Python.Rough" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.apoorv" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +345,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49948078" visible="true" weight="0.16850974" />
@@ -334,14 +353,14 @@
       <window_info id="Favorites" order="2" sideWeight="0.5008696" side_tool="true" weight="0.14225501" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3284974" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3388601" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3388601" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39771548" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.4062176" />
       <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32953367" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -371,8 +390,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/retrivedTriplets.txt" />
-    <entry file="file://$PROJECT_DIR$/Lev1Than/cExample2.dot" />
     <entry file="file://$PROJECT_DIR$/../../Reinforcement_Learning_for_Stock_Prediction/venv/Lib/site-packages/pydot.py" />
     <entry file="file://$PROJECT_DIR$/Launcher/reduced-net.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -537,16 +554,6 @@
     <entry file="file://$PROJECT_DIR$/Launcher/Server.py" />
     <entry file="file://$PROJECT_DIR$/Launcher/ServerAction.py" />
     <entry file="file://$PROJECT_DIR$/Launcher/Rough.py" />
-    <entry file="file://$PROJECT_DIR$/Launcher/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Launcher/upload.dot">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -554,10 +561,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/upload.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Launcher/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="37" selection-start-line="37" selection-end-line="53" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerAction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="144" column="4" selection-start-line="144" selection-start-column="4" selection-end-line="144" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
+        <state relative-caret-position="260">
+          <caret line="131" column="58" lean-forward="true" selection-start-line="131" selection-start-column="58" selection-end-line="131" selection-end-column="58" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
