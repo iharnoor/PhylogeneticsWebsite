@@ -49,6 +49,16 @@ function formdata() {
     alert(firstname1);
 }
 
+var chart = $("#chartId"),
+    aspect = chart.width() / chart.height(),
+    container = chart.parent();
+$(window).on("resize", function () {
+    var targetWidth = container.width();
+    chart.attr("width", targetWidth);
+    chart.attr("height", Math.round(targetWidth / aspect));
+}).trigger("resize");
+
+
 // var lineD3 = d3.line();
 // .curve(d3.curveCatmullRom.alpha(0.5));
 
@@ -102,8 +112,41 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
                 .attr("markerWidth", 6)
                 .attr("markerHeight", 6)
                 .attr("orient", "auto")
+                .attr("preserveAspectRatio", "xMinYMin meet")
+
                 .append("svg:path")
+
+                .append("div")
+                // Container class to make it responsive.
+                .classed("svg-container", true)
+                .append("svg")
+                // Responsive SVG needs these 2 attributes and no width and height attr.
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", "0 0 600 400")
+                // Class to make it responsive.
+                .classed("svg-content-responsive", true)
+                // Fill with a rectangle for visualization.
+                .append("rect")
+                .attr("width", 600)
+                .attr("height", 400)
+
                 .attr("d", "M0,-5L10,0L0,5");
+
+            // d3.selectAll("svg#chartId")
+            //     .append("div")
+            //     // Container class to make it responsive.
+            //     .classed("svg-container", true)
+            //     .append("svg")
+            //     // Responsive SVG needs these 2 attributes and no width and height attr.
+            //     .attr("preserveAspectRatio", "xMinYMin meet")
+            //     .attr("viewBox", "0 0 600 400")
+            //     // Class to make it responsive.
+            //     .classed("svg-content-responsive", true)
+            //     // Fill with a rectangle for visualization.
+            //     .append("rect")
+            //     .attr("width", 600)
+            //     .attr("height", 400);
+
 
             if (isRemoveSelected) {
                 for (let i = 0; i < graph.nodes.length; i++) {
@@ -233,6 +276,8 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
             }
         }
     );
+
+
 // document.elementFromPoint(x, y).click();///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
 
@@ -361,7 +406,7 @@ function createboxes() {
         var text = document.createTextNode("" + element);
         y.appendChild(text);
         // alert(y.textContent);
-        if (!y.textContent.includes("Hash")){
+        if (!y.textContent.includes("Hash")) {
             totalLeafNodes.push(y.textContent);
         }
         // alert(totalLeafNodes);
