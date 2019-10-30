@@ -36,50 +36,15 @@
 
     <br>
 
-    <!--<textarea id="textareabox" name="textarea1" placeholder="Enter Nodes To Be Removed"></textarea>-->
-    <!--<br>-->
     <input id="parenthetical" type="text" placeholder="Enter Newick Format Here">
 
-    <!--<button class="button" id="chooser" onclick="gotFile(file)">Choose file</button><br>-->
-
-    <!-- <label for="file"><strong>Choose a file</strong></label> -->
-    <!--
-            <input type="file" onclick="gotFile(file)"><br>
-            <label for="file" class="btn-2">upl</label> -->
-
-    <!-- <input type="file" id="file" onclick="gotFile" />
-    <label for="file" class="btn-2">upload</label> -->
     <br>
     <button class="button" onclick="onClickCreateNetwork()" id="createNetwork">Create Network</button>
-
-    <!--<button class="button" onclick="changeRootAction()">Change root</button>-->
     <div id="placeholder">
         <label>Displayed Leaves</label><br>
     </div>
-    <!--<br>-->
-    <!--<button class="button" onclick="dwnPFormat()">Download Parentheical format</button>-->
-    <!--<br>-->
-    <!--<button class="button" onclick="downloadImage()">Download PNG</button>-->
     <br>
-    <!--<button class="button" onclick="createboxes()" id="boxes">Remove nodes</button>-->
-    <!--<button class="button" onclick="refreshGraph()" id="remove">Refresh Graph</button>-->
-    <!--<br>-->
     <button class="button" onclick="removeNodesAction()" id="updateNetwork">Update Network</button>
-
-    <!--<br>-->
-    <!--<button class="button" onclick="check()">Submit</button>-->
-
-    <!--<div>-->
-    <!--<script type="text/javascript">-->
-    <!--createboxes();-->
-    <!--</script>-->
-
-    <!--</div>-->
-
-    <!--<form><br>-->
-    <!--Enter the nodes to be removed: <input type="text" id="rNodes"/><br><br>-->
-    <!--<input type="submit" value="Submit" onclick="check()"/><br>-->
-    <!--</form>-->
 </div>
 <div class="container" id="loader">
     <div class="shape shape-1"></div>
@@ -88,7 +53,7 @@
     <div class="shape shape-4"></div>
 </div>
 <!-- <h3>This example loads a file (or multiple files) that are selected by a user from their local drive.  If the file is an image, an image element is displayed.  For a text file, a paragraph element is created to display the text.</h3> -->
-<script src="libraries/d3.v4.min.js"></script>chartId
+<script src="libraries/d3.v4.min.js"></script>
 <script src="libraries/d3-dot-graph.js"></script>
 <script src="libraries/p5.js" type="text/javascript"></script>
 <script src="libraries/download.js" type="text/javascript"></script>
@@ -96,19 +61,12 @@
 <script src="libraries/p5.sound.js" type="text/javascript"></script>
 <h2 id="instruct" style="text-align: center">Please select the file format of your input data</h2>
 <div id="container">
-    <!--<svg version="1.1"  id="chartId" height="1000" width="1200"  xml:space="preserve"></svg>-->
-
-    <svg id="chartId" width="960" height="500"
+    <svg id="chartId" width="1100" height="500"
          viewBox="0 0 2000 400"
          perserveAspectRatio="xMinYMid">
-        <!--<circle r="100" cx="100" cy="100" fill="red"></circle>-->
-        <!--<circle r="100" cx="300" cy="100" fill="green"></circle>-->
-        <!--<circle r="100" cx="500" cy="100" fill="blue"></circle>-->
     </svg>
 </div>
 
-
-<!-- width="1400" height="800"-->
 <script src="sketch.js" type="text/javascript"></script>
 
 </body>

@@ -12,12 +12,6 @@ var removeNodeBool = false;
 var totalLeafNodes = [];
 var trackRemovedNodes = [];
 var trackRemovedLinks = [];
-// i hid textarea box
-// var c = document.getElementById("textareabox");
-// c.style.visibility = "hidden";
-
-// var btnRefresh = document.getElementById("remove");
-// btnRefresh.style.visibility = "hidden";
 
 var btnUpdateNet = document.getElementById("updateNetwork");
 // btnUpdateNet.style.visibility = "hidden";
