@@ -29,6 +29,7 @@ p {
     border-style: solid;
     border-width: 1px;
     padding: 20px;
+    visibility: hidden;
 }
 
 .center {
@@ -149,17 +150,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #chartId {
-    /*position: relative;*/
-    /*padding-left: 15px;*/
-    /*padding-top: 15px;*/
-    /*height: auto;*/
+    float: left;
+    position: absolute;
 
-    position: relative;
-    left: 50%;
-    width: auto;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*width: auto;*/
+    /*-webkit-transform: translateX(-50%);*/
+    /*-ms-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
 }
 
 /*#container {*/
