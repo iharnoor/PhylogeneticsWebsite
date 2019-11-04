@@ -75,26 +75,13 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
     if (!isAddSelected) {
         removeGraph();
     }
-    // d3.dot("cExample.dot", function (graph) {
     document.getElementById("loader").style.visibility = "hidden";
-    // refresher.style.visibility = "visible";
-    // selectbutton.style.visibility = "hidden";
     selectbutton.disabled = true;
-    // b.style.visibility = "visible";
     refresher.style.visibility = "visible";
     refresher.disabled = false;
 
-    // selectbutton.style.visibility="hidden";
     selectbutton.disabled = true;
-    // b.style.visibility = "visible";
-    // btnRemoveNodes.disabled= false;
-    // createboxes();
     d3.dot("http://localhost:5001/readDot", function (graph) {
-            // d3.dot("cExample.dot", function (graph) {
-
-            // d3.select("svg").remove();
-
-            //if (error) throw error;
             // build the arrow.
             svg.append("svg:defs").selectAll("marker")
                 .data(["end"])      // Different link/path types can be defined here
@@ -111,36 +98,8 @@ function createD3Graph(nodesRemoveArr, newCheckedArray, isRemoveSelected, isAddS
                 .append("svg:path")
 
                 .append("div")
-                // Container class to make it responsive.
-                .classed("svg-container", true)
-                .append("svg")
-                // Responsive SVG needs these 2 attributes and no width and height attr.
-                .attr("preserveAspectRatio", "xMinYMin meet")
-                .attr("viewBox", "0 0 600 400")
-                // Class to make it responsive.
-                .classed("svg-content-responsive", true)
-                // Fill with a rectangle for visualization.
                 .append("rect")
-                .attr("width", 600)
-                .attr("height", 400)
-
                 .attr("d", "M0,-5L10,0L0,5");
-
-            // d3.selectAll("svg#chartId")
-            //     .append("div")
-            //     // Container class to make it responsive.
-            //     .classed("svg-container", true)
-            //     .append("svg")
-            //     // Responsive SVG needs these 2 attributes and no width and height attr.
-            //     .attr("preserveAspectRatio", "xMinYMin meet")
-            //     .attr("viewBox", "0 0 600 400")
-            //     // Class to make it responsive.
-            //     .classed("svg-content-responsive", true)
-            //     // Fill with a rectangle for visualization.
-            //     .append("rect")
-            //     .attr("width", 600)
-            //     .attr("height", 400);
-
 
             if (isRemoveSelected) {
                 for (let i = 0; i < graph.nodes.length; i++) {

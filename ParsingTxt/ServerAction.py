@@ -17,7 +17,6 @@ def isDup(pairs, a, b):
     return 1
 
 
-
 def removeDupTriplets():
     with open("HydeToTriplets.txt") as f:
         content = f.readlines()
@@ -37,7 +36,6 @@ def removeDupTriplets():
             result[val] = [x.split()[0] + "," + x.split()[1]]
     file.close()
     print(result)
-
 
 
 def parseHydeToTriplets(fileName, threshold):
@@ -247,45 +245,7 @@ def retainActualLabels2(fileName):
 
 if __name__ == '__main__':
     print("Hello")
-    # tripletsToDot('cExample1.trips')
-    # # convertDotToPNG('cExample1.dot')
-    # # removeLeaves('1\n5')
-    # convertDotToPNGJulia('cExample1.dot')
-    # print("Hello")
 
-    # lines_seen = set()  # holds lines already seen
-    # outfile = open('HydeToTriplets.txt', "w")
-    # for line in open('HydeToTriplets.txt', "r"):
-    #     if line not in lines_seen:  # not a duplicate
-    #         outfile.write(line)
-    #         lines_seen.add(line)
-    # outfile.close()
+    matrix = [[0 for x in range(3)] for y in range(3)]
 
-    # parseHydeToTriplets("results.txt", 0.05)
-    # tripletsToDot('HydeToTriplets.txt')
-
-    # newickToDot('((C,D)F,(A,G));')
-
-    # print(retainActualLabels2('cExample1.dot'))
-    print(returnReducedDotFile('cExample1.dot'))
-    # convertDotToPNG('cExample1.dot')
-
-    # removeNodes('5,4,3')
-
-#  1) Return Parenthetical fiel and return the image
-# Download image or text file
-# Two buttons one for image other for text
-#  Filtering the graph
-# Remove Leaf Nodes
-# Change Root and checbox to filter leaves
-
-# checkbox with all the leaves and uncheck the nodes
-
-# last line if you use please site the following
-# manuscript
-# Download button to
-
-# print parenthetical format instead of triplets
-# estimate of the time .
-# It won't finish in less than 20 minutes
-# Go get a coffee
+    print(matrix)
