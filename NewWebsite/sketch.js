@@ -680,7 +680,6 @@ function pushChangeRootToServer(flag, tripRoot) {
     var data = JSON.stringify({
         "text": flag
     });
-    ;
 
     var request = new XMLHttpRequest();
     request.open("POST", "http://127.0.0.1:5000/changeRoot/" + tripRoot);

@@ -162,14 +162,6 @@ h1, h2, h3, h4, h5, h6 {
     /*transform: translateX(-50%);*/
 }
 
-/*#container {*/
-/*position: relative;*/
-/*left: 50%;*/
-/*-webkit-transform: translateX(-50%);*/
-/*-ms-transform: translateX(-50%);*/
-/*transform: translateX(-50%);*/
-/*}*/
-
 .container {
     visibility: hidden;
     position: relative;
