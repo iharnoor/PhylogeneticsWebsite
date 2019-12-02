@@ -7,6 +7,10 @@ body {
     /*background-color: #74b9ff;*/
 }
 
+.files {
+    visibility: hidden;
+}
+
 hr {
     margin-bottom: -5px;
     margin-top: -5px;

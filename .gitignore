@@ -6,3 +6,4 @@ ParsingTxt/.idea/ParsingTxt.iml
 ParsingTxt/__pycache__/ParentheticalConvertorNaman.cpython-37.pyc
 ParsingTxt/__pycache__/ParentheticalToDot.cpython-37.pyc
 ParsingTxt/__pycache__/ServerAction.cpython-37.pyc
+.idea/workspace.xml
