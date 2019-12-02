@@ -506,7 +506,7 @@ function addNodesAction() {
 
 
 function removeGraph() {
-    $(".hi").empty();
+    $("#chartId").empty();
 }
 
 function refreshGraph() {
