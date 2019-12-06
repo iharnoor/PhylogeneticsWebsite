@@ -1,6 +1,0 @@
-strict digraph G1 {
-internal1001 -> bASC0453
-internal1001 -> aASC0452
-internal1000 -> cASC0454
-internal1000 -> internal1001
-}
