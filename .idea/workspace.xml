@@ -4,7 +4,17 @@
     <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Julia/Test.jl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeInput.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/HydeInput.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/HydeToTriplets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/HydeToTriplets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/Triplets3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/Triplets3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParsingTxt/cExample1_m.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/cExample1_m.dot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ParsingTxt/upload.dot" beforeDir="false" afterPath="$PROJECT_DIR$/ParsingTxt/upload.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,14 +26,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4918382">
+    <splitter split-orientation="horizontal" split-proportion="0.64481604">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+                <state relative-caret-position="210">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -32,23 +42,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Readme.MD">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="150">
-                    <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                  <first_editor relative-caret-position="270">
+                    <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
                   </first_editor>
                   <second_editor />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                <state relative-caret-position="690">
+                  <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -56,8 +66,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="181">
-                  <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+                <state relative-caret-position="4275">
+                  <caret line="285" selection-start-line="285" selection-end-line="285" />
                 </state>
               </provider>
             </entry>
@@ -96,8 +106,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="259">
-                  <caret line="243" column="5" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -162,9 +172,9 @@
         <option value="$PROJECT_DIR$/ParsingTxt/Server.py" />
         <option value="$PROJECT_DIR$/NewWebsite/test.html" />
         <option value="$PROJECT_DIR$/NewWebsite/styles.css" />
+        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
         <option value="$PROJECT_DIR$/NewWebsite/index.html" />
         <option value="$PROJECT_DIR$/Readme.MD" />
-        <option value="$PROJECT_DIR$/NewWebsite/sketch.js" />
       </list>
     </option>
   </component>
@@ -172,14 +182,15 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1792" />
+    <option name="height" value="1120" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,25 +201,24 @@
             <path>
               <item name="PhylogeneticsWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="PhylogeneticsWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="NewWebsite" type="462c0819:PsiDirectoryNode" />
+              <item name="InputFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhylogeneticsWebsite" type="b2602c69:ProjectViewProjectNode" />
               <item name="PhylogeneticsWebsite" type="462c0819:PsiDirectoryNode" />
-              <item name="ParsingTxt" type="462c0819:PsiDirectoryNode" />
+              <item name="Julia Scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575256177072" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575590864886" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -302,17 +312,23 @@
       <workItem from="1572909407878" duration="6614000" />
       <workItem from="1572981322094" duration="1315000" />
       <workItem from="1575253270245" duration="2265000" />
+      <workItem from="1575257548016" duration="259000" />
+      <workItem from="1575473409736" duration="384000" />
+      <workItem from="1575477355775" duration="237000" />
+      <workItem from="1575514584280" duration="221000" />
+      <workItem from="1575514945947" duration="477000" />
+      <workItem from="1575589865559" duration="654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153206000" />
+    <option name="totallyTimeSpent" value="155629000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1792" height="1120" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.19485714" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.14571428" />
       <window_info id="Structure" order="1" sideWeight="0.5069307" side_tool="true" weight="0.20713525" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -462,6 +478,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/test.html" />
+    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ParsingTxt/Server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -483,27 +506,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+        <state relative-caret-position="4275">
+          <caret line="285" selection-start-line="285" selection-end-line="285" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -511,10 +524,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+    <entry file="file://$PROJECT_DIR$/Readme.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
