@@ -16,4 +16,6 @@
 ```java --version ```
 
 ## To Run the program
-* Goto Serv
+1. Goto Server Run the 
+```python3 Server.py```
+2. Open index.html
