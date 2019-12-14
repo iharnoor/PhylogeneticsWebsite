@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="" />
+    <list default="true" id="db11fb5f-ab2f-4629-980e-1f0e5a680940" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Readme.MD" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.MD" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +21,8 @@
             <entry file="file://$PROJECT_DIR$/Readme.MD">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="270">
-                    <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+                  <first_editor relative-caret-position="255">
+                    <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -30,8 +32,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Website/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="74" lean-forward="true" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
@@ -44,8 +46,8 @@
             <entry file="file://$PROJECT_DIR$/Readme.MD">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="285">
-                    <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+                  <first_editor relative-caret-position="90">
+                    <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="21" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -65,7 +67,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>threshoo</find>
       <find>textThreshold</find>
       <find>style.css</find>
       <find>/scripts/snippet-javascript-console.min.js?v=1</find>
@@ -95,6 +96,7 @@
       <find>update</find>
       <find>onclickbtn</find>
       <find>hi</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,6 +132,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -147,7 +150,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,17 +259,18 @@
       <workItem from="1575514584280" duration="221000" />
       <workItem from="1575514945947" duration="477000" />
       <workItem from="1575589865559" duration="1089000" />
+      <workItem from="1576362008622" duration="551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156064000" />
+    <option name="totallyTimeSpent" value="156615000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1792" height="1120" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.19428572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49306932" visible="true" weight="0.1965812" />
       <window_info id="Structure" order="1" sideWeight="0.5069307" side_tool="true" weight="0.20713525" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -335,11 +338,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3-dot-graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-818" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3-dot-graph.js" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -351,13 +350,7 @@
     <entry file="file://$USER_HOME$/Desktop/Web Dev/phplab/PHPLAB.html" />
     <entry file="file://$PROJECT_DIR$/ParsingTxt/results.txt" />
     <entry file="file://$PROJECT_DIR$/ParsingTxt/ServerAction.py" />
-    <entry file="file://$PROJECT_DIR$/NewWebsite/google-loaders-redesign-master/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="80" column="9" lean-forward="true" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/google-loaders-redesign-master/style.scss" />
     <entry file="file://$PROJECT_DIR$/InputFiles/n10[1].txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -372,13 +365,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/filereader.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/filereader.html" />
     <entry file="file://$PROJECT_DIR$/InputFiles/n15[1].txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -393,84 +380,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/upload.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/upload.dot" />
     <entry file="file://$PROJECT_DIR$/../mobileapp4360/app/src/main/java/com/example/mobileapp/camera/CameraActivity.java" />
     <entry file="file://$PROJECT_DIR$/NewWebsite/style.css" />
-    <entry file="file://$PROJECT_DIR$/NewWebsite/input.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/input.txt" />
     <entry file="file://$PROJECT_DIR$/NewWebsite/test.html" />
-    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParsingTxt/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/file1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44715">
-          <caret line="2981" column="12" selection-start-line="2981" selection-start-column="12" selection-end-line="2981" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/file1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Website/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/NewWebsite/styles.css" />
+    <entry file="file://$PROJECT_DIR$/ParsingTxt/Server.py" />
+    <entry file="file://$PROJECT_DIR$/NewWebsite/file1.txt" />
+    <entry file="file://$PROJECT_DIR$/NewWebsite/libraries/d3.v4.min.js" />
+    <entry file="file://$PROJECT_DIR$/NewWebsite/sketch.js" />
+    <entry file="file://$PROJECT_DIR$/NewWebsite/index.html" />
+    <entry file="file://$PROJECT_DIR$/Website/file1.txt" />
+    <entry file="file://$PROJECT_DIR$/Website/input.txt" />
     <entry file="file://$PROJECT_DIR$/Readme.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           </first_editor>
           <second_editor />
         </state>
@@ -478,8 +405,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="8" lean-forward="true" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        <state relative-caret-position="105">
+          <caret line="7" column="74" lean-forward="true" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
         </state>
       </provider>
     </entry>

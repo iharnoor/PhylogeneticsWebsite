@@ -2,14 +2,13 @@
 
 
 * install flask_cors
-```pip install -U flask-cors```
+```pip3 install -U flask-cors```
 * install pydot:
-```pip install pydot```
+```pip3 install pydot```
 * Similarly install
-```pip install pandas```
-```pip install numpy```
-```pip install flask```
-
+```pip3 install pandas```
+```pip3 install numpy```
+```pip3 install flask```
 
 ## Requirements for Python
 * JRE 8 & JDK To test try 
